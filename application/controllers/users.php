@@ -20,20 +20,20 @@
 	
 		if($_POST['robot'] == 'yes')
 		{
-		$login = $this->users_model->checkUser($loginObject);
+			$login = $this->users_model->checkUser($loginObject);
 			
 		}else{
 			echo 'sorry looks like your a robot';
 		}	
-
+	
 		if($login == false){
-			//redirect('blog/loginFail');	
+			redirect('admin/');	
 			
 		}else{
 			$currentUser = $login;
 			$this->session->set_userdata('currentUser', $currentUser);
 			$this->session->set_userdata('loggedin', true);
-
+	
 			redirect('admin/viewPortal');	
 		}
 	}

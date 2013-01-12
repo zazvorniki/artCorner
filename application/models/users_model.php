@@ -10,7 +10,7 @@
 	public function getUser($currentId)
 	{
 		$data['query']=$this->db->get_where('users', array('id' => $currentId));
-		$this->load->view('defaultHeader_view', $data);
+		$this->load->view('adminHeader_view', $data);
 		
 	}
 		

@@ -4,3 +4,24 @@ PHP Parse error:  syntax error, unexpected '{', expecting '(' in /hermes/bosoraw
 20130112T140617: plantationkeyartcorner.com/index.php/admin
 PHP Parse error:  syntax error, unexpected '{', expecting '(' in /hermes/bosoraweb033/b1717/ipg.plantationkeyartcorn/application/controllers/admin.php on line 17
 
+20130112T151545: plantationkeyartcorner.com/index.php/admin/viewPortal
+PHP Fatal error:  Call to a member function getUser() on a non-object in /hermes/bosoraweb033/b1717/ipg.plantationkeyartcorn/application/controllers/admin.php on line 23
+
+20130112T151600: plantationkeyartcorner.com/index.php/admin/viewPortal
+PHP Fatal error:  Call to a member function getUser() on a non-object in /hermes/bosoraweb033/b1717/ipg.plantationkeyartcorn/application/controllers/admin.php on line 23
+
+20130112T153945: plantationkeyartcorner.com/index.php/admin/viewPortal
+PHP Parse error:  syntax error, unexpected ')' in /hermes/bosoraweb033/b1717/ipg.plantationkeyartcorn/application/views/adminHeader_view.php on line 30
+
+20130112T154002: plantationkeyartcorner.com/index.php/admin/viewPortal
+PHP Parse error:  syntax error, unexpected ')' in /hermes/bosoraweb033/b1717/ipg.plantationkeyartcorn/application/views/adminHeader_view.php on line 30
+
+20130112T154112: plantationkeyartcorner.com/index.php/admin/viewPortal
+PHP Parse error:  syntax error, unexpected ')', expecting ',' or ';' in /hermes/bosoraweb033/b1717/ipg.plantationkeyartcorn/application/views/adminHeader_view.php on line 30
+
+20130112T154154: plantationkeyartcorner.com/index.php/admin/viewPortal
+PHP Parse error:  syntax error, unexpected ')', expecting ',' or ';' in /hermes/bosoraweb033/b1717/ipg.plantationkeyartcorn/application/views/adminHeader_view.php on line 30
+
+20130112T154408: plantationkeyartcorner.com/index.php/admin/viewPortal
+PHP Parse error:  syntax error, unexpected ')', expecting ',' or ';' in /hermes/bosoraweb033/b1717/ipg.plantationkeyartcorn/application/views/adminHeader_view.php on line 32
+

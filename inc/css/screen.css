@@ -126,6 +126,29 @@ a:hover{
 }
 
 
+/*----------Admin Header Styles----------*/
+
+.adminInfo{
+	list-style-type: none;
+	margin: 0;
+	font-size: .7em;
+	text-align: right;
+	padding-top: .5em;
+}
+
+.adminInfo label{
+	font-size: 1.5em;
+}
+
+.adminInfo li{
+	display: inline;
+	border-right: 1px solid #333;
+	padding: 0 2em;
+}
+
+.adminInfo li:last-child{
+	border: none;
+}
 
 /*----------Form Styles----------*/
 

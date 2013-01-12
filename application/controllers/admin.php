@@ -6,6 +6,7 @@ class Admin extends CI_Controller{
 	{ 
 		parent::__construct(); 
         	$this->load->helper("url");
+		$this->load->model('users_model');
 	}
 	
 	function index()
@@ -15,8 +16,22 @@ class Admin extends CI_Controller{
 	}
 	
 	function viewPortal(){
-		$this->load->view('defaultBlog_view');
+		$user['currentUser']=$this->session->userdata('currentUser');
+		
+		if (empty($user['currentUser'])) {
+			redirect('admin/');
+		} 
+		
+		$user = $this->users_model->getUser($user['currentUser']->id);
 	}
+	
+	
+	function logout()
+	{
+		$this->session->sess_destroy();
+		redirect('admin/');
+	}
+	
 	
 
 }
