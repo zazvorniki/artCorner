@@ -8,5 +8,13 @@ $(document).ready(function(){
 	var email = new LiveValidation('email');
 	email.add( Validate.Email );
 	email.add( Validate.Presence );	
+	
+	
+	if(Modernizr.sessionstorage){
+		
+	}else{
+		$('.sessionMess').show();
+		$("input").prop('disabled', true);
+	}
 	            
 });

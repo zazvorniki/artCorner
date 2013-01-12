@@ -150,6 +150,14 @@ a:hover{
 	border: none;
 }
 
+.sessionMess{
+	text-align: center;
+	font-size: 1.2em;
+	color: #8a2445;
+	display: none;
+	
+}
+
 /*----------Form Styles----------*/
 
 /*----------Login Styles----------*/

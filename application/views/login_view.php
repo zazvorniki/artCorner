@@ -25,7 +25,7 @@
 <body>
 
 <!--  ==========	Login Form ==========  -->
-
+<p class="sessionMess">Sorry, this site needs browser sessions in order to log you in. Please make sure you have private browsing turned off.</p>
 <div class="loginForm">
 		<?=form_open('users/checkLogin');?>
 		<h2>Login</h2>
@@ -41,4 +41,5 @@
 
 <script src="<?php echo base_url();?>inc/js/main.js" type="text/javascript"></script>
 <script src="<?php echo base_url();?>inc/js/livevalidation_standalone.js" type="text/javascript"></script>
+<script src="<?php echo base_url();?>inc/js/Modernizr.js" type="text/javascript"></script>
 </html>
