@@ -1,0 +1,116 @@
+/*
+Author:  Jessica Sears
+Project: 
+*/
+
+/* Style Guide
+	Navigation color: #e6ebf0
+	Default font: Helvetica Neue
+	Default font color: #323333
+*/
+
+/*----------Fonts----------*/
+
+/*----------General Styles----------*/
+html{
+	margin: 0;
+	padding: 0;	
+}
+
+
+body{
+	font: 1em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	color: #323333;
+	margin: 0;
+	padding: 0;	
+}
+	
+/*----------Header----------*/
+
+.headerCon{
+	padding: 1em;	
+}
+
+header{
+	margin: 0;
+	padding: 0 1.5em 0 1.5em;
+	background: #93bebd; /* Old browsers */
+	background: -moz-linear-gradient(top, #93bebd 14%, #51bcb9 100%, #51bcb9 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(14%,#93bebd), color-stop(100%,#51bcb9), color-stop(100%,#51bcb9)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #93bebd 14%,#51bcb9 100%,#51bcb9 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #93bebd 14%,#51bcb9 100%,#51bcb9 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #93bebd 14%,#51bcb9 100%,#51bcb9 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #93bebd 14%,#51bcb9 100%,#51bcb9 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#93bebd', endColorstr='#51bcb9',GradientType=0 ); /* IE6-9 */
+}
+
+header h1{
+	margin: 0;
+	padding: 0;	
+}
+
+
+nav li:last-child{
+	border-right: 1px solid #333;
+}
+
+nav li:first-child{
+	padding-right: 2em;
+}
+
+.link{
+	float: right;
+	position: relative;
+	top: 2.4em;
+	padding: 0 2em;
+}
+
+nav ul{
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+nav li{
+	display: inline;
+	
+}
+
+header a{
+	color: #2e4638;
+	font-size: 1.5em;
+	text-decoration: none;	
+	text-decoration: underline;
+}
+
+a:hover{
+	color: #3b7653;
+}
+
+.logo{
+	background: url(../img/logo.png) no-repeat;
+	height: 78px;
+	width:400px;
+	display: inline-block;
+}
+		
+.logo a{
+	text-indent: -9999px;
+	display: block;
+	height: 78px;
+	width:400px;
+	padding: 0;
+}
+
+
+
+/*----------Form Styles----------*/
+
+/*----------Footer Styles----------*/
+
+
+/*----------Pagination----------*/
+
+/*----------Validation Styles----------*/
+
+/*----------Media queries----------*/
