@@ -6,13 +6,15 @@ class Admin extends CI_Controller{
 	{ 
 		parent::__construct(); 
         	$this->load->helper("url");
-		//$this->load->model('blog_model');
 	}
 	
 	function index()
 	{
 		
-		$this->load->view('defaultHeader_view');
+		$this->load->view('login_view');
+	}
+	
+	function viewPortal(){
 		$this->load->view('defaultBlog_view');
 	}
 	

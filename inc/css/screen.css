@@ -129,6 +129,29 @@ a:hover{
 
 /*----------Form Styles----------*/
 
+/*----------Login Styles----------*/
+
+.loginForm{
+	background-color: #c0dadb;
+	border-radius: 1em;
+	width: 18em;
+	padding: .5em 1em;
+	margin: 1em auto;
+}
+
+.loginForm form{
+	width: 15em;
+	margin: 0 auto;
+}
+
+.loginForm label {
+float: left;
+width: 5em;
+/*margin-right: 1em;*/
+}
+
+
+
 /*----------Footer Styles----------*/
 
 footer{
@@ -166,5 +189,55 @@ footer a{
 /*----------Pagination----------*/
 
 /*----------Validation Styles----------*/
+
+
+.LV_validation_message{
+    font-weight:bold;
+    margin:0 0 0 5px;
+ 
+}
+
+
+.comForm .LV_validation_message{
+	margin: 0;
+	display: block;
+	width: 20em;
+}
+
+.loginForm .LV_validation_message{
+	margin: 0;
+	display: block;	
+}
+
+.LV_valid {
+    color:#00CC00;
+}
+	
+.LV_invalid {
+    color:#CC0000;
+}
+
+.mess .LV_validation_message{
+	position: relative;
+	bottom: 2em;
+}
+    
+.LV_valid_field,
+input.LV_valid_field:hover, 
+input.LV_valid_field:active,
+textarea.LV_valid_field:hover, 
+textarea.LV_valid_field:active {
+    border: 1px solid #00CC00;
+}
+    
+.LV_invalid_field, 
+input.LV_invalid_field:hover, 
+input.LV_invalid_field:active,
+textarea.LV_invalid_field:hover, 
+textarea.LV_invalid_field:active {
+    border: 1px solid #CC0000;
+}
+
+
 
 /*----------Media queries----------*/
