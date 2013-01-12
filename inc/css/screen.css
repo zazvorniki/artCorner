@@ -22,7 +22,27 @@ body{
 	font: 1em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 	color: #323333;
 	margin: 0;
-	padding: 0;	
+	padding: 0;
+	background:url('../img/bg.jpg');
+		
+}
+
+.container{
+	background-color: #e9e9e9;
+	width: 960px;
+	margin: 1.5em auto;
+	height: 30em;
+	
+}
+
+.content{
+	padding: 2em;
+	text-align: left;
+	
+}
+
+.content p{
+	margin: 0;
 }
 	
 /*----------Header----------*/
