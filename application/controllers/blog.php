@@ -13,6 +13,7 @@ class Blog extends CI_Controller{
 		
 		$this->load->view('defaultHeader_view');
 		$this->load->view('defaultBlog_view');
+		$this->load->view('footer_view');
 	}
 
 }

@@ -44,6 +44,10 @@ body{
 .content p{
 	margin: 0;
 }
+
+.clear{
+	clear: both;
+}
 	
 /*----------Header----------*/
 
@@ -99,7 +103,6 @@ nav li{
 header a{
 	color: #2e4638;
 	font-size: 1.5em;
-	text-decoration: none;	
 	text-decoration: underline;
 }
 
@@ -128,6 +131,37 @@ a:hover{
 
 /*----------Footer Styles----------*/
 
+footer{
+	background-color: #78bdbb;
+	clear: both;
+		
+}
+
+footer ul{
+	float: left;
+}
+
+footer p{
+	float: right;
+	padding-right: 1.5em;
+}
+
+footer li{
+	display: inline;
+	padding: 0 2em;
+	border-right: 1px solid #333;
+}
+
+footer li:last-child{
+	border-right: none;
+}
+
+
+footer a{
+	color: #2e4638;
+	font-size: 1em;
+	text-decoration: none;	
+}
 
 /*----------Pagination----------*/
 
