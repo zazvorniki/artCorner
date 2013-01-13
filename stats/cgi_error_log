@@ -199,3 +199,9 @@ PHP Fatal error:  Call to undefined method blog_model::loadProject() in /hermes/
 20130113T123111: plantationkeyartcorner.com/index.php/admin/insertPost
 PHP Fatal error:  Call to private method blog_model::publishPost() from context 'Admin' in /hermes/bosoraweb033/b1717/ipg.plantationkeyartcorn/application/controllers/admin.php on line 47
 
+20130113T143420: plantationkeyartcorner.com/index.php
+PHP Fatal error:  Call to a member function result() on a non-object in /hermes/bosoraweb033/b1717/ipg.plantationkeyartcorn/application/views/defaultBlog_view.php on line 6
+
+20130113T143435: plantationkeyartcorner.com/index.php
+PHP Fatal error:  Call to a member function result() on a non-object in /hermes/bosoraweb033/b1717/ipg.plantationkeyartcorn/application/views/defaultBlog_view.php on line 6
+

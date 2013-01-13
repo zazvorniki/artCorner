@@ -258,11 +258,13 @@ width: 5em;
 
 .ref{
 	float: right;
-	width: 22%;
+	width: 23%;
+	
 }
 
 .ref ul{
 	list-style-type: none;
+	padding: 0;
 }
 
 /*----------Footer Styles----------*/

@@ -25,8 +25,17 @@
 		//this grabs all the blog posts by the last one inserted
 		$this->db->order_by("date", "dec");
 		$data['query'] = $this->db->get('entries');
+		//$data['query'] = $this->db->query('select * from entries');
 		$this->load->view('defaultBlog_view', $data);		
 	}
+	
+	public function loadResource()
+	{
+		$this->db->order_by("date", "dec");
+		$data['query'] = $this->db->get('resources');
+		$this->load->view('defaultSidebar_view', $data);	
+	}
+	
 	
 	public function loadEvents()
 	{	

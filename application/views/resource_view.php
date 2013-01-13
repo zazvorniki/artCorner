@@ -6,6 +6,7 @@
 			
 			<?=form_open('admin/insertResource', array('class' => 'postForm'));?>
 			<h3>Add a Resource!</h3>
+			<input class="postInput" id="date" type="hidden" class="date" name="date" value="<?print date("m/d/Y".' '.' '." g:i:s");?>"/>
 			
 			<p><label>Resource:</label> <input type="text" id="resource" value="" name="resource" class="resInput" /></p>
 			

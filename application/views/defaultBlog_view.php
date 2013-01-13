@@ -11,18 +11,4 @@
 				<p><?=anchor('blog/comments/'.$row->id, 'read more', array('class' => 'readMore'));?></p>
 				<hr>
 			<?php endforeach;?>
-		</div>
-		
-		<div class="ref">
-			<!--<h3>Resources</h3>
-			<?php foreach ($query->result() as $row): ?> 
-				<ul>
-					<li><a href="<?=$row->resources?>">Link</a></li>
-				</ul>
-			<?php endforeach;?>-->
-			
-		</div>
-		<div class="clear"></div>			
-	</div>
-</div>	
-	
+		</div>	
