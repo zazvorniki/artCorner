@@ -25,3 +25,9 @@ PHP Parse error:  syntax error, unexpected ')', expecting ',' or ';' in /hermes/
 20130112T154408: plantationkeyartcorner.com/index.php/admin/viewPortal
 PHP Parse error:  syntax error, unexpected ')', expecting ',' or ';' in /hermes/bosoraweb033/b1717/ipg.plantationkeyartcorn/application/views/adminHeader_view.php on line 32
 
+20130112T173633: plantationkeyartcorner.com/index.php/admin/viewPortal
+PHP Parse error:  syntax error, unexpected '{', expecting '(' in /hermes/bosoraweb033/b1717/ipg.plantationkeyartcorn/application/controllers/admin.php on line 28
+
+20130112T173653: plantationkeyartcorner.com/index.php/admin/
+PHP Parse error:  syntax error, unexpected '{', expecting '(' in /hermes/bosoraweb033/b1717/ipg.plantationkeyartcorn/application/controllers/admin.php on line 28
+

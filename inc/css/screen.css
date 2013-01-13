@@ -31,7 +31,7 @@ body{
 	background-color: #e9e9e9;
 	width: 960px;
 	margin: 1.5em auto;
-	height: 30em;
+	//height: 30em;
 	
 }
 
@@ -158,7 +158,54 @@ a:hover{
 	
 }
 
-/*----------Form Styles----------*/
+/*----------writeBlog form Styles----------*/
+
+.postForm{
+	width: 23em;
+	margin: 0 auto;
+}
+
+.postForm label{
+	float: left;
+	width: 5em;
+	margin-right: 1em;
+}
+
+.postForm textarea{
+	width: 70%;
+	height: 7em;
+}
+
+.postForm p{
+	padding-bottom: .5em;
+}
+
+.postForm span{
+	padding-right: 1em;
+}
+
+.postInput{
+	width: 12em;
+}
+
+.submit{
+	background-image: linear-gradient(bottom, rgb(101,158,114) 26%, rgb(177,199,173) 65%);
+	background-image: -o-linear-gradient(bottom, rgb(101,158,114) 26%, rgb(177,199,173) 65%);
+	background-image: -moz-linear-gradient(bottom, rgb(101,158,114) 26%, rgb(177,199,173) 65%);
+	background-image: -webkit-linear-gradient(bottom, rgb(101,158,114) 26%, rgb(177,199,173) 65%);
+	background-image: -ms-linear-gradient(bottom, rgb(101,158,114) 26%, rgb(177,199,173) 65%);
+	
+	background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0.26, rgb(101,158,114)),color-stop(0.65, rgb(177,199,173)));
+	border: none;
+	border-radius: .5em;
+	height: 2.5em;
+	width: 12em;
+}
+
+.subPos{
+	text-align: center;
+	padding-top: 1em;
+}
 
 /*----------Login Styles----------*/
 
@@ -178,7 +225,6 @@ a:hover{
 .loginForm label {
 float: left;
 width: 5em;
-/*margin-right: 1em;*/
 }
 
 
