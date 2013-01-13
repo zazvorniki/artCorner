@@ -7,8 +7,8 @@
 				<h3 class="bTitle"><?=$row->title?></h3>
 				<p class="bDate"><?=$row->date?></p>
 				<p class="bPosted">Posted by: <?=$row->posted_by?></p>
-				<p class="bBody"><?=$row->body?></p>
-				<p><?=anchor('blog/comments/'.$row->id, 'read more', array('class' => 'readMore'));?></p>
+				<span class="bBody"><?=$row->body?></span>
+				<p class="readMore"><?=anchor('blog/comments/'.$row->id, ' More->', array('class' => 'readMore'));?></p>
 				<hr>
 			<?php endforeach;?>
 		</div>	

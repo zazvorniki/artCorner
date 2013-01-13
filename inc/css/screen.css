@@ -108,7 +108,7 @@ header a{
 	text-decoration: underline;
 }
 
-a:hover{
+header a:hover, footer a:hover{
 	color: #3b7653;
 }
 
@@ -248,7 +248,15 @@ width: 5em;
 	float: left;
 }
 
+ .blogContainer a:link, .blogContainer a:visited{
+	color: #d8622f;
+}
+
 .bDate{
+	padding-bottom: 1em;
+}
+
+.readMore{
 	padding-bottom: 1em;
 }
 
