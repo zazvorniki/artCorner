@@ -248,7 +248,11 @@ width: 5em;
 	float: left;
 }
 
- .readMore a:link, .readMore a:visited{
+ .readMore a:link, .ref a:link{
+	color: #d8622f;
+}
+
+.readMore a:visited, .ref a:visited{
 	color: #d8622f;
 }
 

@@ -8,18 +8,16 @@
 			<h3>Add a Resource!</h3>
 			<input class="postInput" id="date" type="hidden" class="date" name="date" value="<?print date("m/d/Y".' '.' '." g:i:s");?>"/>
 			
-			<p><label>Resource:</label> <input type="text" id="resource" value="" name="resource" class="resInput" /></p>
+			<p><label>Resource:</label> <input type="text" id="resource" value="http://" name="resource" class="resInput" /></p>
 			
 						
 			<p><label>Title:</label> <input type="text" id="name" name="name" class="resInput"/></p>
 			
 			<p>
-				<label>Category</label>
-				<select id="category">
-					<option value = "">Select one</option>
-					<option value = "project">project</option>
-					<option value = "event">event</option>
-				</select>
+				<label>Category:</label>
+				<span>Project<input type="radio" name="category" value="project"></span>
+				
+				<span>Event<input type="radio" name="category" value="event"></span>
 			</p>
 		
 			<p class="subPos"><input type="submit" class="submit" value="Post" /></p>

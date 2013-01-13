@@ -55,7 +55,7 @@ class Admin extends CI_Controller{
 	{
 		//this takes the info from the form and pushes it to the publish post function in the model and then redirects to the successPost function
 		$this->blog_model->publishPost();
-		redirect('admin/successResource');
+		redirect('admin/successPost');
 	}
 	
 	

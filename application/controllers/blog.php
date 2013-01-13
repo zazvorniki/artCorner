@@ -22,6 +22,7 @@ class Blog extends CI_Controller{
 		//this loads the default projects, then the body and the footer 
 		$this->load->view('defaultHeader_view');
 		$this->blog_model->loadProjects();
+		$this->blog_model->loadReProject();
 		$this->load->view('footer_view');
 	}
 	
@@ -31,6 +32,7 @@ class Blog extends CI_Controller{
 		//this loads the default events, then the body and the footer 
 		$this->load->view('defaultHeader_view');
 		$this->blog_model->loadEvents();
+		$this->blog_model->loadReEvent();
 		$this->load->view('footer_view');
 		
 	}

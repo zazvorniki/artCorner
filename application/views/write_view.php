@@ -16,12 +16,10 @@
 			<p><label>Body:</label><textarea name="body" id="body" ></textarea></p>
 			
 			<p>
-				<label>Category</label>
-				<select id="category">
-					<option value = "">Select one</option>
-					<option value = "project">project</option>
-					<option value = "event">event</option>
-				</select>
+				<label>Category:</label>
+				<span>Project<input type="radio" name="category" value="project"></span>
+				
+				<span>Event<input type="radio" name="category" value="event"></span>
 			</p>
 			
 			<p class="subPos"><input type="submit" class="submit" value="Post" /></p>
