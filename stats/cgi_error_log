@@ -145,3 +145,54 @@ PHP Fatal error:  Cannot redeclare class users_model in /hermes/bosoraweb033/b17
 20130112T203426: plantationkeyartcorner.com/index.php/admin
 PHP Fatal error:  Cannot redeclare class users_model in /hermes/bosoraweb033/b1717/ipg.plantationkeyartcorn/application/models/blog_model.php on line 16
 
+20130112T215036: plantationkeyartcorner.com/index.php
+PHP Fatal error:  Call to a member function result() on a non-object in /hermes/bosoraweb033/b1717/ipg.plantationkeyartcorn/application/views/defaultBlog_view.php on line 7
+
+20130112T215329: plantationkeyartcorner.com/index.php
+PHP Fatal error:  Call to a member function loadAll() on a non-object in /hermes/bosoraweb033/b1717/ipg.plantationkeyartcorn/application/controllers/blog.php on line 14
+
+20130112T224341: plantationkeyartcorner.com/index.php/blog/projects
+PHP Fatal error:  Call to undefined method blog_model::loadProject() in /hermes/bosoraweb033/b1717/ipg.plantationkeyartcorn/application/controllers/blog.php on line 23
+
+20130112T224418: plantationkeyartcorner.com/index.php/blog/projects
+PHP Fatal error:  Call to undefined method blog_model::loadProject() in /hermes/bosoraweb033/b1717/ipg.plantationkeyartcorn/application/controllers/blog.php on line 23
+
+20130112T224419: plantationkeyartcorner.com/index.php/blog/projects
+PHP Fatal error:  Call to undefined method blog_model::loadProject() in /hermes/bosoraweb033/b1717/ipg.plantationkeyartcorn/application/controllers/blog.php on line 23
+
+20130112T224513: plantationkeyartcorner.com/index.php/blog/projects
+PHP Fatal error:  Call to undefined method blog_model::loadProject() in /hermes/bosoraweb033/b1717/ipg.plantationkeyartcorn/application/controllers/blog.php on line 22
+
+20130112T224528: plantationkeyartcorner.com/index.php/blog/projects
+PHP Fatal error:  Call to undefined method blog_model::loadProject() in /hermes/bosoraweb033/b1717/ipg.plantationkeyartcorn/application/controllers/blog.php on line 22
+
+20130112T224644: plantationkeyartcorner.com/index.php/blog/
+PHP Fatal error:  Call to undefined method blog_model::loadProject() in /hermes/bosoraweb033/b1717/ipg.plantationkeyartcorn/application/controllers/blog.php on line 15
+
+20130112T224717: plantationkeyartcorner.com/index.php/blog/projects
+PHP Fatal error:  Call to undefined method blog_model::loadProject() in /hermes/bosoraweb033/b1717/ipg.plantationkeyartcorn/application/controllers/blog.php on line 22
+
+20130112T224734: plantationkeyartcorner.com/index.php/blog/projects
+PHP Fatal error:  Call to undefined method blog_model::loadProject() in /hermes/bosoraweb033/b1717/ipg.plantationkeyartcorn/application/controllers/blog.php on line 22
+
+20130112T224735: plantationkeyartcorner.com/index.php/blog/projects
+PHP Fatal error:  Call to undefined method blog_model::loadProject() in /hermes/bosoraweb033/b1717/ipg.plantationkeyartcorn/application/controllers/blog.php on line 22
+
+20130112T224743: plantationkeyartcorner.com/index.php/blog/projects
+PHP Fatal error:  Call to undefined method blog_model::loadProject() in /hermes/bosoraweb033/b1717/ipg.plantationkeyartcorn/application/controllers/blog.php on line 22
+
+20130112T224813: plantationkeyartcorner.com/index.php/blog/projects
+PHP Fatal error:  Call to undefined method blog_model::loadProject() in /hermes/bosoraweb033/b1717/ipg.plantationkeyartcorn/application/controllers/blog.php on line 22
+
+20130112T225042: plantationkeyartcorner.com/index.php/blog/projects
+PHP Fatal error:  Call to undefined method blog_model::loadProject() in /hermes/bosoraweb033/b1717/ipg.plantationkeyartcorn/application/controllers/blog.php on line 22
+
+20130112T225343: plantationkeyartcorner.com/index.php/blog/projects
+PHP Fatal error:  Call to undefined method blog_model::loadProject() in /hermes/bosoraweb033/b1717/ipg.plantationkeyartcorn/application/controllers/blog.php on line 22
+
+20130112T225356: plantationkeyartcorner.com/index.php/blog/projects
+PHP Fatal error:  Call to undefined method blog_model::loadProject() in /hermes/bosoraweb033/b1717/ipg.plantationkeyartcorn/application/controllers/blog.php on line 22
+
+20130112T225358: plantationkeyartcorner.com/index.php/blog/projects
+PHP Fatal error:  Call to undefined method blog_model::loadProject() in /hermes/bosoraweb033/b1717/ipg.plantationkeyartcorn/application/controllers/blog.php on line 22
+

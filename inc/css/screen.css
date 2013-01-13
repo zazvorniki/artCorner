@@ -236,6 +236,28 @@ width: 5em;
 }
 
 
+/*----------Blog Styles----------*/
+.blogContainer{
+	width: 60%;
+	float: left;
+}
+
+.bDate{
+	padding-bottom: 1em;
+}
+
+.bPosted{
+	padding-bottom: 2em;
+}
+
+.ref{
+	float: right;
+	width: 22%;
+}
+
+.ref ul{
+	list-style-type: none;
+}
 
 /*----------Footer Styles----------*/
 
