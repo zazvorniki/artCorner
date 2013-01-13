@@ -17,7 +17,8 @@
 			
 			<p>
 				<label>Category</label>
-				<select id = "category">
+				<select id="category">
+					<option value = "">Select one</option>
 					<option value = "project">project</option>
 					<option value = "event">event</option>
 				</select>
