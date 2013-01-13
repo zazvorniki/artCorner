@@ -13,6 +13,13 @@
 		$this->db->insert('entries', $_POST);
 	}
 	
+	public function publishResource()
+	{
+		//this inserts the resources into the database
+		$this->db->insert('resources', $_POST);
+	}
+	
+	
 	public function loadAll()
 	{	
 		//this grabs all the blog posts by the last one inserted

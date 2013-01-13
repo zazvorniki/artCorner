@@ -1,2 +1,2 @@
 <!--  ==========	Footer ==========  -->
-<p class="message">Yeah, you posted a blog post! Why don't you post another?</p>
+<p class="message">Yeah, your submission was successful! Why don't you post another?</p>

@@ -41,10 +41,28 @@ class Admin extends CI_Controller{
 		
 	}
 	
+	function writeResource(){
+		//this says that the session user is the current user
+		$user['currentUser']=$this->session->userdata('currentUser');
+		//this takes the currentUser and then passes it to a function inside the user model
+		$user = $this->users_model->getUser($user['currentUser']->id);
+		//this loads the view where you can post a blog entire
+		$this->load->view('resource_view');
+		$this->load->view('footer_view');
+	}
+	
 	function insertPost()
 	{
-		//this takes the info from the form and pushes it to the publish posy function in the model and then redirects to the successPost function
+		//this takes the info from the form and pushes it to the publish post function in the model and then redirects to the successPost function
 		$this->blog_model->publishPost();
+		redirect('admin/successResource');
+	}
+	
+	
+	function insertResource()
+	{
+		//this takes the info from the form and pushes it to the publish resource function in the model and then redirects to the successPost function
+		$this->blog_model->publishResource();
 		redirect('admin/successPost');
 	}
 	
@@ -58,6 +76,19 @@ class Admin extends CI_Controller{
 		//these load the views appropriate for this page		
 		$this->load->view('thankYou_view');
 		$this->load->view('write_view');
+		$this->load->view('footer_view');
+	}
+	
+	function successResource()
+	{
+		//this says that the session user is the current user
+		$user['currentUser']=$this->session->userdata('currentUser');
+		//this takes the currentUser and then passes it to a function inside the user model
+		$user = $this->users_model->getUser($user['currentUser']->id);
+		
+		//these load the views appropriate for this page		
+		$this->load->view('thankYou_view');
+		$this->load->view('resource_view');
 		$this->load->view('footer_view');
 	}
 	
