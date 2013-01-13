@@ -15,13 +15,15 @@ Project:
 html{
 	margin: 0;
 	padding: 0;	
+	position: relative;
+	min-height: 100%;
 }
 
 
 body{
 	font: 1em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 	color: #323333;
-	margin: 0;
+	margin: 0 0 100px;
 	padding: 0;
 	background:url('../img/bg.jpg');
 		
@@ -210,9 +212,13 @@ a:hover{
 .message{
 	color: #659e72;
 	font-size: 1.5em;
-	width: 27em;
+	width: 31em;
 	margin:  0 auto;
 	padding-top: .5em;
+}
+
+.resInput{
+	width: 18em;
 }
 
 /*----------Login Styles----------*/
@@ -264,6 +270,11 @@ width: 5em;
 footer{
 	background-color: #78bdbb;
 	clear: both;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	height: 3em;
+	width: 100%;
 		
 }
 

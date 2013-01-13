@@ -196,3 +196,6 @@ PHP Fatal error:  Call to undefined method blog_model::loadProject() in /hermes/
 20130112T225358: plantationkeyartcorner.com/index.php/blog/projects
 PHP Fatal error:  Call to undefined method blog_model::loadProject() in /hermes/bosoraweb033/b1717/ipg.plantationkeyartcorn/application/controllers/blog.php on line 22
 
+20130113T123111: plantationkeyartcorner.com/index.php/admin/insertPost
+PHP Fatal error:  Call to private method blog_model::publishPost() from context 'Admin' in /hermes/bosoraweb033/b1717/ipg.plantationkeyartcorn/application/controllers/admin.php on line 47
+
