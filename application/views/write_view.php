@@ -7,22 +7,29 @@
 			<?=form_open('admin/insertPost', array('class' => 'postForm'));?>
 			<h3>Write a new post!</h3>
 			
-			<p><label>Poster:</label> <input class="postInput" type="text" value="Mrs. Sears" name="posted_by" readonly/></p>
+			<p><label>Poster:</label> <input class="postInput" id="poster" type="text" value="Mrs. Sears" name="posted_by" readonly/></p>
 			
-			<p><label>Date:</label> <input class="postInput" type="text" class="date" name="date" value="<?print date("m/d/Y".' '.' '." g:i:s");?>" readonly/></p>
+			<p><label>Date:</label> <input class="postInput" id="date" type="text" class="date" name="date" value="<?print date("m/d/Y".' '.' '." g:i:s");?>" readonly/></p>
 			
-			<p><label>Title:</label> <input type="text" class="postInput" name="title"/></p>
+			<p><label>Title:</label> <input type="text" id="title" class="postInput" name="title"/></p>
 			
-			<p><label>Body:</label><textarea name="body" ></textarea></p>
+			<p><label>Body:</label><textarea name="body" id="body" ></textarea></p>
 			
-			<p><label>Resources:</label><textarea name="resources"></textarea></p>
+			<p><label>Resources:</label><textarea id="resources" name="resources"></textarea></p>
 			
-			<span>Project<input type="radio" name="catagory" value="project"></span>
+			<span>Project<input type="radio" class="rad" name="category" value="project"></span>
 			
-			<span>Event<input type="radio" name="catagory" value="event"></span>
+			<span>Event<input type="radio" class="rad" name="category" value="event"></span>
 			
 			<p class="subPos"><input type="submit" class="submit" value="Post" /></p>
 			</form>
 		</div>
 	</div>
-</div>		
+</div>
+
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.js"></script>
+
+<script src="<?php echo base_url();?>inc/js/blogVal.js" type="text/javascript"></script>
+<script src="<?php echo base_url();?>inc/js/livevalidation_standalone.js" type="text/javascript"></script>
+		

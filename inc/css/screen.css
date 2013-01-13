@@ -207,6 +207,14 @@ a:hover{
 	padding-top: 1em;
 }
 
+.message{
+	color: #659e72;
+	font-size: 1.5em;
+	width: 27em;
+	margin:  0 auto;
+	padding-top: .5em;
+}
+
 /*----------Login Styles----------*/
 
 .loginForm{
@@ -275,7 +283,7 @@ footer a{
 }
 
 
-.comForm .LV_validation_message{
+.postForm .LV_validation_message{
 	margin: 0;
 	display: block;
 	width: 20em;

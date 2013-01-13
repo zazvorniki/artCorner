@@ -31,3 +31,117 @@ PHP Parse error:  syntax error, unexpected '{', expecting '(' in /hermes/bosoraw
 20130112T173653: plantationkeyartcorner.com/index.php/admin/
 PHP Parse error:  syntax error, unexpected '{', expecting '(' in /hermes/bosoraweb033/b1717/ipg.plantationkeyartcorn/application/controllers/admin.php on line 28
 
+20130112T202326: www.plantationkeyartcorner.com/index.php/admin/insertPost
+PHP Fatal error:  Cannot redeclare class users_model in /hermes/bosoraweb033/b1717/ipg.plantationkeyartcorn/application/models/blog_model.php on line 16
+
+20130112T202731: www.plantationkeyartcorner.com/index.php/admin/writeBlog
+PHP Fatal error:  Cannot redeclare class users_model in /hermes/bosoraweb033/b1717/ipg.plantationkeyartcorn/application/models/blog_model.php on line 16
+
+20130112T202735: www.plantationkeyartcorner.com/index.php/admin/writeBlog
+PHP Fatal error:  Cannot redeclare class users_model in /hermes/bosoraweb033/b1717/ipg.plantationkeyartcorn/application/models/blog_model.php on line 16
+
+20130112T202745: www.plantationkeyartcorner.com/index.php/admin/writeBlog
+PHP Fatal error:  Cannot redeclare class users_model in /hermes/bosoraweb033/b1717/ipg.plantationkeyartcorn/application/models/blog_model.php on line 16
+
+20130112T202747: www.plantationkeyartcorner.com/index.php/admin/writeBlog
+PHP Fatal error:  Cannot redeclare class users_model in /hermes/bosoraweb033/b1717/ipg.plantationkeyartcorn/application/models/blog_model.php on line 16
+
+20130112T202753: www.plantationkeyartcorner.com/index.php/admin/writeBlog
+PHP Fatal error:  Cannot redeclare class users_model in /hermes/bosoraweb033/b1717/ipg.plantationkeyartcorn/application/models/blog_model.php on line 16
+
+20130112T202754: www.plantationkeyartcorner.com/index.php/admin/writeBlog
+PHP Fatal error:  Cannot redeclare class users_model in /hermes/bosoraweb033/b1717/ipg.plantationkeyartcorn/application/models/blog_model.php on line 16
+
+20130112T202756: www.plantationkeyartcorner.com/index.php/admin/writeBlog
+PHP Fatal error:  Cannot redeclare class users_model in /hermes/bosoraweb033/b1717/ipg.plantationkeyartcorn/application/models/blog_model.php on line 16
+
+20130112T202758: www.plantationkeyartcorner.com/index.php/admin
+PHP Fatal error:  Cannot redeclare class users_model in /hermes/bosoraweb033/b1717/ipg.plantationkeyartcorn/application/models/blog_model.php on line 16
+
+20130112T202759: www.plantationkeyartcorner.com/index.php/admin
+PHP Fatal error:  Cannot redeclare class users_model in /hermes/bosoraweb033/b1717/ipg.plantationkeyartcorn/application/models/blog_model.php on line 16
+
+20130112T202817: www.plantationkeyartcorner.com/index.php/admin
+PHP Fatal error:  Cannot redeclare class users_model in /hermes/bosoraweb033/b1717/ipg.plantationkeyartcorn/application/models/blog_model.php on line 16
+
+20130112T202819: www.plantationkeyartcorner.com/index.php/admin
+PHP Fatal error:  Cannot redeclare class users_model in /hermes/bosoraweb033/b1717/ipg.plantationkeyartcorn/application/models/blog_model.php on line 16
+
+20130112T202831: www.plantationkeyartcorner.com/index.php/admin
+PHP Fatal error:  Cannot redeclare class users_model in /hermes/bosoraweb033/b1717/ipg.plantationkeyartcorn/application/models/blog_model.php on line 16
+
+20130112T202856: www.plantationkeyartcorner.com/index.php/admin
+PHP Fatal error:  Cannot redeclare class users_model in /hermes/bosoraweb033/b1717/ipg.plantationkeyartcorn/application/models/blog_model.php on line 16
+
+20130112T202857: www.plantationkeyartcorner.com/index.php/admin
+PHP Fatal error:  Cannot redeclare class users_model in /hermes/bosoraweb033/b1717/ipg.plantationkeyartcorn/application/models/blog_model.php on line 16
+
+20130112T202859: www.plantationkeyartcorner.com/index.php/admin
+PHP Fatal error:  Cannot redeclare class users_model in /hermes/bosoraweb033/b1717/ipg.plantationkeyartcorn/application/models/blog_model.php on line 16
+
+20130112T202900: www.plantationkeyartcorner.com/index.php/admin
+PHP Fatal error:  Cannot redeclare class users_model in /hermes/bosoraweb033/b1717/ipg.plantationkeyartcorn/application/models/blog_model.php on line 16
+
+20130112T202901: www.plantationkeyartcorner.com/index.php/admin
+PHP Fatal error:  Cannot redeclare class users_model in /hermes/bosoraweb033/b1717/ipg.plantationkeyartcorn/application/models/blog_model.php on line 16
+
+20130112T202901: www.plantationkeyartcorner.com/index.php/admin
+PHP Fatal error:  Cannot redeclare class users_model in /hermes/bosoraweb033/b1717/ipg.plantationkeyartcorn/application/models/blog_model.php on line 16
+
+20130112T202902: www.plantationkeyartcorner.com/index.php/admin
+PHP Fatal error:  Cannot redeclare class users_model in /hermes/bosoraweb033/b1717/ipg.plantationkeyartcorn/application/models/blog_model.php on line 16
+
+20130112T202902: www.plantationkeyartcorner.com/index.php/admin
+PHP Fatal error:  Cannot redeclare class users_model in /hermes/bosoraweb033/b1717/ipg.plantationkeyartcorn/application/models/blog_model.php on line 16
+
+20130112T202902: www.plantationkeyartcorner.com/index.php/admin
+PHP Fatal error:  Cannot redeclare class users_model in /hermes/bosoraweb033/b1717/ipg.plantationkeyartcorn/application/models/blog_model.php on line 16
+
+20130112T202902: www.plantationkeyartcorner.com/index.php/admin
+PHP Fatal error:  Cannot redeclare class users_model in /hermes/bosoraweb033/b1717/ipg.plantationkeyartcorn/application/models/blog_model.php on line 16
+
+20130112T202903: www.plantationkeyartcorner.com/index.php/admin
+PHP Fatal error:  Cannot redeclare class users_model in /hermes/bosoraweb033/b1717/ipg.plantationkeyartcorn/application/models/blog_model.php on line 16
+
+20130112T202903: www.plantationkeyartcorner.com/index.php/admin
+PHP Fatal error:  Cannot redeclare class users_model in /hermes/bosoraweb033/b1717/ipg.plantationkeyartcorn/application/models/blog_model.php on line 16
+
+20130112T202903: www.plantationkeyartcorner.com/index.php/admin
+PHP Fatal error:  Cannot redeclare class users_model in /hermes/bosoraweb033/b1717/ipg.plantationkeyartcorn/application/models/blog_model.php on line 16
+
+20130112T202903: www.plantationkeyartcorner.com/index.php/admin
+PHP Fatal error:  Cannot redeclare class users_model in /hermes/bosoraweb033/b1717/ipg.plantationkeyartcorn/application/models/blog_model.php on line 16
+
+20130112T202903: www.plantationkeyartcorner.com/index.php/admin
+PHP Fatal error:  Cannot redeclare class users_model in /hermes/bosoraweb033/b1717/ipg.plantationkeyartcorn/application/models/blog_model.php on line 16
+
+20130112T202903: www.plantationkeyartcorner.com/index.php/admin
+PHP Fatal error:  Cannot redeclare class users_model in /hermes/bosoraweb033/b1717/ipg.plantationkeyartcorn/application/models/blog_model.php on line 16
+
+20130112T202918: plantationkeyartcorner.com/index.php/admin/writeBlog
+PHP Fatal error:  Cannot redeclare class users_model in /hermes/bosoraweb033/b1717/ipg.plantationkeyartcorn/application/models/blog_model.php on line 16
+
+20130112T202919: plantationkeyartcorner.com/index.php/admin/writeBlog
+PHP Fatal error:  Cannot redeclare class users_model in /hermes/bosoraweb033/b1717/ipg.plantationkeyartcorn/application/models/blog_model.php on line 16
+
+20130112T202936: plantationkeyartcorner.com/index.php/admin/writeBlog
+PHP Fatal error:  Cannot redeclare class users_model in /hermes/bosoraweb033/b1717/ipg.plantationkeyartcorn/application/models/blog_model.php on line 16
+
+20130112T203126: plantationkeyartcorner.com/index.php/admin/writeBlog
+PHP Fatal error:  Cannot redeclare class users_model in /hermes/bosoraweb033/b1717/ipg.plantationkeyartcorn/application/models/blog_model.php on line 16
+
+20130112T203131: plantationkeyartcorner.com/index.php/admin/
+PHP Fatal error:  Cannot redeclare class users_model in /hermes/bosoraweb033/b1717/ipg.plantationkeyartcorn/application/models/blog_model.php on line 16
+
+20130112T203245: plantationkeyartcorner.com/index.php/admin/writeBlog
+PHP Fatal error:  Cannot redeclare class users_model in /hermes/bosoraweb033/b1717/ipg.plantationkeyartcorn/application/models/blog_model.php on line 16
+
+20130112T203306: plantationkeyartcorner.com/index.php/admin
+PHP Fatal error:  Cannot redeclare class users_model in /hermes/bosoraweb033/b1717/ipg.plantationkeyartcorn/application/models/blog_model.php on line 16
+
+20130112T203314: plantationkeyartcorner.com/index.php/admin
+PHP Fatal error:  Cannot redeclare class users_model in /hermes/bosoraweb033/b1717/ipg.plantationkeyartcorn/application/models/blog_model.php on line 16
+
+20130112T203426: plantationkeyartcorner.com/index.php/admin
+PHP Fatal error:  Cannot redeclare class users_model in /hermes/bosoraweb033/b1717/ipg.plantationkeyartcorn/application/models/blog_model.php on line 16
+
