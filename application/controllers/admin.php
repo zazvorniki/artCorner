@@ -35,6 +35,12 @@ class Admin extends CI_Controller{
 	}
 	
 	function writeBlog(){
+		//this prevents users outside from accessing the insert statement and getting the error message telling them to 'set' the data
+		$user['currentUser']=$this->session->userdata('currentUser');
+		
+		if (empty($user['currentUser'])) {
+			redirect('admin/');
+		}
 		//this says that the session user is the current user
 		$user['currentUser']=$this->session->userdata('currentUser');
 		//this takes the currentUser and then passes it to a function inside the user model
@@ -45,6 +51,12 @@ class Admin extends CI_Controller{
 	}
 	
 	function writeResource(){
+		//this prevents users outside from accessing the insert statement and getting the error message telling them to 'set' the data
+		$user['currentUser']=$this->session->userdata('currentUser');
+		
+		if (empty($user['currentUser'])) {
+			redirect('admin/');
+		}
 		//this says that the session user is the current user
 		$user['currentUser']=$this->session->userdata('currentUser');
 		//this takes the currentUser and then passes it to a function inside the user model
@@ -56,13 +68,25 @@ class Admin extends CI_Controller{
 	
 	function insertPost()
 	{
+		//this prevents users outside from accessing the insert statement and getting the error message telling them to 'set' the data
+		$user['currentUser']=$this->session->userdata('currentUser');
+		
+		if (empty($user['currentUser'])) {
+			redirect('admin/');
+		}
 		//this takes the info from the form and pushes it to the publish post function in the model and then redirects to the successPost function
 		$this->blog_model->publishPost();
 		redirect('admin/successPost');
 	}
 	
 	function insertResource()
-	{
+	{	
+		//this prevents users outside from accessing the insert statement and getting the error message telling them to 'set' the data
+		$user['currentUser']=$this->session->userdata('currentUser');
+		
+		if (empty($user['currentUser'])) {
+			redirect('admin/');
+		}
 		//this takes the info from the form and pushes it to the publish resource function in the model and then redirects to the successPost function
 		$this->blog_model->publishResource();
 		redirect('admin/successResource');
@@ -70,6 +94,12 @@ class Admin extends CI_Controller{
 	
 	function successPost()
 	{
+		//this prevents users outside from accessing the insert statement and getting the error message telling them to 'set' the data
+		$user['currentUser']=$this->session->userdata('currentUser');
+		
+		if (empty($user['currentUser'])) {
+			redirect('admin/');
+		}
 		//this says that the session user is the current user
 		$user['currentUser']=$this->session->userdata('currentUser');
 		//this takes the currentUser and then passes it to a function inside the user model
@@ -82,6 +112,12 @@ class Admin extends CI_Controller{
 	
 	function successResource()
 	{
+		//this prevents users outside from accessing the insert statement and getting the error message telling them to 'set' the data
+		$user['currentUser']=$this->session->userdata('currentUser');
+		
+		if (empty($user['currentUser'])) {
+			redirect('admin/');
+		}
 		//this says that the session user is the current user
 		$user['currentUser']=$this->session->userdata('currentUser');
 		//this takes the currentUser and then passes it to a function inside the user model
@@ -102,6 +138,12 @@ class Admin extends CI_Controller{
 	
 	function projects()
 	{
+		//this prevents users outside from accessing the insert statement and getting the error message telling them to 'set' the data
+		$user['currentUser']=$this->session->userdata('currentUser');
+		
+		if (empty($user['currentUser'])) {
+			redirect('admin/');
+		}
 		//this loads the default projects, then the body and the footer 
 		//this says that the session user is the current user
 		$user['currentUser']=$this->session->userdata('currentUser');
@@ -114,7 +156,13 @@ class Admin extends CI_Controller{
 	}
 	
 	function events()
-	{		
+	{
+		//this prevents users outside from accessing the insert statement and getting the error message telling them to 'set' the data
+		$user['currentUser']=$this->session->userdata('currentUser');
+		
+		if (empty($user['currentUser'])) {
+			redirect('admin/');
+		}		
 		//this says that the session user is the current user
 		$user['currentUser']=$this->session->userdata('currentUser');
 		//this takes the currentUser and then passes it to a function inside the user model
