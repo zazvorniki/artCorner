@@ -15,7 +15,7 @@
 			
 			<p><label>Body:</label><textarea name="body" id="body" ></textarea></p>
 			
-			<p>
+			<p class="cat">
 				<label>Category:</label>
 				<span>Project<input type="radio" name="category" value="project"></span>
 				
@@ -33,4 +33,5 @@
 
 <script src="<?php echo base_url();?>inc/js/blogVal.js" type="text/javascript"></script>
 <script src="<?php echo base_url();?>inc/js/livevalidation_standalone.js" type="text/javascript"></script>
+<script src="<?php echo base_url();?>inc/js/tiny_mce.js" type="text/javascript"></script>
 		
