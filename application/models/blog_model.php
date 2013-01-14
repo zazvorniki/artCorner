@@ -69,5 +69,13 @@
 		$this->db->where('category', 'project');
 		$data['query'] = $this->db->get('entries');
 		$this->load->view('defaultBlog_view', $data);
-	}	
+	}
+	
+	
+	public function loadComment()
+	{
+		//queries the database for the comments that are attached to that entry id
+		$data['query'] = $this->db->query('select * from comments where entry_id ='.$this->uri->segment(3).' order by date desc');		
+	}
+		
 }
