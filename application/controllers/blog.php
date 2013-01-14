@@ -35,4 +35,12 @@ class Blog extends CI_Controller{
 		$this->blog_model->loadReEvent();
 		$this->load->view('footer_view');
 	}
+	
+	function comments()
+	{
+		//this loads the comments
+		$this->load->view('defaultHeader_view');
+
+		$this->load->view('footer_view');
+	}
 }
