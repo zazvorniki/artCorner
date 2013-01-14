@@ -41,8 +41,8 @@
 				<ul>
 					<li><h1 class="logo"><?=anchor('admin/viewPortal', 'Plantation Key Art Corner');?></h1></li>
 					</li>
-					<li class="link"><?=anchor('blog/', 'Events');?></li>
-					<li class="link"><?=anchor('blog/', 'Projects');?>
+					<li class="link"><?=anchor('admin/events', 'Events');?></li>
+					<li class="link"><?=anchor('admin/projects', 'Projects');?>
 				</ul>
 
 			</nav>

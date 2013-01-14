@@ -22,12 +22,18 @@ class Admin extends CI_Controller{
 	function viewPortal(){
 		//this says that the session user is the current user
 		$user['currentUser']=$this->session->userdata('currentUser');
+		
+		
 		//if the current user is absent of any information then it will redirect you to the login page
 		if (empty($user['currentUser'])) {
 			redirect('admin/');
 		} 
 		//this takes the currentUser and then passes it to a function inside the user model
 		$user = $this->users_model->getUser($user['currentUser']->id);
+		
+		$this->blog_model->loadAll();
+		$this->blog_model->loadResource();	
+		$this->load->view('footer_view');
 	}
 	
 	function writeBlog(){
@@ -98,5 +104,33 @@ class Admin extends CI_Controller{
 		$this->session->sess_destroy();
 		//and then this redirects the user to the login page
 		redirect('admin/');
+	}
+	
+	function projects()
+	{
+		//this loads the default projects, then the body and the footer 
+		//this says that the session user is the current user
+		$user['currentUser']=$this->session->userdata('currentUser');
+		//this takes the currentUser and then passes it to a function inside the user model
+		$user = $this->users_model->getUser($user['currentUser']->id);
+		
+		$this->blog_model->loadProjects();
+		$this->blog_model->loadReProject();
+		$this->load->view('footer_view');
+	}
+	
+	
+	function events()
+	{
+		//this loads the default events, then the body and the footer 
+		
+		//this says that the session user is the current user
+		$user['currentUser']=$this->session->userdata('currentUser');
+		//this takes the currentUser and then passes it to a function inside the user model
+		$user = $this->users_model->getUser($user['currentUser']->id);
+		$this->blog_model->loadEvents();
+		$this->blog_model->loadReEvent();
+		$this->load->view('footer_view');
+		
 	}
 }
