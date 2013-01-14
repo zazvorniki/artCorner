@@ -5,6 +5,7 @@ class Blog extends CI_Controller{
 	public function __construct() 
 	{ 
 		parent::__construct(); 
+		//this loads the blog model that connects this application to the database 
 		$this->load->model('blog_model');
 	}
 	
@@ -26,7 +27,6 @@ class Blog extends CI_Controller{
 		$this->load->view('footer_view');
 	}
 	
-	
 	function events()
 	{
 		//this loads the default events, then the body and the footer 
@@ -34,7 +34,5 @@ class Blog extends CI_Controller{
 		$this->blog_model->loadEvents();
 		$this->blog_model->loadReEvent();
 		$this->load->view('footer_view');
-		
 	}
-
 }
