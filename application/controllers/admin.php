@@ -7,7 +7,7 @@ class Admin extends CI_Controller{
 		parent::__construct(); 
 		//this loads the user model which takes over the login functionality 
 		$this->load->model('users_model');
-		//this loads the blog model which handles the blog funvtionality 
+		//this loads the blog model which handles the blog functionality 
 		$this->load->model('blog_model');
 	}
 	
@@ -35,7 +35,7 @@ class Admin extends CI_Controller{
 	}
 	
 	function writeBlog(){
-		//this prevents users outside from accessing the insert statement and getting the error message telling them to 'set' the data
+		//this prevents users outside from accessing the write blog page that will display a header because it won't know whats inside the header
 		$user['currentUser']=$this->session->userdata('currentUser');
 		
 		if (empty($user['currentUser'])) {
@@ -51,7 +51,7 @@ class Admin extends CI_Controller{
 	}
 	
 	function writeResource(){
-		//this prevents users outside from accessing the insert statement and getting the error message telling them to 'set' the data
+		//this prevents users outside from accessing the resource page that will display a header because it won't know whats inside the header
 		$user['currentUser']=$this->session->userdata('currentUser');
 		
 		if (empty($user['currentUser'])) {
@@ -94,7 +94,7 @@ class Admin extends CI_Controller{
 	
 	function successPost()
 	{
-		//this prevents users outside from accessing the insert statement and getting the error message telling them to 'set' the data
+		//this prevents users outside from accessing the success post page that will display a header because it won't know whats inside the header
 		$user['currentUser']=$this->session->userdata('currentUser');
 		
 		if (empty($user['currentUser'])) {
@@ -112,7 +112,7 @@ class Admin extends CI_Controller{
 	
 	function successResource()
 	{
-		//this prevents users outside from accessing the insert statement and getting the error message telling them to 'set' the data
+		//this prevents users outside from accessing the success Resource page that will display a header because it won't know whats inside the header
 		$user['currentUser']=$this->session->userdata('currentUser');
 		
 		if (empty($user['currentUser'])) {
@@ -138,7 +138,7 @@ class Admin extends CI_Controller{
 	
 	function projects()
 	{
-		//this prevents users outside from accessing the insert statement and getting the error message telling them to 'set' the data
+		//this prevents users outside from accessing the project page that will display a header because it won't know whats inside the header
 		$user['currentUser']=$this->session->userdata('currentUser');
 		
 		if (empty($user['currentUser'])) {
@@ -157,7 +157,7 @@ class Admin extends CI_Controller{
 	
 	function events()
 	{
-		//this prevents users outside from accessing the insert statement and getting the error message telling them to 'set' the data
+		//this prevents users outside from accessing the events page that will display a header because it won't know whats inside the header
 		$user['currentUser']=$this->session->userdata('currentUser');
 		
 		if (empty($user['currentUser'])) {
