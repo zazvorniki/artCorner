@@ -113,7 +113,6 @@ class Admin extends CI_Controller{
 		$this->load->view('footer_view');
 	}
 	
-	
 	function events()
 	{		
 		//this says that the session user is the current user
