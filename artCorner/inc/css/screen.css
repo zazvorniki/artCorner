@@ -1,0 +1,428 @@
+/*
+Author:  Jessica Sears
+Project: 
+*/
+
+/* Style Guide
+	Navigation color: #e6ebf0
+	Default font: Helvetica Neue
+	Default font color: #323333
+	Default container color: #e9e9e9
+	Default font: 1em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+*/
+
+
+/*----------General Styles----------*/
+html{
+	margin: 0;
+	padding: 0;	
+	position: relative;
+	min-height: 100%;
+}
+
+body{
+	font: 1em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	color: #323333;
+	margin: 0 0 100px;
+	padding: 0;
+	background:url('../img/bg.jpg');
+		
+}
+
+.container{
+	background-color: #e9e9e9;
+	width: 960px;
+	margin: 1.5em auto;	
+}
+
+.content{
+	padding: 2em;
+	text-align: left;
+}
+
+.content p{
+	margin: 0;
+}
+
+.clear{
+	clear: both;
+}
+	
+/*----------Header----------*/
+
+.headerCon{
+	padding: 1em;	
+}
+
+header{
+	margin: 0;
+	padding: 0 1.5em 0 1.5em;
+	background: #93bebd; /* Old browsers */
+	background: -moz-linear-gradient(top, #93bebd 14%, #51bcb9 100%, #51bcb9 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(14%,#93bebd), color-stop(100%,#51bcb9), color-stop(100%,#51bcb9)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #93bebd 14%,#51bcb9 100%,#51bcb9 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #93bebd 14%,#51bcb9 100%,#51bcb9 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #93bebd 14%,#51bcb9 100%,#51bcb9 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #93bebd 14%,#51bcb9 100%,#51bcb9 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#93bebd', endColorstr='#51bcb9',GradientType=0 ); /* IE6-9 */
+}
+
+header h1{
+	margin: 0;
+	padding: 0;	
+}
+
+
+nav li:last-child{
+	border-right: 1px solid #333;
+}
+
+nav li:first-child{
+	padding-right: 2em;
+}
+
+.link{
+	float: right;
+	position: relative;
+	top: 2.4em;
+	padding: 0 2em;
+}
+
+nav ul{
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+nav li{
+	display: inline;
+	
+}
+
+header a{
+	color: #2e4638;
+	font-size: 1.5em;
+	text-decoration: underline;
+}
+
+header a:hover, footer a:hover{
+	color: #3b7653;
+}
+
+.logo{
+	background: url(../img/logo.png) no-repeat;
+	height: 78px;
+	width:400px;
+	display: inline-block;
+}
+		
+.logo a{
+	text-indent: -9999px;
+	display: block;
+	height: 78px;
+	width:400px;
+	padding: 0;
+}
+
+
+/*----------Admin Header Styles----------*/
+
+.adminInfo{
+	list-style-type: none;
+	margin: 0;
+	font-size: .7em;
+	text-align: right;
+	padding-top: .5em;
+}
+
+.adminInfo label{
+	font-size: 1.5em;
+}
+
+.adminInfo li{
+	display: inline;
+	border-right: 1px solid #333;
+	padding: 0 2em;
+}
+
+.adminInfo li:last-child{
+	border: none;
+}
+
+.sessionMess{
+	text-align: center;
+	font-size: 1.2em;
+	color: #8a2445;
+	display: none;
+	
+}
+
+/*----------form Styles----------*/
+
+.postForm{
+	width: 23em;
+	margin: 0 auto;
+}
+
+.postForm label{
+	float: left;
+	width: 5em;
+	margin-right: 1em;
+}
+
+.postForm textarea{
+	width: 70%;
+	height: 7em;
+}
+
+.postForm p{
+	padding-bottom: .5em;
+}
+
+.postForm span{
+	padding-right: 1em;
+}
+
+.postInput{
+	width: 12em;
+}
+
+.submit{
+	background-image: linear-gradient(bottom, rgb(101,158,114) 26%, rgb(177,199,173) 65%);
+	background-image: -o-linear-gradient(bottom, rgb(101,158,114) 26%, rgb(177,199,173) 65%);
+	background-image: -moz-linear-gradient(bottom, rgb(101,158,114) 26%, rgb(177,199,173) 65%);
+	background-image: -webkit-linear-gradient(bottom, rgb(101,158,114) 26%, rgb(177,199,173) 65%);
+	background-image: -ms-linear-gradient(bottom, rgb(101,158,114) 26%, rgb(177,199,173) 65%);
+	
+	background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0.26, rgb(101,158,114)),color-stop(0.65, rgb(177,199,173)));
+	border: none;
+	border-radius: .5em;
+	height: 2em;
+	width: 10em;
+	font-size: 1.2em;
+}
+
+.subPos{
+	text-align: center;
+	padding-top: 1em;
+}
+
+.message{
+	color: #659e72;
+	font-size: 1.5em;
+	width: 31em;
+	margin:  0 auto;
+	padding-top: .5em;
+}
+
+.resInput{
+	width: 18em;
+}
+
+
+.loginForm{
+	background-color: #c0dadb;
+	border-radius: 1em;
+	width: 18em;
+	padding: .5em 1em;
+	margin: 1em auto;
+}
+
+.loginForm form{
+	width: 15em;
+	margin: 0 auto;
+}
+
+.loginForm label {
+float: left;
+width: 5em;
+}
+
+
+/*----------Blog Styles----------*/
+.blogContainer{
+	width: 60%;
+	float: left;
+}
+
+ .readMore a:link, .ref a:link{
+	color: #d8622f;
+}
+
+.readMore a:visited, .ref a:visited{
+	color: #d8622f;
+}
+
+.bDate{
+	padding-bottom: 1em;
+}
+
+.readMore{
+	padding-bottom: 1em;
+}
+
+.bPosted{
+	padding-bottom: 2em;
+}
+
+.ref{
+	float: right;
+	width: 23%;
+	
+}
+
+.ref ul{
+	list-style-type: none;
+	padding: 0;
+}
+
+.defaultSimpleSkin table.mceLayout{
+	float: right;
+}
+
+
+.defaultSimpleSkin table.mceLayout{
+	position: relative;
+	right: .8em;
+}
+	
+.cat{
+	clear: both;
+	padding-top: 1em;
+}
+
+/*----------Footer Styles----------*/
+
+footer{
+	background-color: #78bdbb;
+	clear: both;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	height: 3em;
+	width: 100%;
+		
+}
+
+footer ul{
+	float: left;
+}
+
+footer p{
+	float: right;
+	padding-right: 1.5em;
+}
+
+footer li{
+	display: inline;
+	padding: 0 2em;
+	border-right: 1px solid #333;
+}
+
+footer li:last-child{
+	border-right: none;
+}
+
+
+footer a{
+	color: #2e4638;
+	font-size: 1em;
+	text-decoration: none;	
+}
+
+/*----------Pagination----------*/
+.pager {
+  overflow:hidden;
+  padding-top:1em;
+  width: 9.5em;
+  margin: 0 auto;
+  font-family:Helvetica, Arial, sans-serif;
+  font-size:x-small;
+  line-height:1.5em;  
+}
+
+.pager a{
+  color: #1f5b9e;	
+}
+
+.pager a:hover{
+  text-decoration:none;
+}
+
+.pager li{
+  float:left;
+  list-style-type:none;
+  margin-right:.3em;
+  font-size:1.1em;
+}
+
+
+img, a{
+  border:none;
+}
+
+.active a {
+ color:#1f5b9e;
+ font-weight:bold;
+}
+
+.disabled a{
+  cursor: default;
+  color: #c8c9ca;
+}
+
+.disabled a:hover{
+	text-decoration: underline;
+}
+
+/*----------Validation Styles----------*/
+
+
+.LV_validation_message{
+    font-weight:bold;
+    margin:0 0 0 5px;
+}
+
+.postForm .LV_validation_message{
+	margin: 0;
+	display: block;
+	width: 20em;
+}
+
+.loginForm .LV_validation_message{
+	margin: 0;
+	display: block;	
+}
+
+.LV_valid {
+    color:#00CC00;
+}
+	
+.LV_invalid {
+    color:#CC0000;
+}
+
+.mess .LV_validation_message{
+	position: relative;
+	bottom: 2em;
+}
+    
+.LV_valid_field,
+input.LV_valid_field:hover, 
+input.LV_valid_field:active,
+textarea.LV_valid_field:hover, 
+textarea.LV_valid_field:active {
+    border: 1px solid #00CC00;
+}
+    
+.LV_invalid_field, 
+input.LV_invalid_field:hover, 
+input.LV_invalid_field:active,
+textarea.LV_invalid_field:hover, 
+textarea.LV_invalid_field:active {
+    border: 1px solid #CC0000;
+}
+
+
+
+/*----------Media queries----------*/
