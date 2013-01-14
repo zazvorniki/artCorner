@@ -48,10 +48,10 @@
 $active_group = 'default';
 $active_record = TRUE;
 
-$db['default']['hostname'] = 'localhost';
-$db['default']['username'] = '';
-$db['default']['password'] = '';
-$db['default']['database'] = '';
+$db['default']['hostname'] = 'plantationkeyartcorn.ipagemysql.com';
+$db['default']['username'] = 'zazvorkiki';
+$db['default']['password'] = 'eatmlutaft1';
+$db['default']['database'] = 'art_corner';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;
