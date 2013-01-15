@@ -32,6 +32,10 @@ html{
 	min-height: 100%;
 }
 
+ul{
+	list-style-type: none;
+}
+
 body{
 	font: 1em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 	letter-spacing: .1em;
@@ -312,6 +316,14 @@ width: 5em;
 .innerBlog{
 	width: 80%;
 	margin: 0 auto;
+}
+
+.backBtn{
+	text-decoration: underline;
+	padding: 1em;
+	position: relative;
+	top: 1em;
+	cursor:pointer;
 }
 
 /*----------Footer----------*/
