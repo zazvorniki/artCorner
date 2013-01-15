@@ -85,7 +85,9 @@ body{
 
 .bBody p:first-child{
 	display: block;
-}	
+}
+	
+
 /*----------Header----------*/
 
 .headerCon{
@@ -201,26 +203,35 @@ header a:hover, footer a:hover{
 	margin: 0 auto;
 }
 
-.postForm label{
+.postingCom{
+	width: 28em;
+}
+
+.postingCom .defaultSimpleSkin table.mceLayout{
+	position: relative;
+	right: 2em;
+}
+
+.postForm label, .postingCom label{
 	float: left;
 	width: 5em;
 	margin-right: 1em;
 }
 
-.postForm textarea{
+.postForm textarea, .postingCom textarea{
 	width: 70%;
 	height: 7em;
 }
 
-.postForm p{
+.postForm p, .postingCom p{
 	padding-bottom: .5em;
 }
 
-.postForm span{
+.postForm span, .span{
 	padding-right: 1em;
 }
 
-.postInput{
+.postInput, .comInput{
 	width: 12em;
 }
 
@@ -236,6 +247,10 @@ header a:hover, footer a:hover{
 	height: 2em;
 	width: 10em;
 	font-size: 1.2em;
+}
+
+.postingCom .submit{
+	margin-top: 1em;
 }
 
 .subPos{
@@ -319,6 +334,7 @@ width: 5em;
 	position: relative;
 	right: .8em;
 }
+
 	
 .cat{
 	clear: both;
@@ -328,6 +344,8 @@ width: 5em;
 .innerBlog{
 	width: 80%;
 	margin: 0 auto;
+	word-wrap: break-word;
+	overflow: hidden;
 }
 
 .backBtn{

@@ -31,7 +31,7 @@
 	{
 		//this loads the side bar on the main page with all of the links
 		$this->db->order_by("date", "desc");
-		$data['query'] = $this->db->get('resources');
+		$data['query'] = $this->db->get('resources', 10);
 		$this->load->view('defaultSidebar_view', $data);	
 	}
 	
@@ -80,10 +80,12 @@
 	}
 	
 	
-	public function loadComment()
+	public function loadComments()
 	{
 		//queries the database for the comments that are attached to that entry id
-		$data['query'] = $this->db->query('select * from comments where entry_id ='.$this->uri->segment(3).' order by date desc');		
+		$data['query'] = $this->db->query('select * from comments where entry_id ='.$this->uri->segment(3).' order by date desc');
+		$this->load->view('comment_view', $data);
+				
 	}
 		
 }
