@@ -9,7 +9,14 @@
 						<h3 class="bTitle"><?=$row->title?></h3>
 						<p class="bDate"><?=$row->date?></p>
 						<p class="bPosted">Posted by: <?=$row->posted_by?></p>
-						<p class="bBody"><?=$row->body?></p>
+						
+						<div class="bBody">
+						<?=$row->body?>
+						</div>
+						
+						
+						
+						
 						<p class="readMore"><?=anchor('blog/comments/'.$row->id, ' More->', array('class' => 'readMore'));?></p>
 						<hr>
 					</li>
