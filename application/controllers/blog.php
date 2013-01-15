@@ -44,4 +44,16 @@ class Blog extends CI_Controller{
 		$this->blog_model->loadComments();
 		$this->load->view('footer_view');
 	}
+	
+	function writeComent()
+	{
+		if($_POST['robot'] == 'yes')
+		{
+			$this->blog_model->publishComment();
+			redirect('blog/comments/'.$_POST['entry_id']);
+		}else{
+			echo 'nope';
+		}	
+	}
+	
 }

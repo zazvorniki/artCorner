@@ -346,6 +346,11 @@ width: 5em;
 	margin: 0 auto;
 	word-wrap: break-word;
 	overflow: hidden;
+	padding-bottom: 4em;
+}
+
+.bTitle{
+	padding-top: 1.5em;
 }
 
 .backBtn{
@@ -356,7 +361,9 @@ width: 5em;
 	cursor:pointer;
 }
 
-
+.commentList:last-child{
+	padding-bottom: 2em;
+}
 
 /*----------Footer----------*/
 
