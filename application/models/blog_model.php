@@ -71,6 +71,14 @@
 		$this->load->view('defaultBlog_view', $data);
 	}
 	
+	public function loadOneEntry()
+	{
+		//this grabs the blog entry where the id matches to the one in the url
+		$this->db->where('id', $this->uri->segment(3));
+		$data['query'] = $this->db->get('entries');
+		$this->load->view('innerBlog_view', $data);
+	}
+	
 	
 	public function loadComment()
 	{

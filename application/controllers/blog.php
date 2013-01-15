@@ -40,7 +40,7 @@ class Blog extends CI_Controller{
 	{
 		//this loads the comments
 		$this->load->view('defaultHeader_view');
-
+		$this->blog_model->loadOneEntry();
 		$this->load->view('footer_view');
 	}
 }

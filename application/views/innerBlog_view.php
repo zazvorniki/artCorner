@@ -1,19 +1,15 @@
 <!--  ==========	Body ==========  -->
-<div class="binder">
+
 <div class="container">
 	<div class="content">
-		<div class="blogContainer">
-			<ul class="item">
+	<a class="backBtn" onclick="history.go(-1);"> ≤- back</a>
+		
+		<div class="innerBlog">
 			<?php foreach ($query->result() as $row): ?> 
-				<li>
 					<h3 class="bTitle"><?=$row->title?></h3>
 					<p class="bDate"><?=$row->date?></p>
 					<p class="bPosted">Posted by: <?=$row->posted_by?></p>
-					<p class="bBody"><?=$row->body?></p>
-					<p class="readMore"><?=anchor('blog/comments/'.$row->id, ' More->', array('class' => 'readMore'));?></p>
+					<p class="bBody"><?=$row->body?>
 					<hr>
-				</li>
 			<?php endforeach;?>
-			</ul>
 		</div>	
-		</div>
