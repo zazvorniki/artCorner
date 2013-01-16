@@ -413,6 +413,10 @@ footer a{
 
 /*----------Pagination----------*/
 
+.comments .pager{
+	width: 32.5em;
+}
+
 .pager {
   overflow:hidden;
   padding-top:1em;

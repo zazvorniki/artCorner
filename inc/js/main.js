@@ -5,6 +5,8 @@ $(document).ready(function(){
 	//this calls the pagination on each item
 	  $('ul.item').flexipage();
 	  
+	  $('ul.commentList').flexipage();
+	  
 	 //this inits the rich text editor 
 	  tinyMCE.init({
 	  	mode : "textareas",
