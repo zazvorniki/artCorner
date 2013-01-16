@@ -1,3 +1,7 @@
+.comments .pager{
+	width: 32.5em;
+}
+
 .pager {
   overflow:hidden;
   padding-top:1em;
@@ -34,7 +38,7 @@ img, a{
 
 .disabled a{
   cursor: default;
-  color: #c8c9ca;
+  color: #828383;
 }
 
 .disabled a:hover{
