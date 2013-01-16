@@ -30,7 +30,7 @@ class Admin extends CI_Controller{
 		$user = $this->users_model->getUser($user['currentUser']->id);
 		//this loads the blog posts, the side bar and the footer
 		$this->blog_model->loadAdminBlog();
-		$this->blog_model->loadResource();	
+		$this->blog_model->loadAdminRe();	
 		$this->load->view('footer_view');
 	}
 	
@@ -151,7 +151,7 @@ class Admin extends CI_Controller{
 		$user = $this->users_model->getUser($user['currentUser']->id);
 		//this loads the project blogs and the sidebar and footer that goes along with it
 		$this->blog_model->loadProjects();
-		$this->blog_model->loadReProject();
+		$this->blog_model->loadAdminPro();
 		$this->load->view('footer_view');
 	}
 	
@@ -169,7 +169,27 @@ class Admin extends CI_Controller{
 		$user = $this->users_model->getUser($user['currentUser']->id);
 		//this loads the default events, then the body and the footer 
 		$this->blog_model->loadEvents();
-		$this->blog_model->loadReEvent();
+		$this->blog_model->loadAdminEve();
 		$this->load->view('footer_view');
+	}
+	
+	
+	function edit()
+	{
+		//this prevents users outside from accessing the project page that will display a header because it won't know whats inside the header
+		$user['currentUser']=$this->session->userdata('currentUser');
+		
+		if (empty($user['currentUser'])) {
+			redirect('admin/');
+		}
+		//this loads the default projects, then the body and the footer 
+		//this says that the session user is the current user
+		$user['currentUser']=$this->session->userdata('currentUser');
+		//this takes the currentUser and then passes it to a function inside the user model
+		$user = $this->users_model->getUser($user['currentUser']->id);
+		
+		$this->blog_model->editView();
+		$this->load->view('footer_view');
+		
 	}
 }
