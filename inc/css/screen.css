@@ -196,6 +196,10 @@ header a:hover, footer a:hover{
 	
 }
 
+.commentJava, .noJava{
+	display: none;
+}
+
 /*----------Forms----------*/
 
 .postForm{
@@ -284,10 +288,18 @@ header a:hover, footer a:hover{
 }
 
 .loginForm label {
-float: left;
-width: 5em;
+	float: left;
+	width: 5em;
 }
 
+#date{
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
 
 /*----------Blog----------*/
 .blogContainer{
@@ -366,8 +378,8 @@ width: 5em;
 	cursor:pointer;
 }
 
-.commentList:last-child{
-	padding-bottom: 2em;
+.postingCom{
+	padding-top: 2em;
 }
 
 .name{
@@ -424,7 +436,7 @@ footer a{
     margin:0 0 0 5px;
 }
 
-.postForm .LV_validation_message{
+.postForm .LV_validation_message, .comForm .LV_validation_message{
 	margin: 0;
 	display: block;
 	width: 20em;
