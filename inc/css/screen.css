@@ -202,7 +202,7 @@ header a:hover, footer a:hover{
 
 /*----------Forms----------*/
 
-.postForm{
+.postForm, .editForm{
 	width: 23em;
 	margin: 0 auto;
 }
@@ -216,7 +216,13 @@ header a:hover, footer a:hover{
 	right: 2em;
 }
 
-.postForm label, .postingCom label{
+.editForm .defaultSimpleSkin table.mceLayout{
+	position: relative;
+	right: 3em;
+}
+
+
+.postForm label, .postingCom label, .editForm label{
 	float: left;
 	width: 5em;
 	margin-right: 1em;
@@ -227,7 +233,7 @@ header a:hover, footer a:hover{
 	height: 7em;
 }
 
-.postForm p, .postingCom p{
+.postForm p, .postingCom p, .editForm p{
 	padding-bottom: .5em;
 }
 
@@ -257,9 +263,14 @@ header a:hover, footer a:hover{
 	margin-top: 1em;
 }
 
+.submitPos{
+	padding-top: 9em;
+	text-align: center;	
+}
+
 .subPos{
 	text-align: center;
-	padding-top: 9em;
+	padding-top: 1em;
 }
 
 .message{

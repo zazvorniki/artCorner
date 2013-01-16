@@ -4,7 +4,9 @@
 		<div class="content">
 			<div class="writeBlog">
 				<?php foreach ($query->result() as $row): ?> 
-					<?=form_open('admin/', array('class' => 'edit'));?>
+					<?=form_open('admin/editBlogpost', array('class' => 'editForm'));?>
+					<?=form_hidden('id', $this->uri->segment(3));?>
+					
 					<h3>Write a new post!</h3>
 					
 					<p><label>Poster:</label> <input class="postInput" id="poster" type="text" value="Mrs. Sears" name="posted_by" readonly/></p>
@@ -15,7 +17,7 @@
 					
 					<p><label>Body:</label><textarea name="body" id="body" > <?=$row->body?></textarea></p>
 					
-					<p class="subPos"><input type="submit" class="submit" value="Post" /></p>
+					<p class="submitPos"><input type="submit" class="submit" value="Post" /></p>
 					</form>
 				<?php endforeach;?>
 			</div>

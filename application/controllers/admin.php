@@ -79,6 +79,19 @@ class Admin extends CI_Controller{
 		redirect('admin/successPost');
 	}
 	
+	function editBlogpost()
+	{
+		//this prevents users outside from accessing the insert statement and getting the error message telling them to 'set' the data
+		$user['currentUser']=$this->session->userdata('currentUser');
+		
+		if (empty($user['currentUser'])) {
+			redirect('admin/');
+		}
+		//this takes the info from the form and pushes it to the publish post function in the model and then redirects to the successPost function
+		$this->blog_model->editPost();
+		redirect('admin/viewPortal');
+	}
+	
 	function insertResource()
 	{	
 		//this prevents users outside from accessing the insert statement and getting the error message telling them to 'set' the data

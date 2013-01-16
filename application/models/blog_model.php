@@ -12,6 +12,19 @@
 		$this->db->insert('entries', $_POST);
 	}
 	
+	public function editPost()
+	{		
+		//this is the array of the objects that need to be updated		
+		$data = array(
+		            'title'=>$this->input->post('title'),
+		            'body'=>$this->input->post('body')
+		            );
+		 //this grabs the id from the hidden form field           
+		$this->db->where('id', $this->input->post('id'));
+		//this updates the blog post into the database
+		$this->db->update('entries',$data); 
+	}
+	
 	public function publishResource()
 	{
 		//this inserts the resources into the database
@@ -120,7 +133,6 @@
 		$this->load->view('innerBlog_view', $data);
 	}
 	
-	
 	public function editView()
 	{
 		$this->db->where('id', $this->uri->segment(3));
@@ -128,15 +140,12 @@
 		$this->load->view('edit_view', $data);
 	}
 	
-	
 	public function loadComments()
 	{
 		//queries the database for the comments that are attached to that entry id
 		$this->db->order_by("date", "desc");
 		$this->db->where('entry_id', $this->uri->segment(3));
 		$data['query'] = $this->db->get('comments');
-		$this->load->view('comment_view', $data);
-				
+		$this->load->view('comment_view', $data);				
 	}
-		
 }

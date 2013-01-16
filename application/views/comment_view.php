@@ -15,7 +15,7 @@
 	
 	<div class="postingCom">
 		<h3>Post a comment</h3>
-		<?=form_open('blog/writeComent', array('class' => 'comForm'));?>
+		<?=form_open('blog/writeComment', array('class' => 'comForm'));?>
 		<?=form_hidden('entry_id', $this->uri->segment(3));?>
 		<p><label>Name:</label><input class="comInput" id="cAuthor" type="text" name="author"/></p>
 		<p><label>Email:</label><input class="comInput" id="cEmail" type="text" name="email"/></p>
