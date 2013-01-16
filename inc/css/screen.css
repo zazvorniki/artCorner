@@ -367,7 +367,44 @@ header a:hover, footer a:hover{
 }
 
 .bTitle{
+	float: left;
+}
+
+.adminControls{
+	float: right;
 	padding-top: 1.5em;
+}
+
+.bDate{
+	clear:both;
+}
+
+.editCon{
+	background: url(../img/edit.png) no-repeat;
+	height: 2em;
+	width: 3em;
+	display: inline-block;
+}
+		
+.editCon a{
+	text-indent: -9999px;
+	display: block;
+	height: 2em;
+	width: 3em;
+}
+
+.deleteCon{
+	background: url(../img/delete.png) no-repeat;
+	height: 2em;
+	width: 3em;
+	display: inline-block;
+}
+		
+.deleteCon a{
+	text-indent: -9999px;
+	display: block;
+	height: 2em;
+	width: 3em;
 }
 
 .backBtn{

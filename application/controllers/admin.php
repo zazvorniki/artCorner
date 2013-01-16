@@ -29,7 +29,7 @@ class Admin extends CI_Controller{
 		//this takes the currentUser and then passes it to a function inside the user model
 		$user = $this->users_model->getUser($user['currentUser']->id);
 		//this loads the blog posts, the side bar and the footer
-		$this->blog_model->loadAll();
+		$this->blog_model->loadAdminBlog();
 		$this->blog_model->loadResource();	
 		$this->load->view('footer_view');
 	}
