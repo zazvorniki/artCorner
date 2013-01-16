@@ -45,8 +45,15 @@ class Blog extends CI_Controller{
 		$this->load->view('footer_view');
 	}
 	
+	function adminComments()
+	{
+		//this loads the comments
+		$this->load->view('defaultHeader_view');
+		$this->blog_model->loadAdminOne();
+		$this->blog_model->loadComments();
+		$this->load->view('footer_view');
+	}
 	
-
 	function writeComment()
 	{
 		//this checks if the hidden input field is filled with 'yes'. If it is not then the user is most likely a robot so it will not post what ever they typed in.

@@ -2,14 +2,10 @@
 <div class="binder">
 	<div class="container">
 		<div class="content">
-			<div class="blogContainer">
-				<ul class="item">
+		<a class="backBtn" onclick="history.go(-1);"> ≤- back</a>
+			
+			<div class="innerBlog">
 				<?php foreach ($query->result() as $row): ?> 
-					<li>
-						
-						<h3 class="bTitle"><?=$row->title?></h3>
-						
-						
 						<span class="adminControls">
 						
 						<span class="editCon"><?=anchor('admin/edit/'.$row->id, 'edit', array('class' => 'edit'));?></span>
@@ -18,17 +14,11 @@
 						
 						</span>
 						
+						<h3 class="bTitle"><?=$row->title?></h3>
 						<p class="bDate"><?=$row->date?></p>
 						<p class="bPosted">Posted by: <?=$row->posted_by?></p>
-						
-						<div class="bBody">
-						<?=$row->body?>
-						</div>
-
-						<p class="readMore"><?=anchor('blog/adminComments/'.$row->id, ' More->', array('class' => 'readMore'));?></p>
+						<p class="bBody"><?=$row->body?></p>
 						<hr>
-					</li>
 				<?php endforeach;?>
-				</ul>
-			</div>	
-		</div>
+			</div>
+				

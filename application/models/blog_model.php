@@ -133,6 +133,14 @@
 		$this->load->view('innerBlog_view', $data);
 	}
 	
+	public function loadAdminOne()
+	{
+		//this grabs the blog entry where the id matches to the one in the url
+		$this->db->where('id', $this->uri->segment(3));
+		$data['query'] = $this->db->get('entries');
+		$this->load->view('adminInner_view', $data);
+	}
+	
 	public function editView()
 	{
 		$this->db->where('id', $this->uri->segment(3));
