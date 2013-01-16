@@ -14,6 +14,7 @@
 	
 <!--  ==========	Style Sheets		==========	-->
 	<link rel="stylesheet" href="<?php echo base_url();?>inc/css/screen.css"/>
+	<link rel="stylesheet" href="<?php echo base_url();?>inc/css/flexipage.css" />
 	
 <!--  ==========	Header and navigation ==========  -->
 

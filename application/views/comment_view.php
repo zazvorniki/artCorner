@@ -19,12 +19,17 @@
 		<?=form_hidden('entry_id', $this->uri->segment(3));?>
 		<p><label>Name:</label><input class="comInput" id="cAuthor" type="text" name="author"/></p>
 		<p><label>Email:</label><input class="comInput" id="cEmail" type="text" name="email"/></p>
-		<p><label>Date:</label><input type="text" id="date" class="comInput" name="date" value="<?print date("m/d/Y".' '.' '." g:i:s");?>" readonly/></p>
+		<p><label>Date:</label><input type="text" id="date" class="comInput" name="date" value="<?print date("m/d/Y".' '.' '." g:i:s a");?>" readonly/></p>
 		<label>Comment:</label><textarea class="cBox" id="cBox" name="body" rows="4"></textarea>
 		<input type="hidden" name="robot" value="yes" />
 		<p><input type="submit" class="submit" value="Submit Comment" /></p>
 		</form>
 	</div>
 </div>
+
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.js"></script>
+
+<script src="<?php echo base_url();?>inc/js/comment.js" type="text/javascript"></script>
 
 
