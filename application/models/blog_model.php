@@ -25,6 +25,14 @@
 		$this->db->update('entries',$data); 
 	}
 	
+	
+	public function deletePost()
+	{		
+		
+		$this->db->where('id', $this->uri->segment(3));
+		$this->db->delete('entries');
+	}
+	
 	public function publishResource()
 	{
 		//this inserts the resources into the database

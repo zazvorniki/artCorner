@@ -10,7 +10,7 @@
 						
 						<span class="editCon"><?=anchor('admin/edit/'.$row->id, 'edit', array('class' => 'edit'));?></span>
 						
-						<span class="deleteCon"><?=anchor('blog/delete/'.$row->id, 'delete', array('class' => 'delete'));?></span>
+						<span class="deleteCon"><?=anchor('admin/delete/'.$row->id, 'delete', array('class' => 'delete'));?></span>
 						
 						</span>
 						

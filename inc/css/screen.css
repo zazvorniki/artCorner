@@ -303,7 +303,7 @@ header a:hover, footer a:hover{
 	width: 5em;
 }
 
-#date{
+#date, #poster{
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
 	-khtml-user-select: none;

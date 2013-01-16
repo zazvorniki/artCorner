@@ -4,7 +4,7 @@
 				<ul>
 					<li>
 					
-					<span class="deleteCon"><?=anchor('blog/delete/'.$row->id, 'delete', array('class' => 'delete'));?></span>
+					<span class="deleteCon"><?=anchor('admin/delete/'.$row->id, 'delete', array('class' => 'delete'));?></span>
 					
 					
 					<a href="<?=$row->resource?>"><?=$row->name?></a></li>
