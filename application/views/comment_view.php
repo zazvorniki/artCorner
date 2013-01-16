@@ -5,13 +5,13 @@
 				<?php if($query->num_rows > 0): ?>
 				<ul class="commentList">
 					<?php foreach ($query->result() as $row): ?> 
-							<li><span class="name"><?=$row->author?> said on <?=$row->date?></span><br><span class="body"><?=$row->body?></span><br><img src="<?php echo base_url();?>inc/img/line.png" alt="line" /></li>
+							<li><span class="name"><?=$row->author?> said on <?=$row->date?></span><br><span class="body"><?=$row->body?></span><br><img class="line" src="<?php echo base_url();?>inc/img/line.png" alt="line" /></li>
 					<?php endforeach;?>
 				</ul>	
 				<?php endif; ?>	
 			</div>
 				
-	<!--<p class="commentJava">Turn on your javascript and you can post your own comments!</p>-->
+	<p class="commentJava">Turn on your javascript and you can post your own comments!</p>
 	
 	<div class="postingCom">
 		<h3>Post a comment</h3>

@@ -19,7 +19,7 @@
 	}
 	
 	public function publishComment()
-	{
+	{		
 		//this inserts the comments into the comment table in the database
 		$this->db->insert('comments', $_POST);
 	}

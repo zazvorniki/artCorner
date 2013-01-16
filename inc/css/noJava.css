@@ -1,0 +1,26 @@
+/*
+Author:  Jessica Sears
+Project: Final Project
+*/
+	
+.noJava h3{
+	text-align: center;
+	margin: 0;
+	padding-top: .5em;
+}
+
+.noJava{
+	color: #950e1d;	
+}
+
+.postingCom{
+	display: none;
+}
+
+
+.commentJava{
+	display: inline;
+	text-align: center;
+	color: #950e1d;
+	font-weight: bold;
+}

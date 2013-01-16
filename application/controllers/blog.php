@@ -47,8 +47,10 @@ class Blog extends CI_Controller{
 	
 	function writeComent()
 	{
+		//this checks if the hidden input field is filled with 'yes'. If it is not then the user is most likely a robot so it will not post what ever they typed in.
 		if($_POST['robot'] == 'yes')
 		{
+			//this publishes the comment and then redirects the user back to the comment page they were on with their comment posted
 			$this->blog_model->publishComment();
 			redirect('blog/comments/'.$_POST['entry_id']);
 		}else{

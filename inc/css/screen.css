@@ -365,6 +365,15 @@ width: 5em;
 	padding-bottom: 2em;
 }
 
+.name{
+	font-weight: bold;
+	margin-top: 1em;
+}
+
+.line{
+	padding-bottom: 1.5em;
+}
+
 /*----------Footer----------*/
 
 footer{
