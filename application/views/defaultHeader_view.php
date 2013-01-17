@@ -15,6 +15,13 @@
 <!--  ==========	Style Sheets		==========	-->
 	<link rel="stylesheet" href="<?php echo base_url();?>inc/css/screen.css"/>
 	<link rel="stylesheet" href="<?php echo base_url();?>inc/css/flexipage.css" />
+	
+<!--  ==========	Facebook like button ==========  -->
+	
+	<div id="fb-root"></div>
+	
+	<script src="<?php echo base_url();?>inc/js/fb.js" type="text/javascript"></script>
+	
 <!--  ==========	Header and navigation ==========  -->
 
 </head>

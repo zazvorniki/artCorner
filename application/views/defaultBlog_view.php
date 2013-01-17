@@ -13,10 +13,7 @@
 						<div class="bBody">
 						<?=$row->body?>
 						</div>
-						
-						
-						
-						
+
 						<p class="readMore"><?=anchor('blog/comments/'.$row->id, ' More->', array('class' => 'readMore'));?></p>
 						<hr>
 					</li>

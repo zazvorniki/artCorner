@@ -5,10 +5,9 @@ $(document).ready(function(){
 	// this inits the rich text editor 
 	  tinyMCE.init({
 	  	mode : "textareas",
-	  	theme : "simple"
+	  	theme : "simple",
 	  });
-	  
-	 
+
 	 //makes sure the author input field is filled in before submitting
 	 var cAuthor = new LiveValidation('cAuthor')
 	 cAuthor.add( Validate.Presence );
