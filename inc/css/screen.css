@@ -91,9 +91,10 @@ body{
 left: 9em;
 }
 	
-#cBox_insertunorderedlist{
+#cBox_insertunorderedlist, #body_insertunorderedlist{
 	display: none;
 }
+
 
 .yesSub{
 	float: left;
@@ -233,7 +234,7 @@ header a:hover, footer a:hover{
 
 .postingCom .defaultSimpleSkin table.mceLayout{
 	position: relative;
-	right: 2em;
+	right: 8em;
 }
 
 .editForm .defaultSimpleSkin table.mceLayout{
@@ -303,7 +304,7 @@ header a:hover, footer a:hover{
 }
 
 .postingCom .submit{
-	margin-top: 1em;
+	margin-top: 7em;
 }
 
 .submitPos{
@@ -402,9 +403,14 @@ header a:hover, footer a:hover{
 }
 
 .defaultSimpleSkin table.mceLayout{
-	position: relative;
-	right: .8em;
+	margin-right: -6em;
 }
+
+.mceLayout{
+	position: relative;
+	right: 3em;
+}
+
 
 	
 .cat{
