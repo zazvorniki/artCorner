@@ -95,6 +95,18 @@ left: 9em;
 	display: none;
 }
 
+.yesSub{
+	float: left;
+}
+
+.noSub{
+	float: right;
+}
+
+.confirmDelete{
+	width: 70%;
+	margin: 0 auto;
+}
 
 /*----------Header----------*/
 
@@ -265,6 +277,29 @@ header a:hover, footer a:hover{
 	height: 2em;
 	width: 10em;
 	font-size: 1.2em;
+}
+
+.noSub{
+	background: #f9d9d9; /* Old browsers */
+	background: -moz-linear-gradient(top, #f9d9d9 10%, #d8847f 55%, #845d54 97%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(10%,#f9d9d9), color-stop(55%,#d8847f), color-stop(97%,#845d54)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #f9d9d9 10%,#d8847f 55%,#845d54 97%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #f9d9d9 10%,#d8847f 55%,#845d54 97%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #f9d9d9 10%,#d8847f 55%,#845d54 97%); /* IE10+ */
+	background: linear-gradient(to bottom, #f9d9d9 10%,#d8847f 55%,#845d54 97%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9d9d9', endColorstr='#845d54',GradientType=0 ); /* IE6-9 */
+	border: none;
+	border-radius: .5em;
+	height: 2em;
+	width: 10em;
+	font-size: 1.2em;
+
+}
+
+.confirm{
+	width: 32em;
+	margin: 0 auto;
+	padding: 2em 0;
 }
 
 .postingCom .submit{

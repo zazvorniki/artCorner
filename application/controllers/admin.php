@@ -195,7 +195,6 @@ class Admin extends CI_Controller{
 		if (empty($user['currentUser'])) {
 			redirect('admin/');
 		}
-		//this loads the default projects, then the body and the footer 
 		//this says that the session user is the current user
 		$user['currentUser']=$this->session->userdata('currentUser');
 		//this takes the currentUser and then passes it to a function inside the user model
@@ -214,7 +213,6 @@ class Admin extends CI_Controller{
 		if (empty($user['currentUser'])) {
 			redirect('admin/');
 		}
-		//this loads the default projects, then the body and the footer 
 		//this says that the session user is the current user
 		$user['currentUser']=$this->session->userdata('currentUser');
 		//this takes the currentUser and then passes it to a function inside the user model
@@ -222,6 +220,22 @@ class Admin extends CI_Controller{
 		
 		$this->blog_model->deletePost();
 		redirect('admin/viewPortal');
+		
+	}
+	
+	function deleteWarning()
+	{
+		//this prevents users outside from accessing the project page that will display a header because it won't know whats inside the header
+		$user['currentUser']=$this->session->userdata('currentUser');
+		
+		if (empty($user['currentUser'])) {
+			redirect('admin/');
+		}
+		//this says that the session user is the current user
+		$user['currentUser']=$this->session->userdata('currentUser');
+		//this takes the currentUser and then passes it to a function inside the user model
+		$user = $this->users_model->getUser($user['currentUser']->id);
+		$this->load->view('deleteWarning_view');
 		
 	}
 }

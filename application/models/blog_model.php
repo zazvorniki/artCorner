@@ -29,7 +29,7 @@
 	public function deletePost()
 	{		
 		
-		$this->db->where('id', $this->uri->segment(3));
+		$this->db->where('id', $this->input->post('id'));
 		$this->db->delete('entries');
 	}
 	
