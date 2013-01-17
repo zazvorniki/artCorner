@@ -50,7 +50,6 @@
 		//this grabs all the blog posts by the last one inserted
 		$this->db->order_by("date", "desc");
 		$data['query'] = $this->db->get('entries');
-		//$data['query'] = $this->db->query('select * from entries');
 		$this->load->view('defaultBlog_view', $data);		
 	}
 	
@@ -59,7 +58,24 @@
 		//this grabs all the blog posts by the last one inserted
 		$this->db->order_by("date", "desc");
 		$data['query'] = $this->db->get('entries');
-		//$data['query'] = $this->db->query('select * from entries');
+		$this->load->view('adminBlog_view', $data);	
+	}
+	
+	public function loadAdminEvents()
+	{
+		//this grabs all the blog posts by the last one inserted for the events
+		$this->db->order_by("date", "desc");
+		$this->db->where('category', 'event');
+		$data['query'] = $this->db->get('entries');
+		$this->load->view('adminBlog_view', $data);	
+	}
+	
+	public function loadAdminProjects()
+	{
+		//this grabs all the blog posts by the last one inserted for the projects
+		$this->db->order_by("date", "desc");
+		$this->db->where('category', 'project');
+		$data['query'] = $this->db->get('entries');
 		$this->load->view('adminBlog_view', $data);	
 	}
 	

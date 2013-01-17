@@ -163,8 +163,8 @@ class Admin extends CI_Controller{
 		//this takes the currentUser and then passes it to a function inside the user model
 		$user = $this->users_model->getUser($user['currentUser']->id);
 		//this loads the project blogs and the sidebar and footer that goes along with it
-		$this->blog_model->loadProjects();
-		$this->blog_model->loadAdminPro();
+		$this->blog_model->loadAdminProjects();
+		$this->blog_model->loadAdminProRe();
 		$this->load->view('footer_view');
 	}
 	
@@ -181,8 +181,8 @@ class Admin extends CI_Controller{
 		//this takes the currentUser and then passes it to a function inside the user model
 		$user = $this->users_model->getUser($user['currentUser']->id);
 		//this loads the default events, then the body and the footer 
-		$this->blog_model->loadEvents();
-		$this->blog_model->loadAdminEve();
+		$this->blog_model->loadAdminEvents();
+		$this->blog_model->loadAdminEveRe();
 		$this->load->view('footer_view');
 	}
 	
