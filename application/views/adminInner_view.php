@@ -10,14 +10,12 @@
 						
 						<span class="editCon"><?=anchor('admin/edit/'.$row->id, 'edit', array('class' => 'edit'));?></span>
 						
-						<span class="deleteCon"><?=anchor('admin/delete/'.$row->id, 'delete', array('class' => 'delete'));?></span>
+						<span class="deleteCon"><?=anchor('admin/deleteWarning/'.$row->id, 'delete', array('class' => 'delete'));?></span>
 						
 						</span>
 						
-						<h3 class="bTitle"><?=$row->title?></h3>
-						<p class="bDate"><?=$row->date?></p>
-						<p class="bPosted">Posted by: <?=$row->posted_by?></p>
-						<p class="bBody"><?=$row->body?></p>
+						<p class="bTitle"><?=$row->title?></p>
+						<p class="bDate">Posted by, <?=$row->posted_by?> on <?=date("F j, Y", $row->date)?></p>						<p class="bBody"><?=$row->body?></p>
 						<hr>
 				<?php endforeach;?>
 			</div>

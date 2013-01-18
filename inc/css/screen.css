@@ -28,21 +28,11 @@ Project:
     font-family: 'source';
     src: url('../font/SourceSansPro/SourceSansPro-Regular-webfont.eot');
     src: url('../font/SourceSansPro/SourceSansPro-Regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../font/SourceSans/ProSourceSansPro-Regular-webfont.woff') format('woff'),
+         url('../font/SourceSansPro/SourceSansPro-Regular-webfont.woff') format('woff'),
          url('../font/SourceSansPro/SourceSansPro-Regular-webfont.ttf') format('truetype'),
          url('../font/SourceSansPro/SourceSansPro-Regular-webfont') format('svg');
     font-weight: normal;
     font-style: normal;
-}
-
-
-@font-face {
-    font-family: 'droidBold';
-    src: url('../font/DroidSerif/DroidSerif-Bold-webfont.eot');
-    src: url('../font/DroidSerif/DroidSerif-Bold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../font/DroidSerif/DroidSerif-Bold-webfont.woff') format('woff'),
-         url('../font/DroidSerif/ProSourceSansPro-Regular-webfont.ttf') format('truetype'),
-         url('../font/DroidSerif/DroidSerif-Bold-webfont') format('svg');
 }
 
 @font-face {
@@ -65,34 +55,29 @@ ul{
 	list-style-type: none;
 }
 
+li{
+	display: inline;
+}
+
 body{
-	font: 1em "source", Arial, Helvetica, Geneva, sans-serif;
+	font: 1em "source", Helvetica, Geneva, sans-serif;
 	letter-spacing: .1em;
-	margin: 0 0 100px;
-	padding: 0;
+	margin: 0 0 1em;
 	background:url('../img/bg.png');
+}
+
+.binder{
+	background: url('../img/spiral.png') repeat-y left 2.7em;
+	width: 66.5em;
+	margin: 0 auto;
 }
 
 .container{
 	background-color: #e9e9e9;
 	width: 960px;
 	margin: 1.5em auto;
-	padding-bottom: 1em;
+	padding-bottom: 2em;
 	background:url('../img/paper.png');
-}
-
-
-.binder{
-	background-image: url('../img/spiral.png');
-	background-position: left;
-	background-repeat: repeat-y;	
-	width: 66.5em;
-	margin: 0 auto;
-}
-
-.content{
-	padding-top: 1.5em;
-	text-align: left;
 }
 
 
@@ -103,22 +88,6 @@ body{
 .clear{
 	clear: both;
 }
-
-
-.bBody p{
-	display: none;
-	word-wrap: break-word;
-	overflow: hidden;
-	line-height: 1.4em;
-}
-
-.bBody p:first-child{
-	display: block;
-}
-
-.fb_edge_widget_with_comment {
-left: 9em;
-}
 	
 #cBox_insertunorderedlist, #body_insertunorderedlist, #cBox_insertorderedlist, #body_insertorderedlist{
 	display: none;
@@ -128,24 +97,61 @@ left: 9em;
 	padding: 0 4em;	
 }
 
-.yesSub{
-	float: left;
+.commentJava, .noJava{
+	display: none;
 }
 
-.noSub{
-	float: right;
+.sessionMess{
+	text-align: center;
+	font-size: 1.2em;
+	color: #8a2445;
+	display: none;
+	background:url('../img/paper.png');
+	padding: 1em;
+	margin: 0;
 }
 
-.confirmDelete{
-	width: 70%;
-	margin: 0 auto;
+
+/*----------Links----------*/
+
+
+header a{
+	color: #d6efee;
+	font: 1.5em "nexafree", Arial, Helvetica, Geneva, sans-serif;
+	text-decoration: none;
+}
+
+footer a{
+	color: #d6efee;
+	font-size: 1em;
+	text-decoration: none;	
+}
+
+header a:hover, footer a:hover{
+	color: #85b6b4;
+}
+
+.readMore a:link, .ref a:link{
+	color: #1f5b9e;
+}
+
+.readMore a:visited, .ref a:visited{
+	color: #174476;
+}
+
+.readMore a:hover, .ref a:hover{
+	color: #2e7bd0;
+	text-decoration: none;
+}
+
+.deleteCon a{
+	text-indent: -9999px;
+	display: block;
+	height: 1.5em;
+	width: 2em;
 }
 
 /*----------Header----------*/
-
-.headerCon{
-	padding: 1em 1.5em 0 1.5em;	
-}
 
 header{
 	margin: 0;
@@ -154,44 +160,17 @@ header{
 
 header h1{
 	margin: 0;
-	padding: 0;	
 }
 
-/*nav li:last-child{
-	border-right: 1px solid #333;
-}*/
-
-nav li:first-child{
-	padding-right: 2em;
+.headerCon{
+	padding: 1em 1.5em 0 1.5em;	
 }
 
 .link{
 	float: right;
 	position: relative;
 	top: 2.4em;
-	padding: 0 2em;
-}
-
-nav ul{
-	list-style-type: none;
-	padding: 0;
-	margin: 0;
-}
-
-nav li{
-	display: inline;
-	
-}
-
-header a{
-	color: #d6efee;
-	font-size: 1.5em;
-	font-family: nexafree;
-	text-decoration: none;
-}
-
-header a:hover, footer a:hover{
-	color: #3b7653;
+	padding: 0 1.5em;
 }
 
 .logo{
@@ -206,13 +185,11 @@ header a:hover, footer a:hover{
 	display: block;
 	height: 78px;
 	width:400px;
-	padding: 0;
 }
 
 /*----------Admin Header----------*/
 
 .adminInfo{
-	list-style-type: none;
 	margin: 0;
 	font-size: .7em;
 	text-align: right;
@@ -225,24 +202,7 @@ header a:hover, footer a:hover{
 }
 
 .adminInfo li{
-	display: inline;
 	padding: 0 2em;
-}
-
-.adminInfo li:last-child{
-	border: none;
-}
-
-.sessionMess{
-	text-align: center;
-	font-size: 1.2em;
-	color: #8a2445;
-	display: none;
-	
-}
-
-.commentJava, .noJava{
-	display: none;
 }
 
 /*----------Forms----------*/
@@ -261,21 +221,10 @@ header a:hover, footer a:hover{
 	right: 8em;
 }
 
-.editForm .defaultSimpleSkin table.mceLayout{
-	position: relative;
-	right: 3em;
-}
-
-
 .postForm label, .postingCom label, .editForm label{
 	float: left;
 	width: 5em;
 	margin-right: 1em;
-}
-
-.postForm textarea, .postingCom textarea{
-	width: 70%;
-	height: 7em;
 }
 
 .postForm p, .postingCom p, .editForm p{
@@ -372,13 +321,14 @@ header a:hover, footer a:hover{
 	width: 5em;
 }
 
-#date, #poster{
+#poster{
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
 	-khtml-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
+	background-color: #e1e0e0;	
 }
 
 /*----------Blog----------*/
@@ -387,21 +337,7 @@ header a:hover, footer a:hover{
 	float: left;
 }
 
- .readMore a:link, .ref a:link{
-	color: #1f5b9e;
-}
-
-.readMore a:visited, .ref a:visited{
-	color: #174476;
-}
-
-.readMore a:hover, .ref a:hover{
-	color: #2e7bd0;
-	text-decoration: none;
-}
-
-
-.readMore{
+ .readMore{
 	padding-bottom: 1.2em;
 	border-bottom: 1px solid #333;
 }
@@ -410,6 +346,7 @@ header a:hover, footer a:hover{
 	float: right;
 	width: 23%;
 	font-family: droid;
+	padding-top: 1.5em;
 }
 
 .ref h3{
@@ -417,16 +354,12 @@ header a:hover, footer a:hover{
 }
 
 .ref ul{
-	list-style-type: none;
 	padding: 0;
 	width: 10em;
 }
 
 .defaultSimpleSkin table.mceLayout{
 	float: right;
-}
-
-.defaultSimpleSkin table.mceLayout{
 	margin-right: -6em;
 }
 
@@ -435,8 +368,6 @@ header a:hover, footer a:hover{
 	right: 3em;
 }
 
-
-	
 .cat{
 	clear: both;
 	padding-top: 1em;
@@ -449,6 +380,18 @@ header a:hover, footer a:hover{
 	overflow: hidden;
 	padding-bottom: 4em;
 }
+
+.bBody p{
+	display: none;
+	word-wrap: break-word;
+	overflow: hidden;
+	line-height: 1.4em;
+}
+
+.bBody p:first-child{
+	display: block;
+}
+
 
 .bTitle{
 	float: left;
@@ -490,11 +433,10 @@ header a:hover, footer a:hover{
 	display: inline-block;
 }
 		
-.deleteCon a{
-	text-indent: -9999px;
-	display: block;
-	height: 1.5em;
-	width: 2em;
+
+.deleteForm p{
+	padding-top: 2em;
+	font-size: 1.2em;
 }
 
 .backBtn{
@@ -522,13 +464,30 @@ header a:hover, footer a:hover{
 	padding-left: 2.5em;
 }
 
+.writeBlog{
+	padding-top: 1em;
+}
+
+.yesSub{
+	float: left;
+}
+
+.noSub{
+	float: right;
+}
+
+.confirmDelete{
+	width: 70%;
+	margin: 1em auto;
+}
+
+
 /*----------Footer----------*/
 
 footer{
 	clear: both;
 	position: absolute;
-	left: 0;
-	bottom: 0;
+	bottom: -1.5em;
 	height: 3em;
 	width: 100%;
 	color: #d6efee;
@@ -547,18 +506,8 @@ footer p{
 footer li{
 	display: inline;
 	padding: 0 1em;
-	//border-right: 1px solid #333;
 }
 
-/*footer li:last-child{
-	border-right: none;
-}*/
-
-footer a{
-	color: #d6efee;
-	font-size: 1em;
-	text-decoration: none;	
-}
 
 /*----------Validation Styles----------*/
 

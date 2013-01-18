@@ -25,6 +25,7 @@ class Admin extends CI_Controller{
 		//if the current user is absent of any information then it will redirect you to the login page
 		if (empty($user['currentUser'])) {
 			redirect('admin/');
+			die();
 		} 
 		//this takes the currentUser and then passes it to a function inside the user model
 		$user = $this->users_model->getUser($user['currentUser']->id);
@@ -147,6 +148,25 @@ class Admin extends CI_Controller{
 		$this->session->sess_destroy();
 		//and then this redirects the user to the login page
 		redirect('admin/');
+	}
+	
+	function adminComments()
+	{
+		//this prevents users outside from accessing the success Resource page that will display a header because it won't know whats inside the header
+		$user['currentUser']=$this->session->userdata('currentUser');
+		
+		if (empty($user['currentUser'])) {
+			redirect('admin/');
+		}
+		//this says that the session user is the current user
+		$user['currentUser']=$this->session->userdata('currentUser');
+		//this takes the currentUser and then passes it to a function inside the user model
+		$user = $this->users_model->getUser($user['currentUser']->id);
+		
+		//this loads the comments
+		$this->blog_model->loadAdminOne();
+		$this->blog_model->loadComments();
+		$this->load->view('footer_view');
 	}
 	
 	function projects()

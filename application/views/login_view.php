@@ -25,7 +25,7 @@
 <body>
 
 <!--  ==========	Login Form ==========  -->
-<p class="sessionMess">Sorry, this site needs browser sessions in order to log you in. Please make sure you have private browsing turned off.</p>
+<h3 class="sessionMess">Sorry, this site needs browser sessions in order to log you in. Please make sure you have private browsing turned off.</h3>
 <div class="loginForm">
 		<?=form_open('users/checkLogin');?>
 		<h2>Login</h2>

@@ -10,8 +10,8 @@
 						
 						<div class="fb-like" data-href="<?php $url="http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']; echo $url;?>" data-send="false" data-width="300" data-show-faces="true" data-layout="button_count" data-font="arial"></div>
 												
-						<p class="bDate"><?=date("F j, Y", $row->date)?></p>
-						<p class="bPosted">Posted by: <?=$row->posted_by?></p>
+						<p class="bDate">Posted by, <?=$row->posted_by?> on <?=date("F j, Y", $row->date)?></p>
+							
 						<p class="bBody"><?=$row->body?></p>
 						
 				<?php endforeach;?>

@@ -26,7 +26,10 @@
 			<li><?=anchor('admin/writeBlog/', 'Write a Blog');?></li>
 			<li><?=anchor('admin/writeResource/', 'Enter a Resource');?></li>
 			<li><?=anchor('admin/logout', 'Logout');?></li>
-		</ul>	
+		</ul>
+		<noscript class="noJava">
+		<link rel="stylesheet" href="<?php echo base_url();?>inc/css/noJava.css" type="text/css" media="screen"/>
+		<h3>Please turn your javascript on to take advantage of all the features of this site!</h3></noscript>		
 		<div class="headerCon" style="padding: 1em 1.5em 0 1.5em">
 			<nav>
 				<ul>

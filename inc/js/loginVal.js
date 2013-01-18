@@ -11,5 +11,6 @@ $(document).ready(function(){
 	}else{
 		$('.sessionMess').show();
 		$("input").prop('disabled', true);
+		$("input").css("background-color", "#cecdcd");
 	}	
 });

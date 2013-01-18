@@ -10,9 +10,7 @@
 					<h3>Write a new post!</h3>
 					
 					<p><label>Poster:</label> <input class="postInput" id="poster" type="text" value="Mrs. Sears" name="posted_by" readonly/></p>
-					
-					<p><label>Date:</label> <input class="postInput" id="date" type="text" class="date" name="date" value="<?=$row->date?>" readonly/></p>
-					
+
 					<p><label>Title:</label> <input type="text" id="title" class="postInput" value="<?=$row->title?>" name="title"/></p>
 					
 					<p><label>Body:</label><textarea name="body" id="body" > <?=$row->body?></textarea></p>

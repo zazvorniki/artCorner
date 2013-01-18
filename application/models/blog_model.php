@@ -52,6 +52,7 @@
 		//this grabs all the blog posts by the last one inserted
 		$this->db->order_by("date", "desc");
 		$data['query'] = $this->db->get('entries');
+		
 		$this->load->view('defaultBlog_view', $data);		
 	}
 	
