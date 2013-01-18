@@ -18,7 +18,7 @@
 						
 						</span>
 						
-						<p class="bDate"><?=$row->date?></p>
+						<p class="bDate"><?=date("F j, Y", $row->date)?></p>
 						<p class="bPosted">Posted by: <?=$row->posted_by?></p>
 						
 						<div class="bBody">
@@ -26,7 +26,6 @@
 						</div>
 
 						<p class="readMore"><?=anchor('blog/adminComments/'.$row->id, ' More->', array('class' => 'readMore'));?></p>
-						<hr>
 					</li>
 				<?php endforeach;?>
 				</ul>

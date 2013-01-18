@@ -8,8 +8,10 @@
 	
 	public function publishPost()
 	{
+		$data = $_POST;
+		$data['date'] = time();
 		//this inserts the blog post into the database
-		$this->db->insert('entries', $_POST);
+		$this->db->insert('entries', $data);
 	}
 	
 	public function editPost()

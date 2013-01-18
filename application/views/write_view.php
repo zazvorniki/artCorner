@@ -9,8 +9,6 @@
 				
 				<p><label>Poster:</label> <input class="postInput" id="poster" type="text" value="Mrs. Sears" name="posted_by" readonly/></p>
 				
-				<p><label>Date:</label> <input class="postInput" id="date" type="text" class="date" name="date" value="<?print date("m/d/Y".' '.' '." g:i:s a");?>" readonly/></p>
-				
 				<p><label>Title:</label> <input type="text" id="title" class="postInput" name="title"/></p>
 				
 				<p><label>Body:</label><textarea name="body" id="body" ></textarea></p>

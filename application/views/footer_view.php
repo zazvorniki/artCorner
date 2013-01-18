@@ -1,4 +1,7 @@
 <!--  ==========	Footer ==========  -->
+</div>
+</div>
+</div>
 <footer>
 	<ul>
 		<li><?=anchor('blog/projects', 'Projects');?></li>
