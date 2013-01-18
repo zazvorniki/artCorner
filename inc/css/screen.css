@@ -94,9 +94,45 @@ body{
 }
 
 .commentPage{
-	padding: 0 4em;	
+	padding: 1em 4em;
+	background: url("../img/commentPaper.png");
+	margin: 50px auto;
+	max-width: 600px;
+	position: relative;
+	width: 80%;
+	-webkit-box-shadow: 0 1px 7px hsla(0,0%,0%,.2);
+	-moz-box-shadow: 0 1px 7px hsla(0,0%,0%,.2);
+	box-shadow: 0 1px 7px hsla(0,0%,0%,.2);
 }
 
+.commentPage:after,
+.commentPage:before {
+    background: #e6e6e6;
+    content: '';
+    height: 50px;
+    position: absolute;
+    top: -25px;
+    width: 100px;
+    -webkit-box-shadow: 0 5px 10px -7px hsla(0,0%,0%,.5);
+       -moz-box-shadow: 0 5px 10px -7px hsla(0,0%,0%,.5);
+            box-shadow: 0 5px 10px -7px hsla(0,0%,0%,.5);
+}
+.commentPage:after {
+    left: -50px;
+    -webkit-transform: rotate(-45deg);
+       -moz-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+         -o-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+}
+.commentPage:before {
+    right: -50px;
+    -webkit-transform: rotate(45deg);
+       -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+         -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+}
 .commentJava, .noJava{
 	display: none;
 }
@@ -344,7 +380,7 @@ header h1{
 
 .ref{
 	float: right;
-	width: 23%;
+	width: 30%;
 	font-family: droid;
 	padding-top: 1.5em;
 }
@@ -355,7 +391,7 @@ header h1{
 
 .ref ul{
 	padding: 0;
-	width: 10em;
+	width: 15em;
 }
 
 .defaultSimpleSkin table.mceLayout{
@@ -386,6 +422,7 @@ header h1{
 	word-wrap: break-word;
 	overflow: hidden;
 	line-height: 1.4em;
+	font-size: 1.1em;
 }
 
 .bBody p:first-child{

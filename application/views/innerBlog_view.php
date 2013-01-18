@@ -6,10 +6,12 @@
 			
 			<div class="innerBlog">
 				<?php foreach ($query->result() as $row): ?> 
-						<h3 class="bTitle"><?=$row->title?></h3>
+						<p class="bTitle"><?=$row->title?></p>
 						
-						<div class="fb-like" data-href="<?php $url="http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']; echo $url;?>" data-send="false" data-width="300" data-show-faces="true" data-layout="button_count" data-font="arial"></div>
-												
+						
+						
+						<!--<fb:like href="http://plantationkeyartcorner.com" send="false" layout="button_count" width="450" show_faces="true" font="arial"></fb:like>-->
+									
 						<p class="bDate">Posted by, <?=$row->posted_by?> on <?=date("F j, Y", $row->date)?></p>
 							
 						<p class="bBody"><?=$row->body?></p>
@@ -17,3 +19,4 @@
 				<?php endforeach;?>
 			</div>
 				
+<!--				<?php $url="http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']; echo $url;?>-->

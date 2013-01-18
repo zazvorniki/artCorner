@@ -1,14 +1,15 @@
 .comments .pager{
-	width: 32.5em;
+	width: 40%;
+	margin: 0 auto;
 }
 
 .pager {
   overflow:hidden;
   padding-top:1em;
-  width: 9.5em;
+  width: 10.5em;
   margin: 0 auto;
   font-family:Helvetica, Arial, sans-serif;
-  font-size:x-small;
+  font-size:1em;
   line-height:1.5em;  
 }
 
