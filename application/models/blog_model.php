@@ -8,6 +8,7 @@
 	
 	public function publishPost()
 	{
+		//this sets the data as the post and the datestamp
 		$data = $_POST;
 		$data['date'] = time();
 		//this inserts the blog post into the database
@@ -29,22 +30,24 @@
 	
 	
 	public function deletePost()
-	{		
-		
+	{	
+		//where the id's match this will delete that post
 		$this->db->where('id', $this->input->post('id'));
 		$this->db->delete('entries');
 	}
 	
 	public function publishResource()
 	{
+		$data = $_POST;
 		//this inserts the resources into the database
-		$this->db->insert('resources', $_POST);
+		$this->db->insert('resources', $data);
 	}
 	
 	public function publishComment()
-	{		
+	{	$data = $_POST;
+		$data['date'] = time();	
 		//this inserts the comments into the comment table in the database
-		$this->db->insert('comments', $_POST);
+		$this->db->insert('comments', $data);
 	}
 	
 	public function loadAll()
@@ -86,7 +89,7 @@
 	{
 		//this loads the side bar on the main page with all of the links
 		$this->db->order_by("date", "desc");
-		$data['query'] = $this->db->get('resources', 10);
+		$data['query'] = $this->db->get('resources');
 		$this->load->view('defaultSidebar_view', $data);	
 	}
 	
