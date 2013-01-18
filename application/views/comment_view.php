@@ -1,5 +1,5 @@
 <!--  ==========	Comments ==========  -->
-
+<div class="commentPage">
 			<h2>Comments</h2>
 			<div class="comments">	
 				<?php if($query->num_rows > 0): ?>
@@ -27,7 +27,7 @@
 	</div>
 </div>
 
-
+</div>
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.js"></script>
 
 <script src="<?php echo base_url();?>inc/js/comment.js" type="text/javascript"></script>

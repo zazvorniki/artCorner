@@ -27,7 +27,7 @@
 			<li><?=anchor('admin/writeResource/', 'Enter a Resource');?></li>
 			<li><?=anchor('admin/logout', 'Logout');?></li>
 		</ul>	
-		<div class="headerCon" style="padding: 0 0 1em 0;">
+		<div class="headerCon" style="padding: 1em 1.5em 0 1.5em">
 			<nav>
 				<ul>
 					<li><h1 class="logo"><?=anchor('admin/viewPortal', 'Plantation Key Art Corner');?></h1></li>

@@ -28,13 +28,31 @@ Project:
     font-family: 'source';
     src: url('../font/SourceSansPro/SourceSansPro-Regular-webfont.eot');
     src: url('../font/SourceSansPro/SourceSansPro-Regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../font/SourceSansProSourceSansPro-Regular-webfont.woff') format('woff'),
+         url('../font/SourceSans/ProSourceSansPro-Regular-webfont.woff') format('woff'),
          url('../font/SourceSansPro/SourceSansPro-Regular-webfont.ttf') format('truetype'),
          url('../font/SourceSansPro/SourceSansPro-Regular-webfont') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
+
+@font-face {
+    font-family: 'droidBold';
+    src: url('../font/DroidSerif/DroidSerif-Bold-webfont.eot');
+    src: url('../font/DroidSerif/DroidSerif-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/DroidSerif/DroidSerif-Bold-webfont.woff') format('woff'),
+         url('../font/DroidSerif/ProSourceSansPro-Regular-webfont.ttf') format('truetype'),
+         url('../font/DroidSerif/DroidSerif-Bold-webfont') format('svg');
+}
+
+@font-face {
+    font-family: 'droid';
+    src: url('../font/DroidSerif/DroidSerif-Regular-webfont.eot');
+    src: url('../font/DroidSerif/DroidSerif-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/DroidSerif/DroidSerif-Regular-webfont.woff') format('woff'),
+         url('../font/DroidSerif/ProSourceSansPro-Regular-webfont.ttf') format('truetype'),
+         url('../font/DroidSerif/DroidSerif-Regular-webfont') format('svg');
+}
 /*----------General----------*/
 html{
 	margin: 0;
@@ -68,12 +86,12 @@ body{
 	background-image: url('../img/spiral.png');
 	background-position: left;
 	background-repeat: repeat-y;	
-	width: 1097px;
+	width: 66.5em;
 	margin: 0 auto;
 }
 
 .content{
-	padding: 2em;
+	padding-top: 1.5em;
 	text-align: left;
 }
 
@@ -91,6 +109,7 @@ body{
 	display: none;
 	word-wrap: break-word;
 	overflow: hidden;
+	line-height: 1.4em;
 }
 
 .bBody p:first-child{
@@ -105,6 +124,9 @@ left: 9em;
 	display: none;
 }
 
+.commentPage{
+	padding: 0 4em;	
+}
 
 .yesSub{
 	float: left;
@@ -122,12 +144,11 @@ left: 9em;
 /*----------Header----------*/
 
 .headerCon{
-	padding: 1em;	
+	padding: 1em 1.5em 0 1.5em;	
 }
 
 header{
 	margin: 0;
-	padding: 0 1.5em 0 1.5em;
 	color: #d6efee;
 }
 
@@ -136,9 +157,9 @@ header h1{
 	padding: 0;	
 }
 
-nav li:last-child{
+/*nav li:last-child{
 	border-right: 1px solid #333;
-}
+}*/
 
 nav li:first-child{
 	padding-right: 2em;
@@ -195,7 +216,8 @@ header a:hover, footer a:hover{
 	margin: 0;
 	font-size: .7em;
 	text-align: right;
-	padding-top: .5em;
+	padding: .5em 0;
+	background-color: #1b181a;
 }
 
 .adminInfo label{
@@ -204,7 +226,6 @@ header a:hover, footer a:hover{
 
 .adminInfo li{
 	display: inline;
-	border-right: 1px solid #333;
 	padding: 0 2em;
 }
 
@@ -379,22 +400,20 @@ header a:hover, footer a:hover{
 	text-decoration: none;
 }
 
-.bDate{
-	padding-bottom: 1em;
-}
 
 .readMore{
 	padding-bottom: 1.2em;
 	border-bottom: 1px solid #333;
 }
 
-.bPosted{
-	padding-bottom: 2em;
-}
-
 .ref{
 	float: right;
 	width: 23%;
+	font-family: droid;
+}
+
+.ref h3{
+	font-family: droidBold;
 }
 
 .ref ul{
@@ -433,6 +452,9 @@ header a:hover, footer a:hover{
 
 .bTitle{
 	float: left;
+	font-family: droid;
+	font-size: 1.5em;
+	padding: 1em 0 .3em 0;
 }
 
 .adminControls{
@@ -442,6 +464,9 @@ header a:hover, footer a:hover{
 
 .bDate{
 	clear:both;
+	font-family: droid;
+	font-size: 1.1em;
+	padding-bottom: 1em;
 }
 
 .editCon{
@@ -493,10 +518,13 @@ header a:hover, footer a:hover{
 	padding-bottom: 1.5em;
 }
 
+.item{
+	padding-left: 2.5em;
+}
+
 /*----------Footer----------*/
 
 footer{
-	//background-color: #78bdbb;
 	clear: both;
 	position: absolute;
 	left: 0;
@@ -518,13 +546,13 @@ footer p{
 
 footer li{
 	display: inline;
-	padding: 0 2em;
-	border-right: 1px solid #333;
+	padding: 0 1em;
+	//border-right: 1px solid #333;
 }
 
-footer li:last-child{
+/*footer li:last-child{
 	border-right: none;
-}
+}*/
 
 footer a{
 	color: #d6efee;

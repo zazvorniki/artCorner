@@ -7,7 +7,7 @@
 				<?php foreach ($query->result() as $row): ?> 
 					<li>
 						
-						<h3 class="bTitle"><?=$row->title?></h3>
+						<p class="bTitle"><?=$row->title?></p>
 						
 						
 						<span class="adminControls">
@@ -18,8 +18,7 @@
 						
 						</span>
 						
-						<p class="bDate"><?=date("F j, Y", $row->date)?></p>
-						<p class="bPosted">Posted by: <?=$row->posted_by?></p>
+						<p class="bDate">Posted by, <?=$row->posted_by?> on <?=date("F j, Y", $row->date)?></p>
 						
 						<div class="bBody">
 						<?=$row->body?>
