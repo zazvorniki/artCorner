@@ -17,10 +17,10 @@
 		<h3>Post a comment</h3>
 		<?=form_open('blog/writeComment', array('class' => 'comForm'));?>
 		<?=form_hidden('entry_id', $this->uri->segment(3));?>
-		<p><label>Name:</label><input class="comInput" id="cAuthor" type="text" name="author"/></p>
-		<p><label>Email:</label><input class="comInput" id="cEmail" type="text" name="email"/></p>
+		<p><label>Name:</label><input class="comInput" id="cAuthor" type="text" name="author" autocomplete="off"/></p>
+		<p><label>Email:</label><input class="comInput" id="cEmail" type="text" name="email" autocomplete="off"/></p>
 		<label>Comment:</label><textarea class="cBox" id="cBox" name="body" rows="4"></textarea>
-		<input type="hidden" name="robot" value="yes" />
+		<input type="hidden" name="robot" value="yes" autocomplete="off"/>
 		<p><input type="submit" class="submit" value="Submit Comment" /></p>
 		</form>
 	</div>

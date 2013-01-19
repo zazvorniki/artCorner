@@ -6,12 +6,12 @@
 				
 				<?=form_open('admin/insertResource', array('class' => 'postForm'));?>
 				<h3>Add a Resource!</h3>
-				<input class="postInput" id="date" type="hidden" class="date" name="date" value="<?print date("m/d/Y".' '.' '." g:i:s");?>"/>
+				<input class="postInput" id="date" type="hidden" class="date" name="date" value="<?print date("m/d/Y".' '.' '." g:i:s");?>" autocomplete="off"/>
 				
-				<p><label>Resource:</label> <input type="text" id="resource" value="http://" name="resource" class="resInput" /></p>
+				<p><label>Resource:</label> <input type="text" id="resource" value="" name="resource" class="resInput" autocomplete="off"/></p>
 				
 							
-				<p><label>Title:</label> <input type="text" id="name" name="name" class="resInput"/></p>
+				<p><label>Title:</label> <input type="text" id="name" name="name" class="resInput" autocomplete="off"/></p>
 				
 				<p>
 					<label>Category:</label>

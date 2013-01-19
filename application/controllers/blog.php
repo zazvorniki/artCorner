@@ -45,7 +45,6 @@ class Blog extends CI_Controller{
 		$this->load->view('footer_view');
 	}
 	
-	
 	function writeComment()
 	{
 		//this checks if the hidden input field is filled with 'yes'. If it is not then the user is most likely a robot so it will not post what ever they typed in.
@@ -57,6 +56,13 @@ class Blog extends CI_Controller{
 		}else{
 			echo 'nope';
 		}	
+	}
+	
+	function contactForm()
+	{
+		$this->load->view('defaultHeader_view');
+		$this->load->view('contact_view');
+		$this->load->view('footer_view');
 	}
 	
 }

@@ -36,6 +36,13 @@
 		$this->db->delete('entries');
 	}
 	
+	public function deleteResource()
+	{	
+		//where the id's match this will delete that resource
+		$this->db->where('id', $this->uri->segment(3));
+		$this->db->delete('resources');
+	}
+	
 	public function publishResource()
 	{
 		$data = $_POST;

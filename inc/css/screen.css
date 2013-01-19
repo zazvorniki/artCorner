@@ -89,7 +89,7 @@ body{
 	clear: both;
 }
 	
-#cBox_insertunorderedlist, #body_insertunorderedlist, #cBox_insertorderedlist, #body_insertorderedlist{
+#cBox_insertunorderedlist, #body_insertunorderedlist, #cBox_insertorderedlist, #body_insertorderedlist, #message_insertunorderedlist, #message_insertorderedlist{
 	display: none;
 }
 
@@ -105,33 +105,32 @@ body{
 	box-shadow: 0 1px 7px hsla(0,0%,0%,.2);
 }
 
-.commentPage:after,
-.commentPage:before {
-    background: #e6e6e6;
-    content: '';
-    height: 50px;
-    position: absolute;
-    top: -25px;
-    width: 100px;
-    -webkit-box-shadow: 0 5px 10px -7px hsla(0,0%,0%,.5);
-       -moz-box-shadow: 0 5px 10px -7px hsla(0,0%,0%,.5);
-            box-shadow: 0 5px 10px -7px hsla(0,0%,0%,.5);
+.commentPage:after, .commentPage:before {
+	background: #e6e6e6;
+	content: '';
+	height: 50px;
+	position: absolute;
+	top: -25px;
+	width: 100px;
+	-webkit-box-shadow: 0 5px 10px -7px hsla(0,0%,0%,.5);
+	-moz-box-shadow: 0 5px 10px -7px hsla(0,0%,0%,.5);
+	box-shadow: 0 5px 10px -7px hsla(0,0%,0%,.5);
 }
 .commentPage:after {
-    left: -50px;
-    -webkit-transform: rotate(-45deg);
-       -moz-transform: rotate(-45deg);
-        -ms-transform: rotate(-45deg);
-         -o-transform: rotate(-45deg);
-            transform: rotate(-45deg);
+	left: -50px;
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	transform: rotate(-45deg);
 }
 .commentPage:before {
-    right: -50px;
-    -webkit-transform: rotate(45deg);
-       -moz-transform: rotate(45deg);
-        -ms-transform: rotate(45deg);
-         -o-transform: rotate(45deg);
-            transform: rotate(45deg);
+	right: -50px;
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
 }
 .commentJava, .noJava{
 	display: none;
@@ -248,6 +247,10 @@ header h1{
 	margin: 0 auto;
 }
 
+.contactForm{
+	padding: 1em 0 0 2em;
+}
+
 .postingCom{
 	width: 28em;
 }
@@ -257,21 +260,30 @@ header h1{
 	right: 8em;
 }
 
-.postForm label, .postingCom label, .editForm label{
+.con .mceLayout{
+	position: relative;
+	right: 38em;
+}
+
+.contactSub{
+	margin-top: 7.5em;
+}
+
+.postForm label, .postingCom label, .editForm label, .contactForm label{
 	float: left;
 	width: 5em;
 	margin-right: 1em;
 }
 
-.postForm p, .postingCom p, .editForm p{
+.postForm p, .postingCom p, .editForm p, .contactForm p{
 	padding-bottom: .5em;
 }
 
-.postForm span, .span{
+.postForm span, .span, .contactForm span{
 	padding-right: 1em;
 }
 
-.postInput, .comInput{
+.postInput, .comInput, .contact{
 	width: 14em;
 }
 
@@ -352,7 +364,7 @@ header h1{
 	margin: 0 auto;
 }
 
-.loginForm label {
+.loginForm label{
 	float: left;
 	width: 5em;
 }

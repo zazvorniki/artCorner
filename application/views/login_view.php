@@ -29,8 +29,8 @@
 <div class="loginForm">
 		<?=form_open('users/checkLogin');?>
 		<h2>Login</h2>
-		<label>Email:</label><input  type="text" name="email" id="email"/>
-		<label>Password:</label><input  type="password" name="pass" id="pass"/>
+		<label>Email:</label><input  type="text" name="email" id="email" />
+		<label>Password:</label><input  type="password" name="pass" id="pass" />
 		<input type="hidden" name="robot" value="yes" />
 		<p><input type="submit" value="Sign In" /></p>
 		</form>

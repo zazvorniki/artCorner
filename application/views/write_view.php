@@ -7,9 +7,9 @@
 				<?=form_open('admin/insertPost', array('class' => 'postForm'));?>
 				<h3>Write a new post!</h3>
 				
-				<p><label>Poster:</label> <input class="postInput" id="poster" type="text" value="Mrs. Sears" name="posted_by" readonly/></p>
+				<p><label>Poster:</label> <input class="postInput" id="poster" type="text" value="Ms. Sears" name="posted_by" readonly autocomplete="off"/></p>
 				
-				<p><label>Title:</label> <input type="text" id="title" class="postInput" name="title"/></p>
+				<p><label>Title:</label> <input type="text" id="title" class="postInput" name="title" autocomplete="off"/></p>
 				
 				<p><label>Body:</label><textarea name="body" id="body" ></textarea></p>
 				

@@ -16,7 +16,6 @@
 						
 						<p class="bTitle"><?=$row->title?></p>
 						<p class="bDate">Posted by, <?=$row->posted_by?> on <?=date("F j, Y", $row->date)?></p>						<p class="bBody"><?=$row->body?></p>
-						<hr>
 				<?php endforeach;?>
 			</div>
 				

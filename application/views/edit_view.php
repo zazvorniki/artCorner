@@ -9,13 +9,13 @@
 					
 					<h3>Write a new post!</h3>
 					
-					<p><label>Poster:</label> <input class="postInput" id="poster" type="text" value="Mrs. Sears" name="posted_by" readonly/></p>
+					<p><label>Poster:</label> <input class="postInput" id="poster" type="text" value="Mrs. Sears" name="posted_by" readonly autocomplete="off"/></p>
 
-					<p><label>Title:</label> <input type="text" id="title" class="postInput" value="<?=$row->title?>" name="title"/></p>
+					<p><label>Title:</label> <input type="text" id="title" class="postInput" value="<?=$row->title?>" name="title" autocomplete="off"/></p>
 					
 					<p><label>Body:</label><textarea name="body" id="body" > <?=$row->body?></textarea></p>
 					
-					<p class="submitPos"><input type="submit" class="submit" value="Post" /></p>
+					<p class="submitPos"><input type="submit" class="submit" value="Post" autocomplete="off"/></p>
 					</form>
 				<?php endforeach;?>
 			</div>

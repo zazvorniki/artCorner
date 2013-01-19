@@ -6,7 +6,7 @@
 	<ul>
 		<li><?=anchor('blog/projects', 'Projects');?></li>
 		<li><?=anchor('blog/events', 'Events');?></li>
-		<li><?=anchor('blog/', 'Contact');?></li>
+		<li><?=anchor('blog/contactForm', 'Contact');?></li>
 	</ul>
 	
 	<p>© 2013 Jessica Sears All rights reserved.</p>
