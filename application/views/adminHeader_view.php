@@ -16,6 +16,8 @@
 	<link rel="stylesheet" href="<?php echo base_url();?>inc/css/screen.css"/>
 	<link rel="stylesheet" href="<?php echo base_url();?>inc/css/flexipage.css" />
 	
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.js"></script>
+	
 <!--  ==========	Header and navigation ==========  -->
 
 </head>

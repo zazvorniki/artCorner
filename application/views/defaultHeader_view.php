@@ -21,6 +21,8 @@
 	
 	<script src="<?php echo base_url();?>inc/js/fb.js" type="text/javascript"></script>
 	
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.js"></script>
+	
 <!--  ==========	Header and navigation ==========  -->
 
 </head>
