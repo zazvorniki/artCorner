@@ -339,12 +339,20 @@ header h1{
 	padding-top: 1em;
 }
 
-.message{
+.message, .emailMess{
 	color: #186927;
 	font-size: 1.5em;
+	padding-top: .5em;
+}
+
+.message{
 	width: 34em;
 	margin:  0 auto;
-	padding-top: .5em;
+}
+
+.emailMess{
+	width: 28em;
+	margin:  0 auto;
 }
 
 .messContainer{

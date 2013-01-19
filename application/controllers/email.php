@@ -5,32 +5,47 @@ class Email extends CI_Controller{
 	public function __construct() 
 	{ 
 		parent::__construct(); 
-		$this->load->library('email');
+		$this->load->model('blog_model');
 		
 	}
 	
 	function index()
 	{	
+		$config = Array(
+			"protocol" => "smtp",
+			"smtp_host" => "ssl://smtp.googlemail.com",
+			"smtp_port" => "465",
+			"smtp_user" => "swampgliders@gmail.com",
+			"smtp_pass" => "tanfnntt"
+		);
 		
-	}
-	
-	function sendEmail()
-	{
+		$this->load->library('email', $config);
+		$this->email->initialize(array('mailtype' => 'html')); 
 		
+		$this->email->set_newline("\r\n");
 		$this->email->from($this->input->post('email'), $this->input->post('name'));
 		$this->email->to('swampgliders@gmail.com'); 
-//		$this->email->cc('swampgliders@gmail.com');
-		$this->email->reply_to('marcia.sears@keysschools.com', 'Marcia Sears'); 
+		//		$this->email->cc('swampgliders@gmail.com');
+		$this->email->reply_to($this->input->post('email'), $this->input->post('name')); 
 		
-    		$this->email->subject('plantationkeyartcorner.com contact form');
+		$this->email->subject('plantationkeyartcorner.com contact form');
 		$this->email->message($this->input->post('message'));	
-		
-		$this->email->send();
-		
-		if ( ! $this->email->send())
+			
+		if (!$this->email->send())
 		{
-		    echo 'nope!';
+		show_error($this->email->print_debugger());
+		}else{
+		redirect('email/sentMail');
 		}
-		
+	}
+
+	function sentMail()
+	{
+		//This loads the default views. The header, body and footer
+		$this->load->view('defaultHeader_view');
+		$this->load->view('emailSuccess_view');
+		$this->blog_model->loadAll();
+		$this->blog_model->loadResource();	
+		$this->load->view('footer_view');
 	}
 }
