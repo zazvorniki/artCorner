@@ -37,5 +37,8 @@
 </div>
 
 </body>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.js"></script>
+<script src="<?php echo base_url();?>inc/js/livevalidation_standalone.js" type="text/javascript"></script>
 <script src="<?php echo base_url();?>inc/js/loginVal.js" type="text/javascript"></script>
+<script src="<?php echo base_url();?>inc/js/Modernizr.js" type="text/javascript"></script>
 </html>

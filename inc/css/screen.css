@@ -370,19 +370,19 @@ header h1{
 .loginForm{
 	background-color: #c0dadb;
 	border-radius: 1em;
-	width: 18em;
+	width: 19em;
 	padding: .5em 1em;
 	margin: 1em auto;
 }
 
 .loginForm form{
-	width: 15em;
+	width: 16em;
 	margin: 0 auto;
 }
 
 .loginForm label{
 	float: left;
-	width: 5em;
+	width: 6em;
 }
 
 #poster{
@@ -581,7 +581,7 @@ footer li{
     margin:0 0 0 5px;
 }
 
-.postForm .LV_validation_message, .comForm .LV_validation_message{
+.LV_validation_message{
 	margin: 0;
 	display: block;
 	width: 20em;
