@@ -8,8 +8,14 @@
 	
 	public function publishPost()
 	{
+		//this array finds the inputs and strips the html tags from them before inputting them in the database
+		$data = array(
+			'title'=>strip_tags($this->input->post('title')),
+			'posted_by'=>strip_tags($this->input->post('posted_by')),
+			'category'=>$this->input->post('category'),
+			'body'=>$this->input->post('body')
+		);
 		//this sets the data as the post and the datestamp
-		$data = $_POST;
 		$data['date'] = time();
 		//this inserts the blog post into the database
 		$this->db->insert('entries', $data);
@@ -17,11 +23,11 @@
 	
 	public function editPost()
 	{		
-		//this is the array of the objects that need to be updated		
+		//this array finds the inputs and strips the html tags from them before inputting them in the database
 		$data = array(
-		            'title'=>$this->input->post('title'),
-		            'body'=>$this->input->post('body')
-		            );
+			'title'=>strip_tags($this->input->post('title')),
+			'body'=>$this->input->post('body')
+		);
 		 //this grabs the id from the hidden form field           
 		$this->db->where('id', $this->input->post('id'));
 		//this updates the blog post into the database
@@ -45,13 +51,28 @@
 	
 	public function publishResource()
 	{
-		$data = $_POST;
+		//this array finds the inputs and strips the html tags from them before inputting them in the database
+		$data = array(
+			'resource'=>strip_tags($this->input->post('resource')),
+			'name'=>strip_tags($this->input->post('name')),
+			'category'=>$this->input->post('category'),
+			'date'=>$this->input->post('date')
+		);
 		//this inserts the resources into the database
 		$this->db->insert('resources', $data);
 	}
 	
 	public function publishComment()
-	{	$data = $_POST;
+	{	
+		//this array finds the inputs and strips the html tags from them before inputting them in the database
+		$data = array(
+			'entry_id'=>$this->input->post('entry_id'),
+			'author'=>strip_tags($this->input->post('author')),
+			'email'=>strip_tags($this->input->post('email')),
+			'showEmail'=>$this->input->post('showEmail'),
+			'body'=>$this->input->post('body'),
+			'robot'=>$this->input->post('robot')
+		);
 		$data['date'] = time();	
 		//this inserts the comments into the comment table in the database
 		$this->db->insert('comments', $data);
@@ -62,7 +83,6 @@
 		//this grabs all the blog posts by the last one inserted
 		$this->db->order_by("date", "desc");
 		$data['query'] = $this->db->get('entries');
-		
 		$this->load->view('defaultBlog_view', $data);		
 	}
 	
@@ -113,7 +133,7 @@
 	{
 		//this loads the side bar on the main page with all of the links
 		$this->db->order_by("date", "desc");
-		$data['query'] = $this->db->get('resources', 10);
+		$data['query'] = $this->db->get('resources');
 		$this->load->view('adminSidebar_view', $data);	
 	}
 	
@@ -180,6 +200,7 @@
 	
 	public function editView()
 	{
+		//this grabs the edit view where the ids match on the blogs
 		$this->db->where('id', $this->uri->segment(3));
 		$data['query'] = $this->db->get('entries');
 		$this->load->view('edit_view', $data);

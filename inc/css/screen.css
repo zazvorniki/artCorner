@@ -250,12 +250,6 @@ header h1{
 	padding: 1em 0 0 2em;
 }
 
-
-
-.contactSub{
-	margin-top: 7.5em;
-}
-
 .postForm label, .postingCom label, .editForm label, .contactForm label{
 	float: left;
 	width: 5em;
@@ -510,6 +504,11 @@ header h1{
 .confirmDelete{
 	width: 70%;
 	margin: 1em auto;
+}
+
+#message_container{
+	position: relative;
+	left: 6em;
 }
 
 
