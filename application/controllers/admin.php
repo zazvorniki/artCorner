@@ -132,7 +132,6 @@ class Admin extends CI_Controller{
 		$user = $this->users_model->getUser($user['currentUser']->id);
 		$this->blog_model->editView();
 		$this->load->view('footer_view');
-		
 	}
 	
 	function delete()
@@ -148,7 +147,6 @@ class Admin extends CI_Controller{
 		
 		$this->blog_model->deletePost();
 		redirect('blog/');
-		
 	}
 	
 	function deleteLink()
@@ -177,9 +175,7 @@ class Admin extends CI_Controller{
 		//this takes the currentUser and then passes it to a function inside the user model
 		$user = $this->users_model->getUser($user['currentUser']->id);
 		$this->load->view('deleteWarning_view');
-		
-	}
-	
+	}	
 		
 	function logout()
 	{
@@ -188,6 +184,4 @@ class Admin extends CI_Controller{
 		//and then this redirects the user to the login page
 		redirect('admin/');
 	}
-	
-	
 }
