@@ -5,7 +5,11 @@
 				<?php if($query->num_rows > 0): ?>
 				<ul class="commentList">
 					<?php foreach ($query->result() as $row): ?> 
-							<li><span class="name"><?=$row->author?> said on <?=date("F j, Y", $row->date)?></span><br><span class="body"><?=$row->body?></span><br><img class="line" src="<?php echo base_url();?>inc/img/line.png" alt="line" /></li>
+							<li><span class="name"><?=$row->author?><?php if($row->showEmail == "show"){echo ' ('.$row->email.') ' ;}?> said on <?=date("F j, Y", $row->date)?></span><br>
+							
+							<span class="body"><?=$row->body?></span><br>
+	
+							<img class="line" src="<?php echo base_url();?>inc/img/line.png" alt="line" /></li>
 					<?php endforeach;?>
 				</ul>	
 				<?php endif; ?>	
@@ -19,6 +23,7 @@
 		<?=form_hidden('entry_id', $this->uri->segment(3));?>
 		<p><label>Name:</label><input class="comInput" id="cAuthor" type="text" name="author" autocomplete="off"/></p>
 		<p><label>Email:</label><input class="comInput" id="cEmail" type="text" name="email" autocomplete="off"/></p>
+		<p style="padding-bottom: 1em;"><span>Show your email</span><input name="showEmail" checked="checked" value="show" type="checkbox"></p>
 		<label>Comment:</label><textarea class="cBox" id="cBox" name="body" rows="4"></textarea>
 		<input type="hidden" name="robot" value="yes" autocomplete="off"/>
 		<p class="subPos"><input type="submit" class="submit" value="Submit Comment" /></p>
