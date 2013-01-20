@@ -3,9 +3,22 @@ $(document).ready(function(){
 	var title = new LiveValidation('title')
 	title.add( Validate.Presence );
 	//this initializes the tinyMCE rich text editor
-	
+
+	//this is the advanced tinymce editor. With spellcheck and advanced editing features only available for the blog post and the edit page.
 	tinyMCE.init({
-		mode : "textareas",
-		theme : "simple"
+	    // General options
+	    mode : "textareas",
+	    theme : "advanced",
+	    plugins : "spellchecker,style,emotions,inlinepopups",
+	    
+	     //Theme options
+	    theme_advanced_buttons1 : "bold,italic,underline,strikethrough,|,justifyleft,justifycenter,justifyright,justifyfull,|,cleanup,|,forecolor, emotions,spellchecker,|,fontselect",
+	    theme_advanced_buttons2:
+	    "undo,redo,|,link, unlink, image, hr",
+	    theme_advanced_toolbar_location : "top",
+	    theme_advanced_toolbar_align : "center",
+	    theme_advanced_resizing : true,
+	    width: "500px",
+	    height: "200px"
 	});	
 });
