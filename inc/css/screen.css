@@ -243,27 +243,14 @@ header h1{
 /*----------Forms----------*/
 
 .postForm, .editForm{
-	width: 23em;
-	margin: 0 auto;
+	margin-left: 4em;
 }
 
 .contactForm{
 	padding: 1em 0 0 2em;
 }
 
-.postingCom{
-	width: 28em;
-}
 
-.postingCom .defaultSimpleSkin table.mceLayout{
-	position: relative;
-	right: 8em;
-}
-
-.con .mceLayout{
-	position: relative;
-	right: 38em;
-}
 
 .contactSub{
 	margin-top: 7.5em;
@@ -300,6 +287,7 @@ header h1{
 	width: 10em;
 	font-size: 1.2em;
 	cursor:pointer;
+	clear: both;
 }
 
 .noSub{
@@ -325,17 +313,7 @@ header h1{
 	padding: 2em 0;
 }
 
-.postingCom .submit{
-	margin-top: 7em;
-}
-
-.submitPos{
-	padding-top: 9em;
-	text-align: center;	
-}
-
 .subPos{
-	text-align: center;
 	padding-top: 1em;
 }
 
@@ -422,21 +400,6 @@ header h1{
 	width: 15em;
 }
 
-.defaultSimpleSkin table.mceLayout{
-	float: right;
-	margin-right: -6em;
-}
-
-.mceLayout{
-	position: relative;
-	right: 3em;
-}
-
-.cat{
-	clear: both;
-	padding-top: 1em;
-}
-
 .innerBlog{
 	width: 80%;
 	margin: 0 auto;
@@ -514,6 +477,7 @@ header h1{
 
 .postingCom{
 	padding-top: 2em;
+	width: 28em;
 }
 
 .name{

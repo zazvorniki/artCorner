@@ -11,14 +11,16 @@
 				
 				<p><label>Title:</label> <input type="text" id="title" class="postInput" name="title" autocomplete="off"/></p>
 				
-				<p><label>Body:</label><textarea name="body" id="body" ></textarea></p>
-				
 				<p class="cat">
 					<label>Category:</label>
 					<span>Project<input type="radio" name="category" value="project"></span>
 					
 					<span>Event<input type="radio" name="category" value="event"></span>
 				</p>
+				<div class="textPos">
+					<p><textarea name="body" id="body" ></textarea></p>
+				</div>
+				
 				
 				<p class="subPos"><input type="submit" class="submit" value="Post" /></p>
 				</form>

@@ -13,9 +13,11 @@
 
 					<p><label>Title:</label> <input type="text" id="title" class="postInput" value="<?=$row->title?>" name="title" autocomplete="off"/></p>
 					
-					<p><label>Body:</label><textarea name="body" id="body" > <?=$row->body?></textarea></p>
+					<div class="textPos">
+					<p><textarea name="body" id="body" > <?=$row->body?></textarea></p>
+					</div>
 					
-					<p class="submitPos"><input type="submit" class="submit" value="Post" autocomplete="off"/></p>
+					<p class="subPos"><input type="submit" class="submit" value="Post" autocomplete="off"/></p>
 					</form>
 				<?php endforeach;?>
 			</div>

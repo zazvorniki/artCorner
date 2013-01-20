@@ -21,7 +21,7 @@
 		<p><label>Email:</label><input class="comInput" id="cEmail" type="text" name="email" autocomplete="off"/></p>
 		<label>Comment:</label><textarea class="cBox" id="cBox" name="body" rows="4"></textarea>
 		<input type="hidden" name="robot" value="yes" autocomplete="off"/>
-		<p><input type="submit" class="submit" value="Submit Comment" /></p>
+		<p class="subPos"><input type="submit" class="submit" value="Submit Comment" /></p>
 		</form>
 	</div>
 </div>
