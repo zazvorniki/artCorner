@@ -506,9 +506,10 @@ header h1{
 	margin: 1em auto;
 }
 
-#message_container{
+.messageCon{
 	position: relative;
 	left: 6em;
+	bottom: 1.5em;
 }
 
 

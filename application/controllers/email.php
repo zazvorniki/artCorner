@@ -6,6 +6,7 @@ class Email extends CI_Controller{
 	{ 
 		parent::__construct(); 
 		$this->load->model('blog_model');
+		$this->load->model('users_model');
 	}
 	
 	function index()
@@ -29,10 +30,10 @@ class Email extends CI_Controller{
 		$this->email->set_newline("\r\n");
 		
 		//this sets the from field, the to field and he cc field. These will change once the site is in full production. At the moment the email is sending to my own personal email account and the cc is commented out
-		$this->email->from($this->input->post('email'), $this->input->post('name'));
+		$this->email->from(strip_tags($this->input->post('email')), strip_tags($this->input->post('name')));
 		$this->email->to('swampgliders@gmail.com'); 
 //		$this->email->cc('swampgliders@gmail.com');
-		$this->email->reply_to($this->input->post('email'), $this->input->post('name')); 
+		$this->email->reply_to(strip_tags($this->input->post('email')), strip_tags($this->input->post('name'))); 
 		
 		//the is the email subject and message that will be sent 
 		$this->email->subject('plantationkeyartcorner.com contact form');
@@ -48,12 +49,26 @@ class Email extends CI_Controller{
 	}
 
 	function sentMail()
-	{
-		//This loads the default views. The header, body and footer
-		$this->load->view('defaultHeader_view');
-		$this->load->view('emailSuccess_view');
-		$this->blog_model->loadAll();
-		$this->blog_model->loadResource();	
-		$this->load->view('footer_view');
+	{	
+		//this says that the session user is the current user
+		$user['currentUser']=$this->session->userdata('currentUser');
+		
+		//this if statement says if there are user sessions then the user will be given the admin controls, but if they do not have the right sessions than they are given the views without the controls.
+		if (empty($user['currentUser'])) {
+			//This loads the default views. The header, body and footer
+			$this->load->view('defaultHeader_view');
+			$this->load->view('emailSuccess_view');
+			$this->blog_model->loadAll();
+			$this->blog_model->loadResource();	
+			$this->load->view('footer_view');
+		}else {
+			//this takes the currentUser and then passes it to a function inside the user model
+			$user = $this->users_model->getUser($user['currentUser']->id);
+			$this->load->view('emailSuccess_view');
+			//this loads the blog posts, the side bar and the footer
+			$this->blog_model->loadAdminBlog();
+			$this->blog_model->loadAdminRe();	
+			$this->load->view('footer_view');	
+		}
 	}
 }

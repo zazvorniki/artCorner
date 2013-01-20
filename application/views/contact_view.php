@@ -8,8 +8,9 @@
 					<p><label>Name:</label> <input class="contact" type="text" value="" name="name" id="name" autocomplete="off"/></p>
 					
 					<p><label>Email:</label> <input type="text" class="contact" name="email" id="email" autocomplete="off"/></p>
-					
-					<p><label>Message:</label><textarea name="message" ></textarea></p>
+					Message:<div class="messageCon">
+						<p><label></label><textarea name="message" ></textarea></p>
+					</div>	
 					<input type="submit" class="submit contactSub" value="Email" />
 				</form>
 			</div>
