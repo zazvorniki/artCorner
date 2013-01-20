@@ -32,7 +32,9 @@ class Users extends CI_Controller{
 			$currentUser = $login;
 			$this->session->set_userdata('currentUser', $currentUser);
 			$this->session->set_userdata('loggedin', true);
-			redirect('admin/viewPortal');	
+			//redirect('admin/viewPortal');
+			redirect('blog/');
+				
 		}else{			
 			redirect('admin/');
 		}

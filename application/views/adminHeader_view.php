@@ -35,10 +35,10 @@
 		<div class="headerCon" style="padding: 1em 1.5em 0 1.5em">
 			<nav>
 				<ul>
-					<li><h1 class="logo"><?=anchor('admin/viewPortal', 'Plantation Key Art Corner');?></h1></li>
+					<li><h1 class="logo"><?=anchor('blog/', 'Plantation Key Art Corner');?></h1></li>
 					
-					<li class="link"><?=anchor('admin/events', 'Events');?></li>
-					<li class="link"><?=anchor('admin/projects', 'Projects');?></li>
+					<li class="link"><?=anchor('blog/events', 'Events');?></li>
+					<li class="link"><?=anchor('blog/projects', 'Projects');?></li>
 				</ul>
 			</nav>
 		</div>	

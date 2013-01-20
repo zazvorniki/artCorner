@@ -8,7 +8,7 @@
 			<div class="confirm">	
 				<input type="submit" value="Yes" class="submit yesSub" />			
 			</form>
-			<?=form_open('admin/viewPortal', array('class' => 'redirect'));?>
+			<?=form_open('blog/', array('class' => 'redirect'));?>
 				<input type="submit" value="No"  class="noSub" />
 			</form>	
 			</div>

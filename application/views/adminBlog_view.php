@@ -24,7 +24,7 @@
 						<?=$row->body?>
 						</div>
 
-						<p class="readMore"><?=anchor('admin/adminComments/'.$row->id, ' More->', array('class' => 'readMore'));?></p>
+						<p class="readMore"><?=anchor('blog/comments/'.$row->id, ' More->', array('class' => 'readMore'));?></p>
 					</li>
 				<?php endforeach;?>
 				</ul>

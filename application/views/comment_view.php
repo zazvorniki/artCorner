@@ -5,7 +5,7 @@
 				<?php if($query->num_rows > 0): ?>
 				<ul class="commentList">
 					<?php foreach ($query->result() as $row): ?> 
-							<li><span class="name"><?=$row->author?><?php if($row->showEmail == "show"){echo ' ('.$row->email.') ' ;}?> said on <?=date("F j, Y", $row->date)?></span><br>
+							<li><p class="name"><?=$row->author?><?php if($row->showEmail == "show"){echo ' ('.$row->email.') ' ;}?> said on <?=date("F j, Y", $row->date)?></p>
 							
 							<span class="body"><?=$row->body?></span><br>
 	
@@ -25,6 +25,7 @@
 		<p><label>Email:</label><input class="comInput" id="cEmail" type="text" name="email" autocomplete="off"/></p>
 		<p style="padding-bottom: 1em;"><span>Show your email</span><input name="showEmail" checked="checked" value="show" type="checkbox"></p>
 		<label>Comment:</label><textarea class="cBox" id="cBox" name="body" rows="4"></textarea>
+		<p style="padding-top: 1em;">*note: to create a new paragraph press the return twice</p>
 		<input type="hidden" name="robot" value="yes" autocomplete="off"/>
 		<p class="subPos"><input type="submit" class="submit" value="Submit Comment" /></p>
 		</form>
