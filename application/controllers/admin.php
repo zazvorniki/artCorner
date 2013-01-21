@@ -90,7 +90,7 @@ class Admin extends CI_Controller{
 	
 	function insertResource()
 	{
-		//this checks to see if the form has a data-key. If it does not then it is directed to the error page. This secures this function and dissallows access directly from the url bar.
+		//this checks to see if the form has a data-key. If it does not then it is directed to the error page. This secures this function and disallows access directly from the url bar.
 		if($this->input->post('data-key') == 'newRe')
 		{
 			//this says that the session user is the current user
@@ -157,17 +157,23 @@ class Admin extends CI_Controller{
 	
 	function delete()
 	{
-		//this says that the session user is the current user
-		$user['currentUser']=$this->session->userdata('currentUser');
-		//if the sessions are empty then this will redirect the user back to the login page			
-		if (empty($user['currentUser'])) {
-			redirect('admin/');
-		}
-		//this takes the currentUser and then passes it to a function inside the user model
-		$user = $this->users_model->getUser($user['currentUser']->id);
-		
-		$this->blog_model->deletePost();
-		redirect('blog/');
+		//this checks to see if the form has a data-key. If it does not then it is directed to the error page. This secures this function and disallows access directly from the url bar.
+		if($this->input->post('data-key') == 'permDelete')
+		{
+			//this says that the session user is the current user
+			$user['currentUser']=$this->session->userdata('currentUser');
+			//if the sessions are empty then this will redirect the user back to the login page			
+			if (empty($user['currentUser'])) {
+				redirect('admin/');
+			}
+			//this takes the currentUser and then passes it to a function inside the user model
+			$user = $this->users_model->getUser($user['currentUser']->id);
+			
+			$this->blog_model->deletePost();
+			redirect('blog/');
+		}else{
+			redirect('error/');
+		}	
 	}
 	
 	function deleteLink()
@@ -187,20 +193,15 @@ class Admin extends CI_Controller{
 	
 	function deleteWarning()
 	{
-		if($this->input->post('data-key') == 'permDelete')
-		{
-			//this says that the session user is the current user
-			$user['currentUser']=$this->session->userdata('currentUser');
-			//if the sessions are empty then this will redirect the user back to the login page			
-			if (empty($user['currentUser'])) {
-				redirect('admin/');
-			}
-			//this takes the currentUser and then passes it to a function inside the user model
-			$user = $this->users_model->getUser($user['currentUser']->id);
-			$this->load->view('deleteWarning_view');
-		}else{
-			redirect('error/');
+		//this says that the session user is the current user
+		$user['currentUser']=$this->session->userdata('currentUser');
+		//if the sessions are empty then this will redirect the user back to the login page			
+		if (empty($user['currentUser'])) {
+			redirect('admin/');
 		}
+		//this takes the currentUser and then passes it to a function inside the user model
+		$user = $this->users_model->getUser($user['currentUser']->id);
+		$this->load->view('deleteWarning_view');
 	}	
 		
 	function logout()
