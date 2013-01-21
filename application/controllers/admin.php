@@ -209,6 +209,6 @@ class Admin extends CI_Controller{
 		//this destroys the sessions
 		$this->session->sess_destroy();
 		//and then this redirects the user to the login page
-		redirect('admin/');
+		redirect('blog/');
 	}
 }

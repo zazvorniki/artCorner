@@ -9,12 +9,12 @@ $(document).ready(function(){
 	    // General options
 	    mode : "textareas",
 	    theme : "advanced",
-	    plugins : "spellchecker,style,emotions,inlinepopups",
+	    plugins : "spellchecker,style,inlinepopups",
 	    
 	     //Theme options
-	    theme_advanced_buttons1 : "bold,italic,underline,strikethrough,|,justifyleft,justifycenter,justifyright,justifyfull,|,cleanup,|,forecolor, emotions,spellchecker,|,fontselect",
+	    theme_advanced_buttons1 : "bold,italic,underline,strikethrough,|,justifyleft,justifycenter,justifyright,justifyfull,|,cleanup,|,forecolor, spellchecker,|,fontselect",
 	    theme_advanced_buttons2:
-	    "undo,redo,|,link, unlink, image, hr",
+	    "undo,redo,|,link, unlink, image",
 	    theme_advanced_toolbar_location : "top",
 	    theme_advanced_toolbar_align : "center",
 	    theme_advanced_resizing : true,

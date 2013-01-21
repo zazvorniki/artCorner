@@ -8,7 +8,7 @@
 					<?=form_hidden('id', $this->uri->segment(3));?>
 					<?=form_hidden('data-key', 'editPost')?>
 					
-					<h3>Write a new post!</h3>
+					<h3>Edit your post!</h3>
 					
 					<p><label>Poster:</label> <input class="postInput" id="poster" type="text" value="Mrs. Sears" name="posted_by" readonly autocomplete="off"/></p>
 
@@ -18,7 +18,7 @@
 					<p><textarea name="body" id="body" > <?=$row->body?></textarea></p>
 					</div>
 					
-					<p class="subPos"><input type="submit" class="submit" value="Post" autocomplete="off"/></p>
+					<p class="subPos"><input type="submit" class="submit" value="Save" autocomplete="off"/></p>
 					</form>
 				<?php endforeach;?>
 			</div>

@@ -186,6 +186,12 @@ header a:hover, footer a:hover{
 	width: 2em;
 }
 
+.back{
+	color: #1f5b9e;
+	text-decoration: underline;
+	cursor:pointer;
+}
+
 /*----------Header----------*/
 
 header{
