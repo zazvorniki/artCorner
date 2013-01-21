@@ -6,6 +6,7 @@
 				<?php foreach ($query->result() as $row): ?> 
 					<?=form_open('admin/editBlogpost', array('class' => 'editForm'));?>
 					<?=form_hidden('id', $this->uri->segment(3));?>
+					<?=form_hidden('data-key', 'editPost')?>
 					
 					<h3>Write a new post!</h3>
 					
