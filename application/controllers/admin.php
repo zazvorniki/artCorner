@@ -19,8 +19,8 @@ class Admin extends CI_Controller{
 		$this->load->view('login_view');
 	}
 	
-	function writeBlog(){
-		
+	function writeBlog()
+	{
 		//this says that the session user is the current user
 		$user['currentUser']=$this->session->userdata('currentUser');
 		//if the sessions are empty then this will redirect the user back to the login page
@@ -34,7 +34,8 @@ class Admin extends CI_Controller{
 		$this->load->view('footer_view');
 	}
 	
-	function writeResource(){
+	function writeResource()
+	{
 		//this says that the session user is the current user
 		$user['currentUser']=$this->session->userdata('currentUser');
 		//if the sessions are empty then this will redirect the user back to the login page
@@ -50,15 +51,20 @@ class Admin extends CI_Controller{
 	
 	function insertPost()
 	{
-		//this says that the session user is the current user
-		$user['currentUser']=$this->session->userdata('currentUser');
-		//if the sessions are empty then this will redirect the user back to the login page		
-		if (empty($user['currentUser'])) {
-			redirect('admin/');
-		}
-		//this takes the info from the form and pushes it to the publish post function in the model and then redirects to the successPost function
-		$this->blog_model->publishPost();
-		redirect('admin/successPost');
+		if($this->input->post('data-key') == 'newPost')
+		{
+			//this says that the session user is the current user
+			$user['currentUser']=$this->session->userdata('currentUser');
+			//if the sessions are empty then this will redirect the user back to the login page		
+			if (empty($user['currentUser'])) {
+				redirect('admin/');
+			}
+			//this takes the info from the form and pushes it to the publish post function in the model and then redirects to the successPost function
+			$this->blog_model->publishPost();
+			redirect('admin/successPost');
+		}else{
+			redirect('error/');
+		}	
 	}
 	
 	function editBlogpost()
@@ -75,16 +81,22 @@ class Admin extends CI_Controller{
 	}
 	
 	function insertResource()
-	{	
-		//this says that the session user is the current user
-		$user['currentUser']=$this->session->userdata('currentUser');
-		//if the sessions are empty then this will redirect the user back to the login page
-		if (empty($user['currentUser'])) {
-			redirect('admin/');
-		}
-		//this takes the info from the form and pushes it to the publish resource function in the model and then redirects to the successPost function
-		$this->blog_model->publishResource();
-		redirect('admin/successResource');
+	{
+		if($this->input->post('data-key') == 'newRe')
+		{
+			//this says that the session user is the current user
+			$user['currentUser']=$this->session->userdata('currentUser');
+			//if the sessions are empty then this will redirect the user back to the login page
+			if (empty($user['currentUser'])) {
+				redirect('admin/');
+			}
+			//this takes the info from the form and pushes it to the publish resource function in the model and then redirects to the successPost function
+			$this->blog_model->publishResource();
+			redirect('admin/successResource');
+			
+		}else{
+			redirect('error/');
+		}	
 	}
 	
 	function successPost()

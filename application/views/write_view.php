@@ -5,6 +5,7 @@
 			<div class="writeBlog">
 				
 				<?=form_open('admin/insertPost', array('class' => 'postForm'));?>
+				<?=form_hidden('data-key', 'newPost')?>
 				<h3>Write a new post!</h3>
 				
 				<p><label>Poster:</label> <input class="postInput" id="poster" type="text" value="Ms. Sears" name="posted_by" readonly autocomplete="off"/></p>
