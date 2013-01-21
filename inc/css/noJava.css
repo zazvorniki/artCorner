@@ -27,9 +27,6 @@ Project: Final Project
 	font-weight: bold;
 }
 
-.adminInfo li{
-	display: none;
-}
 
 .adminInfo li:first-child{
 	display: inline;
@@ -39,6 +36,14 @@ Project: Final Project
 	display: inline;
 }
 
-.editCon, .deleteCon{
+.editCon, .deleteCon, .contactForm, .adminInfo li{
 	display: none;
+}
+
+.emailJava{
+	color: #950e1d;
+	font-weight: bold;
+	display: block;
+	padding: 1em 0 0 8em;
+	width: 80%;
 }

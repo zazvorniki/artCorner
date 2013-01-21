@@ -132,7 +132,7 @@ body{
 	-o-transform: rotate(45deg);
 	transform: rotate(45deg);
 }
-.commentJava, .noJava{
+.commentJava, .noJava, .emailJava{
 	display: none;
 }
 
