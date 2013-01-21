@@ -166,15 +166,15 @@ header a:hover, footer a:hover{
 	color: #85b6b4;
 }
 
-.readMore a:link, .ref a:link{
+.readMore a:link, .ref a:link, .errorPage a:link{
 	color: #1f5b9e;
 }
 
-.readMore a:visited, .ref a:visited{
+.readMore a:visited, .ref a:visited, .errorPage a:visited{
 	color: #174476;
 }
 
-.readMore a:hover, .ref a:hover{
+.readMore a:hover, .ref a:hover, .errorPage a:hover{
 	color: #2e7bd0;
 	text-decoration: none;
 }
@@ -511,6 +511,13 @@ header h1{
 	left: 6em;
 	bottom: 1.5em;
 }
+
+.errorPage{
+	padding: 1.5em; 
+	text-align: center;
+}
+
+
 
 
 /*----------Footer----------*/
