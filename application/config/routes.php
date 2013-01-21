@@ -39,7 +39,7 @@
 */
 
 $route['default_controller'] = "blog";
-$route['404_override'] = '';
+$route['404_override'] = 'errorPage';
 
 
 /* End of file routes.php */

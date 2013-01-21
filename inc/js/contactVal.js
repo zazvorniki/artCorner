@@ -12,6 +12,8 @@ $(document).ready(function(){
 	
 	tinyMCE.init({
 		mode : "textareas",
-		theme : "simple"
+		theme : "simple",
+		width: "300px",
+		height: "150px"
 	});	
 });

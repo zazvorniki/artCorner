@@ -4,9 +4,12 @@ $(document).ready(function(){
 	  
 	// this inits the rich text editor 
 	  tinyMCE.init({
-	  	mode : "textareas",
-	  	theme : "simple",
-	  });
+		  mode : "textareas",
+		  mode : "textareas",
+		  theme : "simple",
+		  width: "300px",
+		  height: "150px"
+	 });
 
 	 //makes sure the author input field is filled in before submitting
 	 var cAuthor = new LiveValidation('cAuthor')

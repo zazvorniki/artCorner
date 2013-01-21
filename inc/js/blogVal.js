@@ -19,6 +19,7 @@ $(document).ready(function(){
 	    theme_advanced_toolbar_align : "center",
 	    theme_advanced_resizing : true,
 	    width: "500px",
-	    height: "200px"
+	    height: "200px",
+	    theme_advanced_path : false
 	});	
 });
