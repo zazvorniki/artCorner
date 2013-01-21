@@ -21,6 +21,7 @@
 		<h3>Post a comment</h3>
 		<?=form_open('blog/writeComment', array('class' => 'comForm'));?>
 		<?=form_hidden('entry_id', $this->uri->segment(3));?>
+		<?=form_hidden('data-key', 'newComment')?>
 		<p><label>Name:</label><input class="comInput" id="cAuthor" type="text" name="author" autocomplete="off"/></p>
 		<p><label>Email:</label><input class="comInput" id="cEmail" type="text" name="email" autocomplete="off"/></p>
 		<p style="padding-bottom: 1em;"><span>Show your email</span><input name="showEmail" checked="checked" value="show" type="checkbox"></p>
