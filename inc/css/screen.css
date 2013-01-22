@@ -273,8 +273,12 @@ header h1{
 	padding-right: 1em;
 }
 
-.postInput, .comInput, .contact{
-	width: 14em;
+.postInput, .contact{
+	width: 25em;
+}
+
+.comInput{
+	width: 21em;
 }
 
 .submit{

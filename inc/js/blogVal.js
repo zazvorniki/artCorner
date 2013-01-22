@@ -1,6 +1,7 @@
 $(document).ready(function(){
 	//this makes sure the title field has something inside it before submitting
 	var title = new LiveValidation('title')
+	title.add( Validate.Length, { maximum: 35 } );
 	title.add( Validate.Presence );
 	//this initializes the tinyMCE rich text editor
 
