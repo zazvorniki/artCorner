@@ -108,7 +108,7 @@ body{
 }
 
 .commentPage:after, .commentPage:before {
-	background: #e6e6e6;
+	background: #e8e6d5;
 	content: '';
 	height: 50px;
 	position: absolute;
@@ -117,6 +117,7 @@ body{
 	-webkit-box-shadow: 0 5px 10px -7px hsla(0,0%,0%,.5);
 	-moz-box-shadow: 0 5px 10px -7px hsla(0,0%,0%,.5);
 	box-shadow: 0 5px 10px -7px hsla(0,0%,0%,.5);
+	opacity: .6;
 }
 .commentPage:after {
 	left: -50px;
@@ -424,6 +425,10 @@ header h1{
 	font-size: 1.1em;
 }
 
+.innerBlog p{
+	line-height: 1.4em;
+}
+
 .bBody p:first-child{
 	display: block;
 }
@@ -437,12 +442,12 @@ header h1{
 }
 
 .bTitle a:link{
-	color: #272827;
+	color: #383a3d;
 	text-decoration: none;
 }
 
 .bTitle a:visited{
-	color: #272827;
+	color: #383a3d;
 }
 
 .bTitle a:hover{
