@@ -6,8 +6,4 @@ $(document).ready(function(){
 	//this is the live validation for the name filed
 	var name = new LiveValidation('name')
 	name.add( Validate.Presence );
-	//This makes sure that the category field has a value in its
-	var category = new LiveValidation('category')
-	category.add( Validate.Inclusion, { within: [ 'project' , 'event' ] } );
-	category.add( Validate.Presence );
 });

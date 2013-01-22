@@ -297,7 +297,7 @@ header h1{
 	width: 25em;
 }
 
-.comInput, .contact{
+.comInput, .contact, .writeVocab #title{
 	width: 21em;
 }
 
@@ -590,6 +590,11 @@ header h1{
 	padding: 1em 0 0 2em;
 }
 
+.vocabPage ul{
+	width: 90%;
+	margin: 0 aut0;
+}
+
 .vocabPage h3{
 	display: inline;
 }
@@ -601,6 +606,12 @@ header h1{
 .writeVocab {
 	padding: 1em 2em 0 0;
 	float: left;
+}
+
+.vocabText{
+	position: relative;
+	left: 7em;
+	bottom: .5em;
 }
 
 

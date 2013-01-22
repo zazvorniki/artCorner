@@ -96,7 +96,7 @@ class Admin extends CI_Controller{
 			}
 			//this takes the info from the form and pushes it to the publish post function in the model and then redirects to the successPost function
 			$this->blog_model->publishVocab();
-			redirect('admin/successPost');
+			redirect('admin/successVocab');
 		}else{
 			redirect('error/');
 		}	
@@ -188,7 +188,7 @@ class Admin extends CI_Controller{
 		$user = $this->users_model->getUser($user['currentUser']->id);
 		//these load the views appropriate for this page		
 		$this->load->view('thankYou_view');
-		$this->load->view('resource_view');
+		$this->load->view('vocab_view');
 		$this->load->view('footer_view');
 	}
 

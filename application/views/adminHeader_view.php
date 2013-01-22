@@ -27,7 +27,7 @@
 			<li><?php foreach ($query->result() as $row): ?> <label>Hello,  <?=$row->firstName?></label><?php endforeach;?></li>
 			<li><?=anchor('admin/writeBlog/', 'Write a Blog');?></li>
 			<li><?=anchor('admin/writeResource/', 'Enter a Resource');?></li>
-			<li><?=anchor('admin/writeVocab/', 'New Vocab word');?></li>
+			<li><?=anchor('admin/writeVocab/', 'New Vocab Word');?></li>
 			<li><?=anchor('admin/logout', 'Logout');?></li>
 		</ul>
 		<noscript class="noJava">

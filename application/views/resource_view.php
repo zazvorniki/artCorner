@@ -25,6 +25,6 @@
 					<span class="cancelPos"><?=anchor('blog/', 'cancel', array('class' => 'cancel'));?></span>
 				</form>
 			</div>
-<div class="clear"></div>
+			<div class="clear"></div>
 
 <script src="<?php echo base_url();?>inc/js/reVal.js" type="text/javascript"></script>

@@ -28,7 +28,8 @@
 			'title'=>strip_tags($this->input->post('title')),
 			'posted_by'=>'Ms. Sears',
 			'category'=>'vocab',
-			'body'=>$this->input->post('body')
+			'body'=>strip_tags($this->input->post('body'), '<strong>, <em>, <span>')
+			//strip_tags($data, '<br>')
 		);
 		//this sets the data as the post and the datestamp
 		$data['date'] = time();
