@@ -22,8 +22,9 @@
 					<p><textarea name="body" id="body" ></textarea></p>
 				</div>
 				
-				*note: to create a new paragraph press the return twice
+				<p>*note: to create a new paragraph press the return twice</p>
 				<p class="subPos"><input type="submit" class="submit" value="Post" /></p>
+				<span class="cancelPos"><?=anchor('blog/', 'cancel', array('class' => 'cancel'));?></span>
 				</form>
 			</div>
 			<div class="sideIcons">

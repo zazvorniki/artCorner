@@ -328,6 +328,12 @@ header h1{
 
 .subPos{
 	padding-top: 1em;
+	float: left;
+}
+
+.cancelPos{
+	float: right;
+	margin: 1.5em 1em 0 0;
 }
 
 .message, .emailMess{

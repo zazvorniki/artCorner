@@ -22,6 +22,7 @@
 					</p>
 				
 					<p class="subPos"><input type="submit" class="submit" value="Post" /></p>
+					<span class="cancelPos"><?=anchor('blog/', 'cancel', array('class' => 'cancel'));?></span>
 				</form>
 			</div>
 <div class="clear"></div>
