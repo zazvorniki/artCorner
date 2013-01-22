@@ -426,6 +426,7 @@ header h1{
 	font-family: droid;
 	font-size: 1.5em;
 	padding: 1em 0 .3em 0;
+	width: 18em;
 }
 
 .adminControls{
@@ -497,6 +498,18 @@ header h1{
 
 .writeBlog{
 	padding-top: 1em;
+	float: left;
+}
+
+.sideIcons{
+	float: right;
+	padding-right: 3em;
+	padding-top: 1em;
+}
+
+.sideIcons ul li{
+	display: block;
+	line-height: 1.9em;
 }
 
 .yesSub{
