@@ -24,8 +24,6 @@
 					<p class="subPos"><input type="submit" class="submit" value="Post" /></p>
 				</form>
 			</div>
-		</div>
-	</div>
-</div>	
+<div class="clear"></div>
 
 <script src="<?php echo base_url();?>inc/js/reVal.js" type="text/javascript"></script>
