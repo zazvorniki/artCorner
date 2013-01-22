@@ -49,6 +49,7 @@ html{
 	padding: 0;	
 	position: relative;
 	min-height: 100%;
+	color: #464746;
 }
 
 ul{
@@ -433,7 +434,19 @@ header h1{
 	font-family: droid;
 	font-size: 1.5em;
 	padding: 1em 0 .3em 0;
-	//width: 18em;
+}
+
+.bTitle a:link{
+	color: #272827;
+	text-decoration: none;
+}
+
+.bTitle a:visited{
+	color: #272827;
+}
+
+.bTitle a:hover{
+	color: #070707;
 }
 
 .adminControls{
