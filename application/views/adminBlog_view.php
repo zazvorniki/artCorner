@@ -7,7 +7,7 @@
 				<?php foreach ($query->result() as $row): ?> 
 					<li>
 						
-						<p class="bTitle"><?=$row->title?></p>
+						<p class="bTitle"><?=anchor('blog/comments/'.$row->id, $row->title);?></p>
 						
 						
 						<span class="adminControls">
