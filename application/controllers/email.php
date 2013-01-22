@@ -39,7 +39,7 @@ class Email extends CI_Controller{
 			
 			//this sets the from field, the to field and he cc field. These will change once the site is in full production. At the moment the email is sending to my own personal email account and the cc is commented out
 			$this->email->from(strip_tags($this->input->post('email')), strip_tags($this->input->post('name')));
-			$this->email->to('swampgliders@gmail.com'); 
+			$this->email->to('marcia.sears@keysschools.com'); 
 			//		$this->email->cc('swampgliders@gmail.com');
 			$this->email->reply_to(strip_tags($this->input->post('email')), strip_tags($this->input->post('name'))); 
 			

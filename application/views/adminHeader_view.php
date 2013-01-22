@@ -27,6 +27,7 @@
 			<li><?php foreach ($query->result() as $row): ?> <label>Hello,  <?=$row->firstName?></label><?php endforeach;?></li>
 			<li><?=anchor('admin/writeBlog/', 'Write a Blog');?></li>
 			<li><?=anchor('admin/writeResource/', 'Enter a Resource');?></li>
+			<li><?=anchor('admin/writeVocab/', 'New Vocab word');?></li>
 			<li><?=anchor('admin/logout', 'Logout');?></li>
 		</ul>
 		<noscript class="noJava">
@@ -36,7 +37,7 @@
 			<nav>
 				<ul>
 					<li><h1 class="logo"><?=anchor('blog/', 'Plantation Key Art Corner');?></h1></li>
-					
+					<li class="link"><?=anchor('blog/vocab', 'Vocab');?></li>
 					<li class="link"><?=anchor('blog/events', 'Events');?></li>
 					<li class="link"><?=anchor('blog/projects', 'Projects');?></li>
 				</ul>

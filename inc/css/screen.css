@@ -259,6 +259,20 @@ header h1{
 
 .contactForm{
 	padding: 1em 0 0 2em;
+	float: left;
+}
+
+.reasons{
+	width: 40%;
+	float: right;
+	padding: 2em 3em 0 0;
+}
+
+.reasons ul li{
+	display: block;
+	padding-top: 1em;
+	list-style-type: circle;
+	margin-left: .5em;
 }
 
 .postForm label, .postingCom label, .editForm label, .contactForm label{
@@ -279,11 +293,11 @@ header h1{
 	padding-right: 1em;
 }
 
-.postInput, .contact{
+.postInput{
 	width: 25em;
 }
 
-.comInput{
+.comInput, .contact{
 	width: 21em;
 }
 
@@ -572,7 +586,22 @@ header h1{
 	text-align: center;
 }
 
+.vocabPage{
+	padding: 1em 0 0 2em;
+}
 
+.vocabPage h3{
+	display: inline;
+}
+
+.writeVocab label{
+	width: 6em;
+}
+
+.writeVocab {
+	padding: 1em 2em 0 0;
+	float: left;
+}
 
 
 /*----------Footer----------*/

@@ -76,6 +76,26 @@ class Blog extends CI_Controller{
 		}		
 	}
 	
+	function vocab()
+	{
+		//this says that the session user is the current user
+		$user['currentUser']=$this->session->userdata('currentUser');
+		//this if statement says if there are user sessions then the user will be given the admin controls, but if they do not have the right sessions than they are given the views without the controls.
+		if (empty($user['currentUser'])) {
+			//this loads the default events, then the body and the footer 
+			$this->load->view('defaultHeader_view');
+			$this->blog_model->loadVocab();
+
+			$this->load->view('footer_view');
+		}else{
+			//this takes the currentUser and then passes it to a function inside the user model
+			$user = $this->users_model->getUser($user['currentUser']->id);
+			//this loads the default events, then the body and the footer 
+			$this->blog_model->loadAdminVocab();
+			$this->load->view('footer_view');		
+		}
+	}			
+	
 	function comments()
 	{
 		//this says that the session user is the current user

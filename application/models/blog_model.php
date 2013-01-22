@@ -21,6 +21,21 @@
 		$this->db->insert('entries', $data);
 	}
 	
+	public function publishVocab()
+	{
+		//this array finds the inputs and strips the html tags from them before inputting them in the database
+		$data = array(
+			'title'=>strip_tags($this->input->post('title')),
+			'posted_by'=>'Ms. Sears',
+			'category'=>'vocab',
+			'body'=>$this->input->post('body')
+		);
+		//this sets the data as the post and the datestamp
+		$data['date'] = time();
+		//this inserts the blog post into the database
+		$this->db->insert('entries', $data);
+	}
+	
 	public function editPost()
 	{		
 		//this array finds the inputs and strips the html tags from them before inputting them in the database
@@ -39,6 +54,13 @@
 	{	
 		//where the id's match this will delete that post
 		$this->db->where('id', $this->input->post('id'));
+		$this->db->delete('entries');
+	}
+	
+	public function deleteVocabulary()
+	{	
+		//where the id's match this will delete that post
+		$this->db->where('id', $this->uri->segment(3));
 		$this->db->delete('entries');
 	}
 	
@@ -181,6 +203,25 @@
 		$data['query'] = $this->db->get('entries');
 		$this->load->view('defaultBlog_view', $data);
 	}
+	
+	public function loadVocab()
+	{
+		//this grabs all the blog posts by the last one inserted and it must have the projects category
+		$this->db->order_by("title", "asc");
+		$this->db->where('category', 'vocab');
+		$data['query'] = $this->db->get('entries');
+		$this->load->view('defaultVocab_view', $data);
+	}
+	
+	public function loadAdminVocab()
+	{
+		//this grabs all the blog posts by the last one inserted and it must have the projects category
+		$this->db->order_by("title", "asc");
+		$this->db->where('category', 'vocab');
+		$data['query'] = $this->db->get('entries');
+		$this->load->view('adminVocab_view', $data);
+	}
+	
 	
 	public function loadOneEntry()
 	{

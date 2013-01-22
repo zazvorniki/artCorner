@@ -37,7 +37,7 @@
 			<nav>
 				<ul>
 					<li><h1 class="logo"><?=anchor('blog/', 'Plantation Key Art Corner');?></h1></li>
-					
+					<li class="link"><?=anchor('blog/vocab', 'Vocab');?></li>
 					<li class="link"><?=anchor('blog/events', 'Events');?></li>
 					<li class="link"><?=anchor('blog/projects', 'Projects');?></li>
 				</ul>
