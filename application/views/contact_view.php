@@ -21,11 +21,11 @@
 				<h4>Have a question you want to ask Ms. Sears the art teacher behind this blog? Then go right ahead!</h4>
 				<p>You can ask her about:</p>
 				<ul>
-					<li><img src="<?php echo base_url();?>inc/img/check.png" alt="check mark" />any artiest new or old</li>
-					<li><img src="<?php echo base_url();?>inc/img/check.png" alt="check mark" />anything about her assignments</li>
-					<li><img src="<?php echo base_url();?>inc/img/check.png" alt="check mark" />or if you have a question about your grade</li>
+					<li><img src="<?=base_url();?>inc/img/check.png" alt="check mark" />any artiest new or old</li>
+					<li><img src="<?=base_url();?>inc/img/check.png" alt="check mark" />anything about her assignments</li>
+					<li><img src="<?= base_url();?>inc/img/check.png" alt="check mark" />or if you have a question about your grade</li>
 				</ul>
 			</div>
 			<div class="clear"></div>
 			
-<script src="<?php echo base_url();?>inc/js/contactVal.js" type="text/javascript"></script>
+<script src="<?=base_url();?>inc/js/contactVal.js" type="text/javascript"></script>

@@ -449,6 +449,10 @@ header h1{
 	font-size: 1.1em;
 }
 
+.body p:first-child{
+	padding-top: 1.5em;
+}
+
 .innerBlog p{
 	line-height: 1.4em;
 }

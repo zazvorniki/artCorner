@@ -15,11 +15,11 @@
 	</footer>
 </div>
 
-<script src="<?php echo base_url();?>inc/js/jquery.jtruncate.pack.js" type="text/javascript"></script>
-<script src="<?php echo base_url();?>inc/js/jquery.flexipage.min.js" type="text/javascript"></script>
-<script src="<?php echo base_url();?>inc/js/livevalidation_standalone.js" type="text/javascript"></script>
-<script src="<?php echo base_url();?>inc/js/Modernizr.js" type="text/javascript"></script>
-<script src="<?php echo base_url();?>inc/js/main.js" type="text/javascript"></script>
-<script src="<?php echo base_url();?>inc/js/tiny_mce.js" type="text/javascript"></script>
+<script src="<?=base_url();?>inc/js/jquery.jtruncate.pack.js" type="text/javascript"></script>
+<script src="<?=base_url();?>inc/js/jquery.flexipage.min.js" type="text/javascript"></script>
+<script src="<?=base_url();?>inc/js/livevalidation_standalone.js" type="text/javascript"></script>
+<script src="<?=base_url();?>inc/js/Modernizr.js" type="text/javascript"></script>
+<script src="<?=base_url();?>inc/js/main.js" type="text/javascript"></script>
+<script src="<?=base_url();?>inc/js/tiny_mce.js" type="text/javascript"></script>
 </body>
 </html>

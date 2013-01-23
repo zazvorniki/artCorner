@@ -16,7 +16,7 @@
 	<meta name="keywords" content="art room, plantation key, plantation key school, school, florida school, the keys, florida keys, Mrs. Sears, Sears">
 	
 <!--  ==========	Style Sheets		==========	-->
-	<link rel="stylesheet" href="<?php echo base_url();?>inc/css/screen.css"/>
+	<link rel="stylesheet" href="<?=base_url();?>inc/css/screen.css"/>
 	
 <!--  ==========	Header and navigation ==========  -->
 
@@ -38,7 +38,7 @@
 
 </body>
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.js"></script>
-<script src="<?php echo base_url();?>inc/js/livevalidation_standalone.js" type="text/javascript"></script>
-<script src="<?php echo base_url();?>inc/js/loginVal.js" type="text/javascript"></script>
-<script src="<?php echo base_url();?>inc/js/Modernizr.js" type="text/javascript"></script>
+<script src="<?=base_url();?>inc/js/livevalidation_standalone.js" type="text/javascript"></script>
+<script src="<?=base_url();?>inc/js/loginVal.js" type="text/javascript"></script>
+<script src="<?=base_url();?>inc/js/Modernizr.js" type="text/javascript"></script>
 </html>

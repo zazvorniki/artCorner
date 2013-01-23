@@ -4,7 +4,7 @@
 		<div class="content">
 			<div class="blogContainer">
 				<ul class="item">
-				<?php foreach ($query->result() as $row): ?> 
+				<?foreach ($query->result() as $row):?> 
 					<li>
 						
 						<p class="bTitle"><?=anchor('blog/comments/'.$row->id, $row->title);?></p>
@@ -26,6 +26,6 @@
 
 						<p class="readMore"><?=anchor('blog/comments/'.$row->id, ' More->', array('class' => 'readMore'));?></p>
 					</li>
-				<?php endforeach;?>
+				<?endforeach;?>
 				</ul>
 			</div>	

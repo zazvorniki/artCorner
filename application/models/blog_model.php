@@ -105,6 +105,7 @@
 	{	
 		//this grabs all the blog posts by the last one inserted
 		$this->db->order_by("date", "desc");
+		$this->db->where(array('category !=' => 'vocab'));
 		$data['query'] = $this->db->get('entries');
 		$this->load->view('defaultBlog_view', $data);		
 	}
@@ -113,6 +114,7 @@
 	{
 		//this grabs all the blog posts by the last one inserted
 		$this->db->order_by("date", "desc");
+		$this->db->where(array('category !=' => 'vocab'));
 		$data['query'] = $this->db->get('entries');
 		$this->load->view('adminBlog_view', $data);	
 	}

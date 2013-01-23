@@ -21,4 +21,4 @@
 			</div>
 			<div class="clear"></div>
 
-<script src="<?php echo base_url();?>inc/js/vocabVal.js" type="text/javascript"></script>			
+<script src="<?=base_url();?>inc/js/vocabVal.js" type="text/javascript"></script>			

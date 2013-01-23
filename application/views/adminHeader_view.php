@@ -13,8 +13,8 @@
 	<meta name="keywords" content="art room, plantation key, plantation key school, school, florida school, the keys, florida keys, Mrs. Sears, Sears">
 	
 <!--  ==========	Style Sheets		==========	-->
-	<link rel="stylesheet" href="<?php echo base_url();?>inc/css/screen.css"/>
-	<link rel="stylesheet" href="<?php echo base_url();?>inc/css/flexipage.css" />
+	<link rel="stylesheet" href="<?=base_url();?>inc/css/screen.css"/>
+	<link rel="stylesheet" href="<?=base_url();?>inc/css/flexipage.css" />
 	
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.js"></script>
 	
@@ -24,14 +24,14 @@
 <body>
 	<header>
 		<ul class="adminInfo">
-			<li><?php foreach ($query->result() as $row): ?> <label>Hello,  <?=$row->firstName?></label><?php endforeach;?></li>
+			<li><?foreach ($query->result() as $row): ?> <label>Hello,  <?=$row->firstName?></label><?php endforeach;?></li>
 			<li><?=anchor('admin/writeBlog/', 'Write a Blog');?></li>
 			<li><?=anchor('admin/writeResource/', 'Enter a Resource');?></li>
 			<li><?=anchor('admin/writeVocab/', 'New Vocab Word');?></li>
 			<li><?=anchor('admin/logout', 'Logout');?></li>
 		</ul>
 		<noscript class="noJava">
-		<link rel="stylesheet" href="<?php echo base_url();?>inc/css/noJava.css" type="text/css" media="screen"/>
+		<link rel="stylesheet" href="<?=base_url();?>inc/css/noJava.css" type="text/css" media="screen"/>
 		<h3>Please turn your javascript on to take advantage of all the features of this site!</h3></noscript>		
 		<div class="headerCon" style="padding: 1em 1.5em 0 1.5em">
 			<nav>

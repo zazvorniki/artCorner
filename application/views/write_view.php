@@ -29,22 +29,22 @@
 			</div>
 			<div class="sideIcons">
 				<ul>
-					<li><img src="<?php echo base_url();?>inc/img/tinymce/bold.png" alt="" /><span> - Bold your text</span></li>
-					<li><img src="<?php echo base_url();?>inc/img/tinymce/italic.png" alt="" /><span> - Italicize your font</span></li>
-					<li><img src="<?php echo base_url();?>inc/img/tinymce/underline.png" alt="" /><span> - Underline your font</span></li>
-					<li><img src="<?php echo base_url();?>inc/img/tinymce/linethrough.png" alt="" /><span> - Put a line through your font</span></li>
-					<li><img src="<?php echo base_url();?>inc/img/tinymce/leftalign.png" alt="" /><span> - Left align</span></li>
-					<li><img src="<?php echo base_url();?>inc/img/tinymce/centered.png" alt="" /><span> - Center align</span></li>
-					<li><img src="<?php echo base_url();?>inc/img/tinymce/justified.png" alt="" /><span> - Justified</span></li>
-					<li><img src="<?php echo base_url();?>inc/img/tinymce/clean.png" alt="" /><span> - Clean up the code</span></li>
-					<li><img src="<?php echo base_url();?>inc/img/tinymce/color.png" alt="" /><span> - Add color to your font</span></li>
-					<li><img src="<?php echo base_url();?>inc/img/tinymce/spelling.png" alt="" /><span> - Check spelling</span></li>
-					<li><img src="<?php echo base_url();?>inc/img/tinymce/undo.png" alt="" /><span> - Undo</span></li>
-					<li><img src="<?php echo base_url();?>inc/img/tinymce/redo.png" alt="" /><span> - Redo</span></li>
-					<li><img src="<?php echo base_url();?>inc/img/tinymce/link.png" alt="" /><span> - Create a link</span></li>
-					<li><img src="<?php echo base_url();?>inc/img/tinymce/unlink.png" alt="" /><span> - Remove link</span></li>
-					<li><img src="<?php echo base_url();?>inc/img/tinymce/picture.png" alt="" /><span> - Insert a picture</span></li>
-				</ul>
+					<li><img src="<?=base_url();?>inc/img/tinymce/bold.png" alt="" /><span> - Bold your text</span></li>
+					<li><img src="<?=base_url();?>inc/img/tinymce/italic.png" alt="" /><span> - Italicize your font</span></li>
+					<li><img src="<?=base_url();?>inc/img/tinymce/underline.png" alt="" /><span> - Underline your font</span></li>
+					<li><img src="<?=base_url();?>inc/img/tinymce/linethrough.png" alt="" /><span> - Put a line through your font</span></li>
+					<li><img src="<?=base_url();?>inc/img/tinymce/leftalign.png" alt="" /><span> - Left align</span></li>
+					<li><img src="<?=base_url();?>inc/img/tinymce/centered.png" alt="" /><span> - Center align</span></li>
+					<li><img src="<?=base_url();?>inc/img/tinymce/justified.png" alt="" /><span> - Justified</span></li>
+					<li><img src="<?=base_url();?>inc/img/tinymce/clean.png" alt="" /><span> - Clean up the code</span></li>
+					<li><img src="<?=base_url();?>inc/img/tinymce/color.png" alt="" /><span> - Add color to your font</span></li>
+					<li><img src="<?=base_url();?>inc/img/tinymce/spelling.png" alt="" /><span> - Check spelling</span></li>
+					<li><img src="<?=base_url();?>inc/img/tinymce/undo.png" alt="" /><span> - Undo</span></li>
+					<li><img src="<?=base_url();?>inc/img/tinymce/redo.png" alt="" /><span> - Redo</span></li>
+					<li><img src="<?=base_url();?>inc/img/tinymce/link.png" alt="" /><span> - Create a link</span></li>
+					<li><img src="<?=base_url();?>inc/img/tinymce/unlink.png" alt="" /><span> - Remove link</span></li>
+					<li><img src="<?=base_url();?>inc/img/tinymce/picture.png" alt="" /><span> - Insert a picture</span></li>
+				</ul>			
 			</div>
 			
 			<div class="clear"></div>
