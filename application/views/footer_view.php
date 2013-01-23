@@ -1,7 +1,7 @@
 <!--  ==========	Footer ==========  -->
-</div>
-</div>
-</div>
+</div><!--  end content  -->
+</div><!--  end container  -->
+</div><!--  end binder  -->
 <div class="foot">
 	<div id="footer">
 		<ul>
@@ -12,8 +12,8 @@
 		
 		<p>© 2013 Jessica Sears All rights reserved.</p>
 		<div class="clear"></div>
-	</div>
-</div>
+	</div><!--  end footer  -->
+</div><!--  end foot  -->
 
 <script src="<?=base_url();?>inc/js/jquery.jtruncate.pack.js" type="text/javascript"></script>
 <script src="<?=base_url();?>inc/js/jquery.flexipage.min.js" type="text/javascript"></script>

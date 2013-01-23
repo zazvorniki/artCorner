@@ -9,4 +9,4 @@
 						<li><h3><?=$row->title?></h3> - <?=$row->body?></li>
 					</ul>
 				<?endforeach;?>
-			</div>
+			</div><!--  end vocabPage  -->

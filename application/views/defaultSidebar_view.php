@@ -5,7 +5,6 @@
 					<li><a href="<?=$row->resource?>"><?=$row->name?></a></li>
 				</ul>
 			<?endforeach;?>
-		</div>
+		</div><!--  end ref  -->
 		<div class="clear"></div>
-	</div>
-</div>			
+			

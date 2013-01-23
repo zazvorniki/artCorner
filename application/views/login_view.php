@@ -28,13 +28,13 @@
 <h3 class="sessionMess">Sorry, this site needs browser sessions in order to log you in. Please make sure you have private browsing turned off.</h3>
 <div class="loginForm">
 		<?=form_open('users/checkLogin');?>
-		<h2>Login</h2>
-		<label>Email:</label><input  type="text" name="email" id="email" />
-		<label>Password:</label><input  type="password" name="pass" id="pass" />
-		<input type="hidden" name="robot" value="yes" />
-		<p><input type="submit" value="Sign In" /></p>
-		</form>
-</div>
+			<h2>Login</h2>
+			<label>Email:</label><input  type="text" name="email" id="email" />
+			<label>Password:</label><input  type="password" name="pass" id="pass" />
+			<input type="hidden" name="robot" value="yes" />
+			<p><input type="submit" value="Sign In" /></p>
+		</form><!--  end form  -->
+</div><!--  end loginForm  -->
 
 </body>
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.js"></script>

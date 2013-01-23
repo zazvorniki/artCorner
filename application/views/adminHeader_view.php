@@ -29,7 +29,7 @@
 			<li><?=anchor('admin/writeResource/', 'Enter a Resource');?></li>
 			<li><?=anchor('admin/writeVocab/', 'New Vocab Word');?></li>
 			<li><?=anchor('admin/logout', 'Logout');?></li>
-		</ul>
+		</ul><!--  end adminInfo  -->
 		<noscript class="noJava">
 		<link rel="stylesheet" href="<?=base_url();?>inc/css/noJava.css" type="text/css" media="screen"/>
 		<h3>Please turn your javascript on to take advantage of all the features of this site!</h3></noscript>		
@@ -41,6 +41,6 @@
 					<li class="link"><?=anchor('blog/events', 'Events');?></li>
 					<li class="link"><?=anchor('blog/projects', 'Projects');?></li>
 				</ul>
-			</div>
-		</div>	
-	</div>
+			</div><!--  end nav  -->
+		</div><!--  end headerCon  -->	
+	</div><!--  end header  -->

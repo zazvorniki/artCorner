@@ -24,8 +24,8 @@
 				
 					<p class="subPos"><input type="submit" class="submit" value="Post" /></p>
 					<span class="cancelPos"><?=anchor('blog/', 'cancel', array('class' => 'cancel'));?></span>
-				</form>
-			</div>
+				</form><!--  end postForm  -->
+			</div><!--  end writeBlog  -->
 			<div class="clear"></div>
 
 <script src="<?php echo base_url();?>inc/js/reVal.js" type="text/javascript"></script>

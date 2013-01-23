@@ -9,9 +9,8 @@
 				<p>Are you sure you want to delete this post? This action is <b>permanent</b>, you will not be able to retrieve this information again. </p>
 			<div class="confirm">	
 				<input type="submit" value="Yes" class="submit yesSub" />			
-			</form>
+			</form><!--  end deleteForm  -->
 			<?=form_open('blog/', array('class' => 'redirect'));?>
 				<input type="submit" value="No"  class="noSub" />
-			</form>	
-			</div>
-</div>
+			</form><!--  end redirect  -->	
+			</div><!--  end confirl  -->

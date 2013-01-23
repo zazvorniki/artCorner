@@ -18,5 +18,5 @@
 						
 					</li>
 				<?endforeach;?>
-				</ul>
-			</div>			
+				</ul><!--  end item  -->
+			</div><!--  end blog container  -->			

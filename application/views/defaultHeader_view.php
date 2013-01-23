@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:fb="http://ogp.me/ns/fb#"><head>
+<html lang="en"><head>
 <title>Plantation Key Art Corner</title>
 <!--  ==========	Meta Tags ==========  -->
 	<meta charset="utf-8">
@@ -14,27 +14,17 @@
 <!--  ==========	Style Sheets		==========	-->
 	<link rel="stylesheet" href="<?=base_url();?>inc/css/screen.css"/>
 	<link rel="stylesheet" href="<?=base_url();?>inc/css/flexipage.css" />
-	
-<!--  ==========	Facebook like button ==========  -->
-	
-	<div id="fb-root"></div>
-	
-	<script src="<?=base_url();?>inc/js/fb.js" type="text/javascript"></script>
-	
+<!--  ==========	Jquery	==========	-->
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.js"></script>
-	
-	
-	
-	
-	
-	<!--[if IE]>
-		<link rel="stylesheet" type="text/css" href="<?=base_url();?>inc/css/internetExplorer7.css" />
-	<![endif]-->
-<!--  ==========	Header and navigation ==========  -->
-
 </head>
 
 <body>
+<!--  ==========	Facebook like button ==========  -->
+	<!-- this has to be in the body or else it's not valid html -->
+	<div id="fb-root"></div>
+	<script src="<?=base_url();?>inc/js/fb.js" type="text/javascript"></script>
+	
+<!--  ==========	Header and navigation ==========  -->
 	<div id="header">
 		<ul class="beta">
 			<li>This site is still under development, please keep in mind that there are still a few bugs that need working out.</li>
@@ -52,7 +42,7 @@
 					<li class="clear"></li>
 				</ul>
 
-			</div>
-		</div>	
-	</div>
+			</div><!--  end nav  -->
+		</div><!--  end headerCon  -->	
+	</div><!--  end header  -->
 	

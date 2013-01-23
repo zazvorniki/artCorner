@@ -27,5 +27,5 @@
 						<p class="readMore"><?=anchor('blog/comments/'.$row->id, ' More->', array('class' => 'readMore'));?></p>
 					</li>
 				<?endforeach;?>
-				</ul>
-			</div>	
+				</ul><!--  end item  -->
+			</div><!--  end blog container  -->	

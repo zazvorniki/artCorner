@@ -10,7 +10,5 @@
 					<a href="<?=$row->resource?>"><?=$row->name?></a></li>
 				</ul>
 			<?endforeach;?>
-		</div>
-		<div class="clear"></div>
-	</div>
-</div>			
+		</div><!--  end ref  -->
+		<div class="clear"></div>			

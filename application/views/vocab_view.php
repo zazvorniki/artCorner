@@ -18,8 +18,8 @@
 										
 					<p class="subPos"><input type="submit" class="submit" value="Post Vocab" /></p>					
 					<span class="cancelPos"><?=anchor('blog/', 'cancel', array('class' => 'cancel'));?></span>
-				</form>
-			</div>
+				</form><!--  end postForm  -->
+			</div><!--  end writeVocab  -->
 			<div class="vocabIcons">
 				<ul>
 					<li><img src="<?=base_url();?>inc/img/tinymce/bold.png" alt="" /><span> - Bold your text</span></li>
@@ -30,7 +30,7 @@
 					<li><img src="<?=base_url();?>inc/img/tinymce/undo.png" alt="" /><span> - Undo</span></li>
 					<li><img src="<?=base_url();?>inc/img/tinymce/redo.png" alt="" /><span> - Redo</span></li>
 				</ul>			
-			</div>
+			</div><!--  end vocabIcons  -->
 			
 			<div class="clear"></div>
 

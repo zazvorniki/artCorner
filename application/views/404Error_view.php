@@ -9,4 +9,4 @@
 				 or check out the <?=anchor('blog/', 'main page');?> and try again?</h3>		
 								
 							
-			</div>			
+			</div><!--  end errorPage  -->			
