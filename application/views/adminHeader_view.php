@@ -22,7 +22,7 @@
 
 </head>
 <body>
-	<header>
+	<div id="header">
 		<ul class="adminInfo">
 			<li><?foreach ($query->result() as $row): ?> <label>Hello,  <?=$row->firstName?></label><?php endforeach;?></li>
 			<li><?=anchor('admin/writeBlog/', 'Write a Blog');?></li>
@@ -33,14 +33,14 @@
 		<noscript class="noJava">
 		<link rel="stylesheet" href="<?=base_url();?>inc/css/noJava.css" type="text/css" media="screen"/>
 		<h3>Please turn your javascript on to take advantage of all the features of this site!</h3></noscript>		
-		<div class="headerCon" style="padding: 1em 1.5em 0 1.5em">
-			<nav>
+		<div class="headerCon" style="padding: 1em 1.5em 6em 1.5em">
+			<div id="nav">
 				<ul>
 					<li><h1 class="logo"><?=anchor('blog/', 'Plantation Key Art Corner');?></h1></li>
 					<li class="link"><?=anchor('blog/vocab', 'Vocab');?></li>
 					<li class="link"><?=anchor('blog/events', 'Events');?></li>
 					<li class="link"><?=anchor('blog/projects', 'Projects');?></li>
 				</ul>
-			</nav>
+			</div>
 		</div>	
-	</header>
+	</div>

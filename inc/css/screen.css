@@ -50,6 +50,7 @@ html{
 	position: relative;
 	min-height: 100%;
 	color: #464746;
+	height: 100%;
 }
 
 ul{
@@ -66,12 +67,14 @@ body{
 	letter-spacing: .1em;
 	margin: 0 0 1em;
 	background:url('../img/bg.png');
+	height: 100%;
 }
 
 .binder{
 	background: url('../img/spiral.png') repeat-y left 2.7em;
 	width: 66.5em;
 	margin: 0 auto;
+	clear: both;
 }
 
 .container{
@@ -80,6 +83,8 @@ body{
 	margin: 1.5em auto;
 	padding-bottom: 2em;
 	background:url('../img/paper.png');
+	min-height: 100%;
+	position: rel;
 }
 
 
@@ -153,19 +158,19 @@ body{
 /*----------Links----------*/
 
 
-header a{
+#header a{
 	color: #d6efee;
 	font: 1.5em "nexafree", Arial, Helvetica, Geneva, sans-serif;
 	text-decoration: none;
 }
 
-footer a{
+#footer a{
 	color: #d6efee;
 	font-size: 1em;
 	text-decoration: none;	
 }
 
-header a:hover, footer a:hover{
+#header a:hover, #footer a:hover{
 	color: #85b6b4;
 }
 
@@ -197,18 +202,19 @@ header a:hover, footer a:hover{
 
 /*----------Header----------*/
 
-header{
+#header{
 	margin: 0;
 	color: #d6efee;
 }
 
-header h1{
+#header h1{
 	margin: 0;
 }
 
 .headerCon{
-	width: 68em;
+	width: 62em;
 	margin:  0 auto;	
+	padding-bottom: 6em;
 }
 
 .link{
@@ -216,7 +222,6 @@ header h1{
 	position: relative;
 	top: 2.4em;
 	padding: 0 1.5em;
-	right: 2em;
 }
 
 .logo{
@@ -224,6 +229,7 @@ header h1{
 	height: 78px;
 	width:400px;
 	display: inline-block;
+	float: left;
 }
 		
 .logo a{
@@ -241,6 +247,14 @@ header h1{
 	text-align: right;
 	padding: .5em 0;
 	background-color: #1b181a;
+}
+
+.beta{
+	margin: 0;
+	font-size: 1.2em;
+	padding: .5em 0;
+	background-color: #1b181a;
+	text-align: center;
 }
 
 .adminInfo label{
@@ -621,7 +635,7 @@ header h1{
 
 /*----------Footer----------*/
 
-footer{
+#footer{
 	color: #d6efee;
 	font-family: nexafree;
 	width: 64em;
@@ -630,22 +644,23 @@ footer{
 
 .foot{
 	clear: both;
-	position: absolute;
+	position: relative;
 	bottom: -1em;	
 	width: 100%;
 	height: 3em;
+	left: 0px
 }
 
-footer ul{
+#footer ul{
 	float: left;
 }
 
-footer p{
+#footer p{
 	float: right;
 	padding-right: 1.5em;
 }
 
-footer li{
+#footer li{
 	display: inline;
 	padding: 0 1em;
 }

@@ -23,26 +23,36 @@
 	
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.js"></script>
 	
+	
+	
+	
+	
+	<!--[if IE]>
+		<link rel="stylesheet" type="text/css" href="<?=base_url();?>inc/css/internetExplorer7.css" />
+	<![endif]-->
 <!--  ==========	Header and navigation ==========  -->
 
 </head>
 
 <body>
-	<header>
+	<div id="header">
+		<ul class="beta">
+			<li>This site is still under development, please keep in mind that there are still a few bugs that need working out.</li>
+		</ul>
 		<noscript class="noJava">
-		<link rel="stylesheet" href="<?=base_url();?>inc/css/noJava.css" type="text/css" media="screen"/>
 		<h3>Please turn your javascript on to take advantage of all the features of this site!</h3></noscript>	
 		<div class="headerCon">
 		
-			<nav>
+			<div id="nav">
 				<ul>
 					<li><h1 class="logo"><?=anchor('blog/', 'Plantation Key Art Corner');?></h1></li>
 					<li class="link"><?=anchor('blog/vocab', 'Vocab');?></li>
 					<li class="link"><?=anchor('blog/events', 'Events');?></li>
 					<li class="link"><?=anchor('blog/projects', 'Projects');?></li>
+					<li class="clear"></li>
 				</ul>
 
-			</nav>
+			</div>
 		</div>	
-	</header>
+	</div>
 	

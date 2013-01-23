@@ -3,7 +3,7 @@
 </div>
 </div>
 <div class="foot">
-	<footer>
+	<div id="footer">
 		<ul>
 			<li><?=anchor('blog/projects', 'Projects');?></li>
 			<li><?=anchor('blog/events', 'Events');?></li>
@@ -12,7 +12,7 @@
 		
 		<p>© 2013 Jessica Sears All rights reserved.</p>
 		<div class="clear"></div>
-	</footer>
+	</div>
 </div>
 
 <script src="<?=base_url();?>inc/js/jquery.jtruncate.pack.js" type="text/javascript"></script>
