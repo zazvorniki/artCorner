@@ -21,6 +21,7 @@
 					<div class="textPos">
 					<p><textarea name="body" id="body" > <?=$row->body?></textarea></p>
 					</div>
+					<p class="textValid"><span id="notThere" class="LV_validation_message LV_invalid" style="display: none;">Can't be empty!</span></p>	
 					<p>*note: to create a new paragraph press the return twice</p>
 					<p class="subPos"><input type="submit" class="submit" value="Save" autocomplete="off"/></p>
 					

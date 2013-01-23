@@ -12,7 +12,8 @@
 					
 					<p><label>Email:</label> <input type="text" class="contact" name="email" id="email" autocomplete="off"/></p>
 					Message:<div class="messageCon">
-						<p><label></label><textarea name="message" ></textarea></p>
+						<p><textarea name="message" ></textarea></p>
+					<p class="textValid"><span id="notThere" class="LV_validation_message LV_invalid" style="display: none;">Can't be empty!</span></p>	
 					</div>	
 					<input type="submit" class="submit contactSub" value="Email" />
 				</form>

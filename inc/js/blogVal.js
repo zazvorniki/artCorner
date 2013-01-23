@@ -21,6 +21,26 @@ $(document).ready(function(){
 	    theme_advanced_resizing : true,
 	    width: "630px",
 	    height: "500px",
-	    theme_advanced_path : false
+	    theme_advanced_path : false,
+	    setup : function(ed) {
+	    	ed.onKeyUp.add(function(ed, e) {
+	    	var text = tinyMCE.activeEditor.getContent();
+	    	console.log(text.length);
+	    		if(text == "")
+	    		{
+	    			$("#notThere").show();
+	    		}
+	    	});
+	    },
+	    
 	});	
+	
+	$('.submit').click(function() {
+	    var text = tinyMCE.activeEditor.getContent();
+	    if(text == "")
+	    {
+	    		$("#notThere").show();
+	    		return false;
+	    }
+	 }); 	  
 });

@@ -10,6 +10,25 @@ $(document).ready(function(){
 		  mode : "textareas",
 		  theme : "simple",
 		  width: "300px",
-		  height: "150px"
+		  height: "150px",
+		  setup : function(ed) {
+		  	ed.onKeyUp.add(function(ed, e) {
+		  	var text = tinyMCE.activeEditor.getContent();
+		  	console.log(text.length);
+		  		if(text == "")
+		  		{
+		  			$("#notThere").show();
+		  		}
+		  	});
+		  },
 	 });
+	 
+	 $('.submit').click(function() {
+	     var text = tinyMCE.activeEditor.getContent();
+	     if(text == "")
+	     {
+	     		$("#notThere").show();
+	     		return false;
+	     }
+	  }); 	 
 });

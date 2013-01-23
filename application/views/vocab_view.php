@@ -14,6 +14,7 @@
 						<textarea type="text" id="body" name="body" class="resInput"></textarea>	
 					</div>
 								
+					<p class="textValid"><span id="notThere" class="LV_validation_message LV_invalid" style="display: none;">Can't be empty!</span></p>
 										
 					<p class="subPos"><input type="submit" class="submit" value="Post Vocab" /></p>					
 					<span class="cancelPos"><?=anchor('blog/', 'cancel', array('class' => 'cancel'));?></span>
