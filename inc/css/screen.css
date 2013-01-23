@@ -569,15 +569,19 @@ body{
 	float: left;
 }
 
-.sideIcons{
+.sideIcons, .vocabIcons{
 	float: right;
 	padding-right: 1em;
 	padding-top: 1em;
 }
 
-.sideIcons ul li{
+.sideIcons ul li, .vocabIcons ul li{
 	display: block;
 	line-height: 1.9em;
+}
+
+.vocabIcons{
+	padding-right: 6em;
 }
 
 .yesSub{
