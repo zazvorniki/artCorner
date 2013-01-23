@@ -6,4 +6,12 @@ $(document).ready(function(){
 	//this is the live validation for the name filed
 	var name = new LiveValidation('name')
 	name.add( Validate.Presence );
+	
+	$('.submit').click(function() {
+		if($("input[name=category]:checked").val() == null) 
+		{
+				$("#radioVal").show(); 		
+		 		return false;	
+		}
+	});
 });

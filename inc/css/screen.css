@@ -300,7 +300,7 @@ body{
 }
 
 .postForm p, .postingCom p, .editForm p, .contactForm p{
-	padding-bottom: .5em;
+	padding-bottom: 1em;
 }
 
 .postForm span, .span, .contactForm span{

@@ -17,12 +17,20 @@
 					
 
 					<p><label>Title:</label> <input type="text" id="title" class="postInput" value="<?=$row->title?>" name="title" autocomplete="off"/></p>
+					<p class="cat">
+						<label>Category:</label>
+						<span>Project<input type="radio" name="category" value="project" <?if($row->category == "project"){echo 'checked' ;}?>></span>
+						
+						<span>Event<input type="radio" name="category" value="event"<?if($row->category == "event"){echo 'checked' ;}?>></span>
+					</p>
+					<p>*note: to create a new paragraph press the return twice</p>
+					
+					<p class="textValid"><span id="radioVal" class="LV_validation_message LV_invalid" style="display: none;">Can't be empty!</span></p>
 					
 					<div class="textPos">
 					<p><textarea name="body" id="body" > <?=$row->body?></textarea></p>
 					</div>
 					<p class="textValid"><span id="notThere" class="LV_validation_message LV_invalid" style="display: none;">Can't be empty!</span></p>	
-					<p>*note: to create a new paragraph press the return twice</p>
 					<p class="subPos"><input type="submit" class="submit" value="Save" autocomplete="off"/></p>
 					
 					<span class="cancelPos"><?=anchor('blog/', 'cancel', array('class' => 'cancel'));?></span>

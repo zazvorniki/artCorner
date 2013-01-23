@@ -41,6 +41,12 @@ $(document).ready(function(){
 	    {
 	    		$("#notThere").show();
 	    		return false;
+	    };
+	    
+	    if($("input[name=category]:checked").val() == null) 
+	    {
+	    		$("#radioVal").show(); 		
+	     		return false;	
 	    }
 	 }); 	  
 });

@@ -20,6 +20,7 @@
 						
 						<span>Event<input type="radio" name="category" value="event"></span>
 					</p>
+					<p class="textValid"><span id="radioVal" class="LV_validation_message LV_invalid" style="display: none;">Can't be empty!</span></p>
 				
 					<p class="subPos"><input type="submit" class="submit" value="Post" /></p>
 					<span class="cancelPos"><?=anchor('blog/', 'cancel', array('class' => 'cancel'));?></span>
