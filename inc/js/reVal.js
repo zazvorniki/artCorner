@@ -6,7 +6,7 @@ $(document).ready(function(){
 	//this is the live validation for the name filed
 	var name = new LiveValidation('name')
 	name.add( Validate.Presence );
-	
+	//on submit this will make sure at least one radio button is selected
 	$('.submit').click(function() {
 		if($("input[name=category]:checked").val() == null) 
 		{

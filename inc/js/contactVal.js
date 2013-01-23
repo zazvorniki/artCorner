@@ -9,13 +9,13 @@ $(document).ready(function(){
 	email.add( Validate.Presence );
 
 	//this initializes the tinyMCE rich text editor
-	
 	tinyMCE.init({
 		mode : "textareas",
 		theme : "simple",
 		width: "300px",
 		height: "150px",
 		setup : function(ed) {
+			//this calls the on key up function and makes sure the ext field is not empty
 			ed.onKeyUp.add(function(ed, e) {
 			var text = tinyMCE.activeEditor.getContent();
 			console.log(text.length);
@@ -27,6 +27,7 @@ $(document).ready(function(){
 		},
 	});
 	
+	//On submit this makes sure that the text field is not empty
 	$('.submit').click(function() {
 	    var text = tinyMCE.activeEditor.getContent();
 	    if(text == "")

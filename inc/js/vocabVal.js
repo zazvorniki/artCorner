@@ -12,6 +12,7 @@ $(document).ready(function(){
 		  width: "300px",
 		  height: "150px",
 		  setup : function(ed) {
+		  	//this calls the on key up function and makes sure that the text area is filled
 		  	ed.onKeyUp.add(function(ed, e) {
 		  	var text = tinyMCE.activeEditor.getContent();
 		  	console.log(text.length);
@@ -22,7 +23,7 @@ $(document).ready(function(){
 		  	});
 		  },
 	 });
-	 
+	 //on submit  this will double check to make sure the text area is filled
 	 $('.submit').click(function() {
 	     var text = tinyMCE.activeEditor.getContent();
 	     if(text == "")

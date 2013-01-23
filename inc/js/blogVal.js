@@ -12,7 +12,7 @@ $(document).ready(function(){
 	    theme : "advanced",
 	    plugins : "spellchecker,style,inlinepopups",
 	    
-	     //Theme options
+	     //Advanced editor buttons and settings
 	    theme_advanced_buttons1 : "bold,italic,underline,strikethrough,|,justifyleft,justifycenter,justifyright,justifyfull,|,cleanup,|,forecolor, spellchecker,|,fontselect",
 	    theme_advanced_buttons2:
 	    "undo,redo,|,link, unlink, image",
@@ -23,6 +23,7 @@ $(document).ready(function(){
 	    height: "500px",
 	    theme_advanced_path : false,
 	    setup : function(ed) {
+	    	//this calls the on key up function which helps validate the text field
 	    	ed.onKeyUp.add(function(ed, e) {
 	    	var text = tinyMCE.activeEditor.getContent();
 	    	console.log(text.length);
@@ -32,9 +33,9 @@ $(document).ready(function(){
 	    		}
 	    	});
 	    },
-	    
 	});	
 	
+	//On submit this is going to call the tinymce values and make sure they are filled. This also makes sure the input it selected.
 	$('.submit').click(function() {
 	    var text = tinyMCE.activeEditor.getContent();
 	    if(text == "")
