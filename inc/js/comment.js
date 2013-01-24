@@ -13,19 +13,43 @@ $(document).ready(function(){
 			//This calls the key up function which makes sure that the field is filled and does not have more than a thousand characters 
 			ed.onKeyUp.add(function(ed, e) {
 			var text = tinyMCE.activeEditor.getContent();
-			console.log(text.length);
+			//console.log(text);			
 				if(text == "")
 				{
 					$("#notThere").show();
+				}else {
+					$("#notThere").hide();
 				}
 						
 				if (text.length >1000)
 				{
 					$("#tooLong").show();
+				}else{
+					$("#tooLong").hide();
+				}
+
+			});
+			ed.onPostProcess.add(function(ed, o) {
+				var text = "";
+				var tmp = document.createElement("DIV");
+				
+				tmp.innerHTML = o.content;
+				if (tmp.innerHTML) {
+					text = tmp.textContent||tmp.innerText||"";
+					text = text.replace(/\n/gi, "");
+					text = text.replace(/\s/g, "");
+					text = text.replace(/\t/g, "");
+				} else {
+					text = "";
+				}
+				if (text == "") {
+					o.content = text;
 				}
 			});
 		},
+
 	});
+
 	 //makes sure the author input field is filled in before submitting
 	 var cAuthor = new LiveValidation('cAuthor')
 	 cAuthor.add( Validate.Presence );
@@ -43,12 +67,7 @@ $(document).ready(function(){
 	     		$("#notThere").show();
 	     		return false;
 	     }
-	     //If this is not here than the user can just hit enter and it will submit
-	     if (text.length == 27)
-	     {
-	     		$("#notThere").show();
-	     		return false;
-	     }
+	     
 	     if (text.length >1000)
 	     {
 	     		$("#tooLong").show();
