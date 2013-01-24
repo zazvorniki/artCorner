@@ -256,8 +256,11 @@ body{
 	margin: 0;
 	font-size: 1.2em;
 	padding: .5em 0;
-	background-color: #1b181a;
+	background-color: #bf7872;
 	text-align: center;
+	-webkit-box-shadow: 5px 5px 21px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow:    5px 5px 21px rgba(50, 50, 50, 0.75);
+	box-shadow:         5px 5px 21px rgba(50, 50, 50, 0.75);
 }
 
 .adminInfo label{
@@ -464,10 +467,12 @@ body{
 	overflow: hidden;
 	line-height: 1.4em;
 	font-size: 1.1em;
+	text-align: left !important;
 }
 
 .body p:first-child{
 	padding-top: 1.5em;
+	text-align: left;
 }
 
 .innerBlog p{
@@ -617,12 +622,21 @@ body{
 
 .vocabPage ul{
 	width: 90%;
-	margin: 0 aut0;
+	margin: 0 auto;
+	font: 1em "source", Helvetica, Geneva, sans-serif !important;
+	letter-spacing: .1em;
+	line-height: 2em;
+}
+
+.vocabPage li{
+	display: block;
+	padding: .9em 0;
 }
 
 .vocabPage h3{
 	display: inline;
 }
+
 
 .writeVocab label{
 	width: 6em;

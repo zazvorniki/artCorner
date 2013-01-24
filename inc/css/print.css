@@ -63,9 +63,13 @@ Project:
 }
 
 .content, .container, .binder, body, .commentPage, .commentPage:after, commentPage:before, {
-	background: none;
+	background: white;
 }
 
+.content, .container, .binder, body{
+	position: relative;
+	bottom: 2em;
+}
 
 .commentPage, .commentPage:after, commentPage:before {
 	-webkit-box-shadow: none;

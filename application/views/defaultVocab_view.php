@@ -4,9 +4,9 @@
 		<div class="content">
 			<div class="vocabPage">
 				<h2>Vocabulary</h2>
-				<?foreach ($query->result() as $row): ?> 
-					<ul>
-						<li><h3><?=$row->title?></h3> - <?=$row->body?></li>
-					</ul>
-				<?endforeach;?>
+				<ul>
+					<?foreach ($query->result() as $row): ?> 
+						<li><h3><?=$row->title?></h3> <span> - <?=$row->body?></span></li>
+					<?endforeach;?>
+				</ul>
 			</div><!--  end vocabPage  -->
