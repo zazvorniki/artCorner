@@ -8,12 +8,14 @@
 <!--	<meta name="googlebot" content="all">-->
 	<meta name="author" content="Jessica Sears">
 	<meta name="format-detection" content="telephone=no">
-<!--	<meta name="viewport" content="initial-scale=.5; maximum-scale=.5">-->
 	<meta name="keywords" content="art room, plantation key, plantation key school, school, florida school, the keys, florida keys, Mrs. Sears, Sears">
+	<meta name="viewport" content="initial-scale = .3,maximum-scale = .3" />
+	
 	
 <!--  ==========	Style Sheets		==========	-->
 	<link rel="stylesheet" href="<?=base_url();?>inc/css/screen.css"/>
 	<link rel="stylesheet" href="<?=base_url();?>inc/css/flexipage.css" />
+	<link rel="stylesheet" href="<?=base_url();?>inc/css/print.css" type="text/css" media="print" />
 <!--  ==========	Jquery	==========	-->
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.js"></script>
 </head>
@@ -32,7 +34,7 @@
 		<noscript class="noJava">
 		<h3>Please turn your javascript on to take advantage of all the features of this site!</h3></noscript>	
 		<div class="headerCon">
-		
+		<img class="printLogo" src="<?=base_url();?>inc/img/logo.png" alt="logo" />
 			<div id="nav">
 				<ul>
 					<li><h1 class="logo"><?=anchor('blog/', 'Plantation Key Art Corner');?></h1></li>

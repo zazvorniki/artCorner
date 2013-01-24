@@ -9,11 +9,16 @@
 	public function publishPost()
 	{
 		//this array finds the inputs and strips the html tags from them before inputting them in the database
+		$title = strip_tags($this->input->post('title'));
+		$posted = strip_tags($this->input->post('posted_by'));
+		$cat = $this->input->post('category');
+		$body = preg_replace('/[^(\x20-\x7F)]*/','', $this->input->post('body'));
+		
 		$data = array(
-			'title'=>strip_tags($this->input->post('title')),
-			'posted_by'=>strip_tags($this->input->post('posted_by')),
-			'category'=>$this->input->post('category'),
-			'body'=>$this->input->post('body')
+			'title'=> $title,
+			'posted_by'=>$posted,
+			'category'=>$cat,
+			'body'=> $body
 		);
 		//this sets the data as the post and the datestamp
 		$data['date'] = time();
@@ -24,12 +29,14 @@
 	public function publishVocab()
 	{
 		//this array finds the inputs and strips the html tags from them before inputting them in the database
+		$title = strip_tags($this->input->post('title'));
+		$body = preg_replace('/[^(\x20-\x7F)]*/','', strip_tags($this->input->post('body'), '<strong>, <em>, <span>'));
+		
 		$data = array(
-			'title'=>strip_tags($this->input->post('title')),
+			'title'=>$title,
 			'posted_by'=>'Ms. Sears',
 			'category'=>'vocab',
-			'body'=>strip_tags($this->input->post('body'), '<strong>, <em>, <span>')
-			//strip_tags($data, '<br>')
+			'body'=>$body
 		);
 		//this sets the data as the post and the datestamp
 		$data['date'] = time();
@@ -40,9 +47,12 @@
 	public function editPost()
 	{		
 		//this array finds the inputs and strips the html tags from them before inputting them in the database
+		$title = strip_tags($this->input->post('title'));
+		$body = preg_replace('/[^(\x20-\x7F)]*/','', $this->input->post('body'));
+		
 		$data = array(
-			'title'=>strip_tags($this->input->post('title')),
-			'body'=>$this->input->post('body')
+			'title'=>$title,
+			'body'=>$body
 		);
 		 //this grabs the id from the hidden form field           
 		$this->db->where('id', $this->input->post('id'));
@@ -75,11 +85,16 @@
 	public function publishResource()
 	{
 		//this array finds the inputs and strips the html tags from them before inputting them in the database
+		$resource = strip_tags($this->input->post('resource'));
+		$name = strip_tags($this->input->post('name'));
+		$cat =$this->input->post('category');
+		$date =$this->input->post('date');
+		
 		$data = array(
-			'resource'=>strip_tags($this->input->post('resource')),
-			'name'=>strip_tags($this->input->post('name')),
-			'category'=>$this->input->post('category'),
-			'date'=>$this->input->post('date')
+			'resource'=>$resource,
+			'name'=>$name,
+			'category'=>$cat,
+			'date'=>$date
 		);
 		//this inserts the resources into the database
 		$this->db->insert('resources', $data);
@@ -88,13 +103,20 @@
 	public function publishComment()
 	{	
 		//this array finds the inputs and strips the html tags from them before inputting them in the database
+		$entry_id = $this->input->post('entry_id');
+		$author = strip_tags($this->input->post('author'));
+		$email = strip_tags($this->input->post('email'));
+		$showEmail = $this->input->post('showEmail');
+		$body = preg_replace('/[^(\x20-\x7F)]*/','', $this->input->post('body'));
+		$robot = $this->input->post('robot');
+		
 		$data = array(
-			'entry_id'=>$this->input->post('entry_id'),
-			'author'=>strip_tags($this->input->post('author')),
-			'email'=>strip_tags($this->input->post('email')),
-			'showEmail'=>$this->input->post('showEmail'),
-			'body'=>$this->input->post('body'),
-			'robot'=>$this->input->post('robot')
+			'entry_id'=>$entry_id,
+			'author'=>$author,
+			'email'=>$email,
+			'showEmail'=>$showEmail,
+			'body'=>$body,
+			'robot'=>$robot
 		);
 		$data['date'] = time();	
 		//this inserts the comments into the comment table in the database

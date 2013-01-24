@@ -9,9 +9,7 @@
 	<meta name="robots" content="all">
 <!--	<meta name="googlebot" content="all">-->
 	<meta name="author" content="Jessica Sears">
-    <meta name="copyright" content="Jessica Sears">
 	<meta name="format-detection" content="telephone=no">
-    <meta name="handheldfriendly">
 <!--	<meta name="viewport" content="initial-scale=.5; maximum-scale=.5">-->
 	<meta name="keywords" content="art room, plantation key, plantation key school, school, florida school, the keys, florida keys, Mrs. Sears, Sears">
 	
@@ -36,9 +34,11 @@
 		</form><!--  end form  -->
 </div><!--  end loginForm  -->
 
-</body>
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.js"></script>
+
 <script src="<?=base_url();?>inc/js/livevalidation_standalone.js" type="text/javascript"></script>
+
 <script src="<?=base_url();?>inc/js/loginVal.js" type="text/javascript"></script>
 <script src="<?=base_url();?>inc/js/Modernizr.js" type="text/javascript"></script>
+</body>
 </html>
