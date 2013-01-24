@@ -15,7 +15,7 @@ $(document).ready(function(){
 	     //Advanced editor buttons and settings
 	    theme_advanced_buttons1 : "bold,italic,underline,strikethrough,|,justifyleft,justifycenter,justifyright,justifyfull,|,cleanup,|,forecolor, spellchecker,|,fontselect",
 	    theme_advanced_buttons2:
-	    "undo,redo,|,link, unlink, image",
+	    "undo,redo,|,link, unlink",
 	    theme_advanced_toolbar_location : "top",
 	    theme_advanced_toolbar_align : "center",
 	    theme_advanced_resizing : true,
@@ -69,5 +69,5 @@ $(document).ready(function(){
 	    		$("#radioVal").show(); 		
 	     		return false;	
 	    }
-	 }); 	  
+	 });  
 });

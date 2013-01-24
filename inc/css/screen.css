@@ -255,12 +255,13 @@ body{
 .beta{
 	margin: 0;
 	font-size: 1.2em;
-	padding: .5em 0;
+	padding: .8em 0;
 	background-color: #bf7872;
 	text-align: center;
 	-webkit-box-shadow: 5px 5px 21px rgba(50, 50, 50, 0.75);
-	-moz-box-shadow:    5px 5px 21px rgba(50, 50, 50, 0.75);
-	box-shadow:         5px 5px 21px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow:5px 5px 21px rgba(50, 50, 50, 0.75);
+	box-shadow: 5px 5px 21px rgba(50, 50, 50, 0.75);
+	width: 100%;
 }
 
 .adminInfo label{
@@ -475,8 +476,12 @@ body{
 	text-align: left;
 }
 
+.commentList p{
+	line-height: 1.5em;
+}
+
 .innerBlog p{
-	line-height: 1.4em;
+	line-height: 1.5em;
 }
 
 .bBody p:first-child{

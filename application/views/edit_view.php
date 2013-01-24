@@ -54,7 +54,6 @@
 					<li><img src="<?=base_url();?>inc/img/tinymce/redo.png" alt="" /><span> - Redo</span></li>
 					<li><img src="<?=base_url();?>inc/img/tinymce/link.png" alt="" /><span> - Create a link</span></li>
 					<li><img src="<?=base_url();?>inc/img/tinymce/unlink.png" alt="" /><span> - Remove link</span></li>
-					<li><img src="<?=base_url();?>inc/img/tinymce/picture.png" alt="" /><span> - Insert a picture</span></li>
 				</ul>
 			</div><!--  end sideIcons  -->
 			
