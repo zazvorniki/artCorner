@@ -20,7 +20,16 @@ class Blog extends CI_Controller{
 		if (empty($user['currentUser'])) {
 			//This loads the default views. The header, body and footer
 			$this->load->view('defaultHeader_view');
-			$this->blog_model->loadAll();
+			
+			
+			$data = array();
+			$query = $this->blog_model->loadAll();
+			
+			$data['query'] = $query;
+			$this->load->view('defaultBlog_view', $data);
+			
+			
+			
 			$this->blog_model->loadResource();	
 			$this->load->view('footer_view');
 		}else {

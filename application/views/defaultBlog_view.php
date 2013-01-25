@@ -4,7 +4,7 @@
 		<div class="content">
 			<div class="blogContainer clearfix">
 				<ul class="item">
-				<?foreach ($query->result() as $row): ?> 
+     				 <?foreach($query as $row) :?>	
 					<li>					
 						<p class="bTitle"><?=anchor('blog/comments/'.$row->id, $row->title);?></p>
 					
