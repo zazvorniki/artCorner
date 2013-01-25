@@ -88,7 +88,7 @@
 		$resource = strip_tags($this->input->post('resource'));
 		$name = strip_tags($this->input->post('name'));
 		$cat =$this->input->post('category');
-		$date =$this->input->post('date');
+		$date = time();	
 		
 		$data = array(
 			'resource'=>$resource,
@@ -108,7 +108,6 @@
 		$email = strip_tags($this->input->post('email'));
 		$showEmail = $this->input->post('showEmail');
 		$body = preg_replace('/[^(\x20-\x7F)]*/','', $this->input->post('body'));
-		$robot = $this->input->post('robot');
 		
 		$data = array(
 			'entry_id'=>$entry_id,
@@ -116,7 +115,6 @@
 			'email'=>$email,
 			'showEmail'=>$showEmail,
 			'body'=>$body,
-			'robot'=>$robot
 		);
 		$data['date'] = time();	
 		//this inserts the comments into the comment table in the database

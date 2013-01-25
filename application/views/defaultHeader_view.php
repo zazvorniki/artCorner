@@ -5,6 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="description" content="Mrs. Sears, the art teacher at Plantation key school created this blog to keep her students and their parents informed on the projects and events going on in the art room.">
 	<meta name="robots" content="all">
+	 <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
 <!--	<meta name="googlebot" content="all">-->
 	<meta name="author" content="Jessica Sears">
 	<meta name="format-detection" content="telephone=no">
@@ -16,6 +17,19 @@
 	<link rel="stylesheet" href="<?=base_url();?>inc/css/screen.css"/>
 	<link rel="stylesheet" href="<?=base_url();?>inc/css/flexipage.css" />
 	<link rel="stylesheet" href="<?=base_url();?>inc/css/print.css" type="text/css" media="print" />
+	
+	<!--[if IE 7]>
+		<link rel="stylesheet" href="<?=base_url();?>inc/css/internetExplorer7.css"/>
+	<![endif]-->
+	
+	<!--[if IE 8]>
+		<link rel="stylesheet" href="<?=base_url();?>inc/css/internetExplorer8.css"/>
+	<![endif]-->
+	
+	<!--[if IE 9]>
+		<link rel="stylesheet" href="<?=base_url();?>inc/css/internetExplorer9.css"/>
+	<![endif]-->
+	
 <!--  ==========	Jquery	==========	-->
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.js"></script>
 </head>
@@ -36,15 +50,13 @@
 		<div class="headerCon">
 		<img class="printLogo" src="<?=base_url();?>inc/img/printLogo.png" alt="logo" />
 			<div id="nav">
-				<ul>
+				<ul class="clearfix">
 					<li><h1 class="logo"><?=anchor('blog/', 'Plantation Key Art Corner');?></h1></li>
 					<li class="link"><?=anchor('https://gradebook.keysschools.com/pinnacle/piv/Logon.aspx', 'Pinnacle')?></li>
 					<li class="link"><?=anchor('blog/vocab', 'Vocab');?></li>
 					<li class="link"><?=anchor('blog/events', 'Events');?></li>
 					<li class="link"><?=anchor('blog/projects', 'Projects');?></li>
-					<li class="clear"></li>
 				</ul>
-
 			</div><!--  end nav  -->
 		</div><!--  end headerCon  -->	
 	</div><!--  end header  -->

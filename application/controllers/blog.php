@@ -122,15 +122,10 @@ class Blog extends CI_Controller{
 		//this makes sure that the data-key is filled in. If the user tries to access this function with just the url they will be sent to the error page
 		if($this->input->post('data-key') == 'newComment')
 		{
-			//this checks if the hidden input field is filled with 'yes'. If it is not then the user is most likely a robot so it will not post whatever they typed in.
-			if($this->input->post('robot') == 'yes')
-			{
-				//this publishes the comment and then redirects the user back to the comment page they were on with their comment posted
-				$this->blog_model->publishComment();
-				redirect('blog/comments/'.$this->input->post('entry_id'));
-			}else{
-				redirect('error/');
-			}	
+			//this publishes the comment and then redirects the user back to the comment page they were on with their comment posted
+			$this->blog_model->publishComment();
+			redirect('blog/comments/'.$this->input->post('entry_id'));
+			
 		}else{
 			redirect('error/');
 		}

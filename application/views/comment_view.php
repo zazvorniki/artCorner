@@ -30,7 +30,6 @@
 			<label>Comment:</label><textarea class="cBox" id="cBox" name="body" rows="4"></textarea>
 			<p class="textValid"><span id="tooLong" class="LV_validation_message LV_invalid" style="display: none;">Too Long!</span><span id="notThere" class="LV_validation_message LV_invalid" style="display: none;">Can't be empty!</span></p>
 			<p style="padding-top: 1em;">*note: to create a new paragraph press the return twice</p>
-			<input type="hidden" name="robot" value="yes"/>
 			<p style="padding-top: 1em;"><input type="submit" class="submit" value="Submit Comment" /></p>
 		</form><!--  end comForm  -->
 	</div><!--  end postingComment  -->

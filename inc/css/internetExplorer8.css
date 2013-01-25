@@ -15,19 +15,6 @@ Project:
 /*----------Internet Explorer----------*/
 
 
-#nav{
-	width: 65em;
-	position: relative;
-	top: 2em;
-	right: 1em;
-	
+.pager{
+	width: 12em;
 }
-
-.link{
-	right: 2em;
-}
-
-.container{
-	padding: 1em 0;
-}
-
