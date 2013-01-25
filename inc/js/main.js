@@ -3,5 +3,5 @@ $(document).ready(function(){
 	 $('.blogContainer p').jTruncate(); 
 	  
 	//this calls the pagination on each item
-	  $('.item').flexipage();
+	  $('.item').flexipage();  
 });

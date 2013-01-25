@@ -206,11 +206,15 @@ html[xmlns] .clearfix {
 	color: #1f5b9e;
 }
 
-#apl li a:link{
+#apl a:link{
 	color: #1f5b9e;
 	text-decoration: none;
-	font-size: 1.4em;
+	font-size: 1.5em;
 	padding-right: .5em;
+}
+
+.active a:link{
+	font-size: 2em;
 }
 
 .readMore a:visited, .ref a:visited, .errorPage a:visited{
@@ -246,9 +250,9 @@ html[xmlns] .clearfix {
 }
 
 #apl{
-	width: 80%;
+	width: 86%;
 	margin: 0 auto;
-	padding: 1.2em 0;
+	padding: 1em 0;
 }
 
 #apl li{
@@ -540,7 +544,6 @@ html[xmlns] .clearfix {
 	display: block;
 }
 
-
 .bTitle{
 	float: left;
 	font-family: droid;
@@ -713,6 +716,8 @@ html[xmlns] .clearfix {
 	left: 7em;
 	bottom: .5em;
 }
+
+
 
 
 /*----------Footer----------*/
