@@ -1,20 +1,19 @@
 <!--  ==========	Comments ==========  -->
 <div class="commentPage">
 			<h2>Comments</h2>
-			<div class="comments">	
-				<?if($query->num_rows > 0):?>
+			<div class="comments">
 				<ul class="commentList">
-					<?foreach($query as $row) :?>
-							<li><p class="name"><?=$row->author?><?if($row->showEmail == "show"){echo ' ('.$row->email.') ' ;}?></p>
-							
-							<p class="name"><?=date("F j, Y", $row->date)?></p>
-							
-							<span class="body"><?=$row->body?></span><br>
+					<? if(isset($query)) : foreach($query as $row) :?>	
+						<li><p class="name"><?=$row->author?><?if($row->showEmail == "show"){echo ' ('.$row->email.') ' ;}?></p>
+						
+					<p class="name"><?=date("F j, Y", $row->date)?></p>
+											
+					<span class="body"><?=$row->body?></span><br>
 	
-							<img class="line" src="<?=base_url();?>inc/img/line.png" alt="line" /></li>
-					<?endforeach;?>
-				</ul>	<!--  end commentList  -->
-				<?endif;?>	
+					<img class="line" src="<?=base_url();?>inc/img/line.png" alt="line" /></li>	
+					<? endforeach;?>
+				</ul>
+					<? endif;?>	
 			</div><!--  end comments  -->
 				
 	<p class="commentJava">Turn on your javascript and you can post your own comments!</p>
