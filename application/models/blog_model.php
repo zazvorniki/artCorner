@@ -232,6 +232,7 @@
 		//this grabs all the blog posts by the last one inserted and it must have the projects category
 		$this->db->order_by("title", "asc");
 		$this->db->where('category', 'vocab');
+		$this->db->like('title', $this->uri->segment(3), 'after'); 
 		$data['query'] = $this->db->get('entries');
 		$this->load->view('defaultVocab_view', $data);
 	}
@@ -241,6 +242,7 @@
 		//this grabs all the blog posts by the last one inserted and it must have the projects category
 		$this->db->order_by("title", "asc");
 		$this->db->where('category', 'vocab');
+		$this->db->like('title', $this->uri->segment(3), 'after'); 
 		$data['query'] = $this->db->get('entries');
 		$this->load->view('adminVocab_view', $data);
 	}

@@ -85,7 +85,6 @@ class Blog extends CI_Controller{
 			//this loads the default events, then the body and the footer 
 			$this->load->view('defaultHeader_view');
 			$this->blog_model->loadVocab();
-
 			$this->load->view('footer_view');
 		}else{
 			//this takes the currentUser and then passes it to a function inside the user model
@@ -149,6 +148,5 @@ class Blog extends CI_Controller{
 			$this->load->view('contact_view');
 			$this->load->view('footer_view');
 		}		
-	}
-	
+	}	
 }

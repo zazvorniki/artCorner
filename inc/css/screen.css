@@ -206,13 +206,30 @@ html[xmlns] .clearfix {
 	color: #1f5b9e;
 }
 
+#apl li a:link{
+	color: #1f5b9e;
+	text-decoration: none;
+	font-size: 1.4em;
+	padding-right: .5em;
+}
+
 .readMore a:visited, .ref a:visited, .errorPage a:visited{
 	color: #174476;
+}
+
+#apl li a:visited{
+	color: #1f5b9e;
+	text-decoration: none;
 }
 
 .readMore a:hover, .ref a:hover, .errorPage a:hover{
 	color: #2e7bd0;
 	text-decoration: none;
+}
+
+#apl li a:hover{
+	color: #2e7bd0;
+	text-decoration: underline;
 }
 
 .deleteCon a{
@@ -227,6 +244,17 @@ html[xmlns] .clearfix {
 	text-decoration: underline;
 	cursor:pointer;
 }
+
+#apl{
+	width: 80%;
+	margin: 0 auto;
+	padding: 1.2em 0;
+}
+
+#apl li{
+	display: inline;
+}
+
 
 /*----------Header----------*/
 
