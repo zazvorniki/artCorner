@@ -2,7 +2,7 @@
 <div class="binder">
 	<div class="container">
 		<div class="content">
-			<div class="blogContainer">
+			<div class="blogContainer clearfix">
 				<ul class="item">
 				<?foreach ($query->result() as $row):?> 
 					<li>

@@ -92,6 +92,10 @@ body{
 	margin: 0;
 }
 
+.content{
+	min-height: 20em;
+}
+
 .clear{
 	clear: both;
 }
@@ -297,6 +301,7 @@ html[xmlns] .clearfix {
 
 .postForm, .editForm{
 	margin-left: 1em;
+	float: left;
 }
 
 .contactForm{
@@ -451,7 +456,6 @@ html[xmlns] .clearfix {
 /*----------Blog----------*/
 .blogContainer{
 	width: 65%;
-	float: left;
 }
 
  .readMore{
@@ -596,6 +600,7 @@ html[xmlns] .clearfix {
 
 .item{
 	padding-left: 2.5em;
+	float: left;
 }
 
 .writeBlog{
@@ -605,8 +610,11 @@ html[xmlns] .clearfix {
 
 .sideIcons, .vocabIcons{
 	float: right;
-	padding-right: 1em;
 	padding-top: 1em;
+}
+
+.sideIcons{
+	padding-left: 1.5em;
 }
 
 .sideIcons ul li, .vocabIcons ul li{
@@ -615,7 +623,7 @@ html[xmlns] .clearfix {
 }
 
 .vocabIcons{
-	padding-right: 6em;
+	padding-left: 11em;
 }
 
 .yesSub{

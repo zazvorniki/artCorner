@@ -50,7 +50,7 @@
 		<div class="headerCon">
 		<img class="printLogo" src="<?=base_url();?>inc/img/printLogo.png" alt="logo" />
 			<div id="nav">
-				<ul class="clearfix">
+				<ul>
 					<li><h1 class="logo"><?=anchor('blog/', 'Plantation Key Art Corner');?></h1></li>
 					<li class="link"><?=anchor('https://gradebook.keysschools.com/pinnacle/piv/Logon.aspx', 'Pinnacle')?></li>
 					<li class="link"><?=anchor('blog/vocab', 'Vocab');?></li>
