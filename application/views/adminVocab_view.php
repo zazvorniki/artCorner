@@ -33,7 +33,7 @@
 					<li><?=anchor('blog/vocab/z', 'Z', array('class' => 'letters'));?></li>
 				</ul>
 				
-				<?foreach ($query->result() as $row): ?> 
+				<?foreach ($query as $row): ?> 
 					<ul>
 						<li><span class="deleteCon"><?=anchor('admin/deleteVocab/'.$row->id, 'delete', array('class' => 'delete'));?></span><h3><?=$row->title?></h3> - <?=$row->body?></li>
 					</ul>

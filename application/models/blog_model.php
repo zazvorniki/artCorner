@@ -130,16 +130,6 @@
 		return $query->result();		
 	}
 	
-	public function loadAdminBlog()
-	{
-		//this grabs all the blog posts by the last one inserted
-		$this->db->order_by("date", "desc");
-		$this->db->where(array('category !=' => 'vocab'));
-		$data = $this->db->get('entries');
-		return $query->result();	
-		//$this->load->view('adminBlog_view', $data);	
-	}
-	
 	public function loadAdminEvents()
 	{
 		//this grabs all the blog posts by the last one inserted for the events
@@ -164,9 +154,8 @@
 	{
 		//this loads the side bar on the main page with all of the links
 		$this->db->order_by("date", "desc");
-		$data = $this->db->get('resources');
-		return $query->result();	
-		//$this->load->view('defaultSidebar_view', $data);	
+		$query = $this->db->get('resources');
+		return $query->result();		
 	}
 	
 	public function loadReEvent()
@@ -178,15 +167,6 @@
 		return $query->result();	
 		//$this->load->view('defaultSidebar_view', $data);	
 	}	
-	
-	public function loadAdminRe()
-	{
-		//this loads the side bar on the main page with all of the links
-		$this->db->order_by("date", "desc");
-		$data = $this->db->get('resources');
-		return $query->result();	
-		//$this->load->view('adminSidebar_view', $data);	
-	}
 	
 	public function loadAdminEveRe()
 	{
@@ -244,22 +224,9 @@
 		$this->db->order_by("title", "asc");
 		$this->db->where('category', 'vocab');
 		$this->db->like('title', $this->uri->segment(3), 'after'); 
-		$data = $this->db->get('entries');
+		$query = $this->db->get('entries');
 		return $query->result();	
-		//$this->load->view('defaultVocab_view', $data);
 	}
-	
-	public function loadAdminVocab()
-	{
-		//this grabs all the blog posts by the last one inserted and it must have the projects category
-		$this->db->order_by("title", "asc");
-		$this->db->where('category', 'vocab');
-		$this->db->like('title', $this->uri->segment(3), 'after'); 
-		$data = $this->db->get('entries');
-		return $query->result();	
-		//$this->load->view('adminVocab_view', $data);
-	}
-	
 	
 	public function loadOneEntry()
 	{

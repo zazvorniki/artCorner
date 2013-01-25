@@ -33,7 +33,7 @@
 						<li><?=anchor('blog/vocab/z', 'Z', array('class' => 'letters'));?></li>
 					</ul>
 				<ul>
-					<?foreach($query as $row) :?> 
+     					 <?foreach($query as $row) :?>	
 						<li><h3><?=$row->title?></h3> <span> - <?=$row->body?></span></li>
 					<?endforeach;?>
 				</ul>

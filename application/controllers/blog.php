@@ -20,24 +20,38 @@ class Blog extends CI_Controller{
 		if (empty($user['currentUser'])) {
 			//This loads the default views. The header, body and footer
 			$this->load->view('defaultHeader_view');
-			
-			
 			$data = array();
 			$query = $this->blog_model->loadAll();
 			
 			$data['query'] = $query;
 			$this->load->view('defaultBlog_view', $data);
+
 			
+			$d = array();
+			$q = $this->blog_model->loadResource();	
 			
+			$d['query'] = $q;
+			$this->load->view('defaultSidebar_view', $d);
 			
-			$this->blog_model->loadResource();	
 			$this->load->view('footer_view');
 		}else {
 			//this takes the currentUser and then passes it to a function inside the user model
 			$user = $this->users_model->getUser($user['currentUser']->id);
 			//this loads the blog posts, the side bar and the footer
-			$this->blog_model->loadAdminBlog();
-			$this->blog_model->loadAdminRe();	
+			$data = array();
+			$query = $this->blog_model->loadAll();
+			
+			$data['query'] = $query;
+			$this->load->view('adminBlog_view', $data);
+			
+			$d = array();
+			$q = $this->blog_model->loadResource();	
+			
+			$d['query'] = $q;
+			$this->load->view('adminSidebar_view', $d);
+			
+			
+			//$this->blog_model->loadAdminRe();	
 			$this->load->view('footer_view');
 		} 
 	}
@@ -93,13 +107,24 @@ class Blog extends CI_Controller{
 		if (empty($user['currentUser'])) {
 			//this loads the default events, then the body and the footer 
 			$this->load->view('defaultHeader_view');
-			$this->blog_model->loadVocab();
+
+			$data = array();
+			$query = $this->blog_model->loadVocab();
+			
+			$data['query'] = $query;
+			$this->load->view('defaultVocab_view', $data);
+			
 			$this->load->view('footer_view');
 		}else{
 			//this takes the currentUser and then passes it to a function inside the user model
 			$user = $this->users_model->getUser($user['currentUser']->id);
-			//this loads the default events, then the body and the footer 
-			$this->blog_model->loadAdminVocab();
+			//this loads the default events, then the body and the footer
+			$data = array();
+			$query = $this->blog_model->loadVocab();
+			
+			$data['query'] = $query;
+			$this->load->view('adminVocab_view', $data);
+			 
 			$this->load->view('footer_view');		
 		}
 	}			
