@@ -130,26 +130,6 @@
 		return $query->result();		
 	}
 	
-	public function loadAdminEvents()
-	{
-		//this grabs all the blog posts by the last one inserted for the events
-		$this->db->order_by("date", "desc");
-		$this->db->where('category', 'event');
-		$data= $this->db->get('entries');
-		return $query->result();	
-		//$this->load->view('adminBlog_view', $data);	
-	}
-	
-	public function loadAdminProjects()
-	{
-		//this grabs all the blog posts by the last one inserted for the projects
-		$this->db->order_by("date", "desc");
-		$this->db->where('category', 'project');
-		$data = $this->db->get('entries');
-		return $query->result();	
-		//$this->load->view('adminBlog_view', $data);	
-	}
-	
 	public function loadResource()
 	{
 		//this loads the side bar on the main page with all of the links
@@ -163,39 +143,17 @@
 		//This loads all of the sidebar links with the keyword events
 		$this->db->order_by("date", "desc");
 		$this->db->where('category', 'event');
-		$data = $this->db->get('resources');
+		$query = $this->db->get('resources');
 		return $query->result();	
-		//$this->load->view('defaultSidebar_view', $data);	
 	}	
-	
-	public function loadAdminEveRe()
-	{
-		//This loads all of the sidebar links with the keyword events
-		$this->db->order_by("date", "desc");
-		$this->db->where('category', 'event');
-		$data = $this->db->get('resources');
-		return $query->result();	
-		//$this->load->view('adminSidebar_view', $data);	
-	}
-	
-	public function loadAdminProRe()
-	{	
-		//this loads all of the sidebar links with the keyword of project
-		$this->db->order_by("date", "desc");
-		$this->db->where('category', 'project');
-		$data = $this->db->get('resources');
-		return $query->result();	
-		//$this->load->view('adminSidebar_view', $data);	
-	}
-	
+			
 	public function loadEvents()
 	{	
 		//this grabs all the blog posts by the last one inserted and it must have the events category
 		$this->db->order_by("date", "desc");
 		$this->db->where('category', 'event');
-		$data = $this->db->get('entries');
+		$query = $this->db->get('entries');
 		return $query->result();	
-		//$this->load->view('defaultBlog_view', $data);
 	}
 	
 	public function loadReProject()
@@ -203,9 +161,8 @@
 		//this loads all of the sidebar links with the keyword of project
 		$this->db->order_by("date", "desc");
 		$this->db->where('category', 'project');
-		$data = $this->db->get('resources');
+		$query = $this->db->get('resources');
 		return $query->result();	
-		//$this->load->view('defaultSidebar_view', $data);	
 	}
 	
 	public function loadProjects()
@@ -213,9 +170,8 @@
 		//this grabs all the blog posts by the last one inserted and it must have the projects category
 		$this->db->order_by("date", "desc");
 		$this->db->where('category', 'project');
-		$data = $this->db->get('entries');
+		$query = $this->db->get('entries');
 		return $query->result();	
-		//$this->load->view('defaultBlog_view', $data);
 	}
 	
 	public function loadVocab()
@@ -232,27 +188,16 @@
 	{
 		//this grabs the blog entry where the id matches to the one in the url
 		$this->db->where('id', $this->uri->segment(3));
-		$data = $this->db->get('entries');
+		$query = $this->db->get('entries');
 		return $query->result();	
-		//$this->load->view('innerBlog_view', $data);
 	}
-	
-	public function loadAdminOne()
-	{
-		//this grabs the blog entry where the id matches to the one in the url
-		$this->db->where('id', $this->uri->segment(3));
-		$data = $this->db->get('entries');
-		return $query->result();	
-		//$this->load->view('adminInner_view', $data);
-	}
-	
+		
 	public function editView()
 	{
 		//this grabs the edit view where the ids match on the blogs
 		$this->db->where('id', $this->uri->segment(3));
-		$data = $this->db->get('entries');
+		$query = $this->db->get('entries');
 		return $query->result();	
-		//$this->load->view('edit_view', $data);
 	}
 	
 	public function loadComments()
@@ -260,8 +205,7 @@
 		//queries the database for the comments that are attached to that entry id
 		$this->db->order_by("date", "desc");
 		$this->db->where('entry_id', $this->uri->segment(3));
-		$data = $this->db->get('comments');
+		$query = $this->db->get('comments');
 		return $query->result();	
-		//$this->load->view('comment_view', $data);				
 	}
 }

@@ -4,7 +4,7 @@
 			<div class="comments">	
 				<?if($query->num_rows > 0):?>
 				<ul class="commentList">
-					<?foreach ($query->result() as $row):?> 
+					<?foreach($query as $row) :?>
 							<li><p class="name"><?=$row->author?><?if($row->showEmail == "show"){echo ' ('.$row->email.') ' ;}?></p>
 							
 							<p class="name"><?=date("F j, Y", $row->date)?></p>

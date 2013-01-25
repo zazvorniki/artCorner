@@ -49,9 +49,7 @@ class Blog extends CI_Controller{
 			
 			$d['query'] = $q;
 			$this->load->view('adminSidebar_view', $d);
-			
-			
-			//$this->blog_model->loadAdminRe();	
+						
 			$this->load->view('footer_view');
 		} 
 	}
@@ -65,15 +63,40 @@ class Blog extends CI_Controller{
 		if (empty($user['currentUser'])) {
 			//this loads the default projects, then the body and the footer 
 			$this->load->view('defaultHeader_view');
-			$this->blog_model->loadProjects();
-			$this->blog_model->loadReProject();
+			
+			
+			$data = array();
+			$query = $this->blog_model->loadProjects();
+			
+			$data['query'] = $query;
+			$this->load->view('defaultBlog_view', $data);
+			
+			
+			$d = array();
+			$q = $this->blog_model->loadReProject();	
+			
+			$d['query'] = $q;
+			$this->load->view('defaultSidebar_view', $d);
+						
 			$this->load->view('footer_view');
+						
 		}else {
 			//this takes the currentUser and then passes it to a function inside the user model
 			$user = $this->users_model->getUser($user['currentUser']->id);
 			//this loads the project blogs and the sidebar and footer that goes along with it
-			$this->blog_model->loadAdminProjects();
-			$this->blog_model->loadAdminProRe();
+			$data = array();
+			$query = $this->blog_model->loadProjects();
+			
+			$data['query'] = $query;
+			$this->load->view('adminBlog_view', $data);
+			
+			
+			$d = array();
+			$q = $this->blog_model->loadReProject();	
+			
+			$d['query'] = $q;
+			$this->load->view('adminSidebar_view', $d);
+						
 			$this->load->view('footer_view');
 		}
 	}
@@ -86,16 +109,40 @@ class Blog extends CI_Controller{
 		if (empty($user['currentUser'])) {
 			//this loads the default events, then the body and the footer 
 			$this->load->view('defaultHeader_view');
-			$this->blog_model->loadEvents();
-			$this->blog_model->loadReEvent();
+			$data = array();
+			$query = $this->blog_model->loadEvents();
+			
+			$data['query'] = $query;
+			$this->load->view('defaultBlog_view', $data);
+			
+			
+			$d = array();
+			$q = $this->blog_model->loadReEvent();	
+			
+			$d['query'] = $q;
+			$this->load->view('defaultSidebar_view', $d);
+						
 			$this->load->view('footer_view');
+			
 		}else{
 			//this takes the currentUser and then passes it to a function inside the user model
 			$user = $this->users_model->getUser($user['currentUser']->id);
 			//this loads the default events, then the body and the footer 
-			$this->blog_model->loadAdminEvents();
-			$this->blog_model->loadAdminEveRe();
-			$this->load->view('footer_view');		
+			
+			$data = array();
+			$query = $this->blog_model->loadEvents();
+			
+			$data['query'] = $query;
+			$this->load->view('adminBlog_view', $data);
+			
+			
+			$d = array();
+			$q = $this->blog_model->loadReEvent();	
+			
+			$d['query'] = $q;
+			$this->load->view('adminSidebar_view', $d);
+						
+			$this->load->view('footer_view');
 		}		
 	}
 	
@@ -137,15 +184,39 @@ class Blog extends CI_Controller{
 		if (empty($user['currentUser'])) {
 			//this loads the comments
 			$this->load->view('defaultHeader_view');
-			$this->blog_model->loadOneEntry();
-			$this->blog_model->loadComments();
+			
+			
+			$data = array();
+			$query = $this->blog_model->loadOneEntry();
+			
+			$data['query'] = $query;
+			$this->load->view('innerBlog_view', $data);
+			
+			
+			$d = array();
+			$q = $this->blog_model->loadComments();	
+			
+			$d['query'] = $q;
+			$this->load->view('comment_view', $d);
+			
+			
 			$this->load->view('footer_view');
 		}else {
 			//this takes the currentUser and then passes it to a function inside the user model
 			$user = $this->users_model->getUser($user['currentUser']->id);
 			//this loads the comments
-			$this->blog_model->loadAdminOne();
-			$this->blog_model->loadComments();
+			
+			$data = array();
+			$query = $this->blog_model->loadOneEntry();
+			
+			$data['query'] = $query;
+			$this->load->view('adminInner_view', $data);
+			
+			$d = array();
+			$q = $this->blog_model->loadComments();	
+			
+			$d['query'] = $q;
+			$this->load->view('comment_view', $d);
 			$this->load->view('footer_view');
 		}		
 	}

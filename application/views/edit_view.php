@@ -4,7 +4,7 @@
 		<div class="content">
 			<div class="writeBlog">
 				<div class="clearfix">
-					<?foreach ($query->result() as $row):?> 
+					<?foreach($query as $row) :?>	
 						<?=form_open('admin/editBlogpost', array('class' => 'editForm'));?>
 							<?=form_hidden('id', $this->uri->segment(3));?>
 							<?=form_hidden('data-key', 'editPost')?>

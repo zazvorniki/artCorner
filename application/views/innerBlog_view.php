@@ -5,7 +5,7 @@
 		<a class="backBtn" onclick="history.go(-1);"> ≤- back</a>
 			
 			<div class="innerBlog">
-				<?foreach ($query->result() as $row): ?> 
+					<?foreach($query as $row) :?>	
 						<p class="bTitle"><?=$row->title?></p>
 															
 						<p class="bDate">Posted by, <?=$row->posted_by?> on <?=date("F j, Y", $row->date)?></p>
