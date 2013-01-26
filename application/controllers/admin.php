@@ -75,16 +75,16 @@ class Admin extends CI_Controller{
 			if (empty($user['currentUser'])) {
 				redirect('admin/');
 			}
-			//this takes the info from the form and pushes it to the publish post function in the model and then redirects to the successPost function
-			if (empty($_POST['posted_by']) || empty($_POST['title']) || empty($_POST['category']) || empty($_POST['body']))
-			{
-				$user['currentUser']=$this->session->userdata('currentUser');
-				$this->load->view('error_view');
-				$this->load->view('footer_view');
-			}else{
-				$this->blog_model->publishPost();
-				redirect('admin/successPost');			
-			}			
+				if (empty($_POST['posted_by']) || empty($_POST['title']) || empty($_POST['category']) || empty($_POST['body']))
+				{
+					$user['currentUser']=$this->session->userdata('currentUser');
+					$this->load->view('error_view');
+					$this->load->view('footer_view');
+				}else{
+					//this takes the info from the form and pushes it to the publish post function in the model and then redirects to the successPost function
+					$this->blog_model->publishPost();
+					redirect('admin/successPost');			
+				}			
 		}else{
 			redirect('error/');
 		}	
@@ -121,8 +121,15 @@ class Admin extends CI_Controller{
 				redirect('admin/');
 			}
 			//this takes the info from the form and pushes it to the publish post function in the model and then redirects to the successPost function
-			$this->blog_model->editPost();
-			redirect('blog/');
+				if (empty($_POST['posted_by']) || empty($_POST['title']) || empty($_POST['category']) || empty($_POST['body']))
+				{
+					$user['currentUser']=$this->session->userdata('currentUser');
+					$this->load->view('error_view');
+					$this->load->view('footer_view');
+				}else{
+					$this->blog_model->editPost();
+					redirect('blog/');			
+				}			
 		}else {
 			redirect('error/');
 		}
