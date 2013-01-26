@@ -148,10 +148,17 @@ class Admin extends CI_Controller{
 			if (empty($user['currentUser'])) {
 				redirect('admin/');
 			}
-			//this takes the info from the form and pushes it to the publish resource function in the model and then redirects to the successPost function
-			$this->blog_model->publishResource();
-			redirect('admin/successResource');
 			
+				if (empty($_POST['resource']) || empty($_POST['title']) || empty($_POST['category']))
+				{
+					$user['currentUser']=$this->session->userdata('currentUser');
+					$this->load->view('error_view');
+					$this->load->view('footer_view');
+				}else{
+					//this takes the info from the form and pushes it to the publish resource function in the model and then redirects to the successPost function
+					$this->blog_model->publishResource();
+					redirect('admin/successResource');			
+				}			
 		}else{
 			redirect('error/');
 		}	
