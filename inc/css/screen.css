@@ -5,8 +5,8 @@ Project:
 
 /* Style Guide
 	Navigation color: #e6ebf0
-	Default font: Helvetica Neue
-	Default font color: #323333
+	Default font: Source
+	Default font color: #464746
 	Default container color: #e9e9e9
 	Default font: 1em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 */
@@ -244,6 +244,23 @@ html[xmlns] .clearfix {
 	text-decoration: underline;
 	cursor:pointer;
 }
+
+
+.vocabPage h2 a:link{
+	color: #464746;
+	text-decoration: none;
+}
+
+.vocabPage h2 a:hover{
+	text-decoration: underline;
+}
+
+.vocabPage h2 a:visited{
+	color: #464746;
+	text-decoration: none;
+	
+}
+
 
 #apl{
 	width: 86%;
@@ -687,9 +704,8 @@ html[xmlns] .clearfix {
 .vocabPage ul{
 	width: 90%;
 	margin: 0 auto;
-	font: 1em "source", Helvetica, Geneva, sans-serif !important;
 	letter-spacing: .1em;
-	line-height: 2em;
+	line-height: 1.7em;
 }
 
 .vocabPage li{
@@ -699,6 +715,10 @@ html[xmlns] .clearfix {
 
 .vocabPage h3{
 	display: inline;
+}
+
+.vocabPage li span{
+	font: 1em "source", Helvetica, Geneva, sans-serif !important;	
 }
 
 

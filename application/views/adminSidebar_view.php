@@ -11,3 +11,4 @@
 				</ul>
 			<?endforeach;?>
 		</div><!--  end ref  -->
+		<div class="clear"></div>

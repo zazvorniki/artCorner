@@ -1,4 +1,4 @@
-		<div class="ref">
+<div class="ref">
 			<h3>Resources</h3>
      				 <?foreach($query as $row) :?>	
 				<ul>
@@ -6,4 +6,5 @@
 				</ul>
 			<?endforeach;?>
 		</div><!--  end ref  -->
+		<div class="clear"></div>	
 			
