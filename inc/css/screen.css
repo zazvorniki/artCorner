@@ -779,6 +779,10 @@ html[xmlns] .clearfix {
     color:#CC0000;
 }
 
+.vocabError{
+	color:#CC0000;
+}
+
 .mess .LV_validation_message{
 	position: relative;
 	bottom: 2em;

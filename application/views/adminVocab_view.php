@@ -32,10 +32,13 @@
 					<li><?=anchor('blog/vocab/y', 'Y', array('class' => 'letters'));?></li>
 					<li><?=anchor('blog/vocab/z', 'Z', array('class' => 'letters'));?></li>
 				</ul>
-				
-				<?foreach ($query as $row): ?> 
 					<ul>
-						<li><span class="deleteCon"><?=anchor('admin/deleteVocab/'.$row->id, 'delete', array('class' => 'delete'));?></span><h3><?=$row->title?></h3> - <?=$row->body?></li>
+						<? if(count($query) > 0): ?>
+							<?foreach($query as $row) :?>
+								<li><span class="deleteCon"><?=anchor('admin/deleteVocab/'.$row->id, 'delete', array('class' => 'delete'));?></span><h3><?=$row->title?></h3> <span> - <?=$row->body?></span></li>
+							<? endforeach;?>
+						<? else: ?>
+							<li><span class="vocabError">Sorry, it looks like there are no words for this letter at this time.</span></li>
+						<? endif; ?> 
 					</ul>
-				<?endforeach;?>
 			</div><!--  end vocabPage  -->
