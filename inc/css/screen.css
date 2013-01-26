@@ -651,20 +651,16 @@ html[xmlns] .clearfix {
 	float: left;
 }
 
-.sideIcons, .vocabIcons, .editIcons{
+.sideIcons, .vocabIcons{
 	float: right;
 	padding-top: 1em;
 }
 
 .sideIcons{
-	padding-left: 1.5em;
-}
-
-.editIcons{
 	padding-left: 3.5em;
 }
 
-.sideIcons ul li, .vocabIcons ul li, .editIcons ul li{
+.sideIcons ul li, .vocabIcons ul li{
 	display: block;
 	line-height: 1.9em;
 }

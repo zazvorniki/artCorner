@@ -39,7 +39,7 @@
 					<?endforeach;?>
 				</div><!--  end writeBlog  -->
 				
-				<div class="editIcons">
+				<div class="sideIcons">
 					<ul>
 						<li><img src="<?=base_url();?>inc/img/tinymce/bold.png" alt="" /><span> - Bold your text</span></li>
 						<li><img src="<?=base_url();?>inc/img/tinymce/italic.png" alt="" /><span> - Italicize your font</span></li>
