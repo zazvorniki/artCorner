@@ -3,7 +3,7 @@
 	<div class="container">
 		<div class="content">
 			<div class="vocabPage">
-				<h2>Vocabulary</h2>
+				<h2>Vocabulary <?if($this->uri->segment(3)){echo ' - '.$this->uri->segment(3);};?></h2>
 				<ul id="apl">
 					<li><?=anchor('blog/vocab/a', 'A', array('class' => 'letters'));?></li>
 					<li><?=anchor('blog/vocab/b', 'B', array('class' => 'letters'));?></li>

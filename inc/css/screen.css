@@ -92,10 +92,6 @@ body{
 	margin: 0;
 }
 
-.content{
-	min-height: 20em;
-}
-
 .clear{
 	clear: both;
 }
@@ -638,7 +634,7 @@ html[xmlns] .clearfix {
 	float: left;
 }
 
-.sideIcons, .vocabIcons{
+.sideIcons, .vocabIcons, .editIcons{
 	float: right;
 	padding-top: 1em;
 }
@@ -647,7 +643,11 @@ html[xmlns] .clearfix {
 	padding-left: 1.5em;
 }
 
-.sideIcons ul li, .vocabIcons ul li{
+.editIcons{
+	padding-left: 3.5em;
+}
+
+.sideIcons ul li, .vocabIcons ul li, .editIcons ul li{
 	display: block;
 	line-height: 1.9em;
 }

@@ -37,6 +37,7 @@
 			<div id="nav">
 				<ul>
 					<li><h1 class="logo"><?=anchor('blog/', 'Plantation Key Art Corner');?></h1></li>
+					<li class="link"><?=anchor('https://gradebook.keysschools.com/pinnacle/piv/Logon.aspx', 'Pinnacle')?></li>
 					<li class="link"><?=anchor('blog/vocab', 'Vocab');?></li>
 					<li class="link"><?=anchor('blog/events', 'Events');?></li>
 					<li class="link"><?=anchor('blog/projects', 'Projects');?></li>

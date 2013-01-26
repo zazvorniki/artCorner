@@ -155,6 +155,7 @@ class Blog extends CI_Controller{
 		if (empty($user['currentUser'])) {
 			//This takes the information from the model and pushes it into the default one blog post view
 			$this->load->view('defaultHeader_view');
+			$data = array();
 			$query = $this->blog_model->loadOneEntry();
 			$data['query'] = $query;
 			$this->load->view('innerBlog_view', $data);

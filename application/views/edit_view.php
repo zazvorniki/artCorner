@@ -2,8 +2,8 @@
 <div class="binder">
 	<div class="container">
 		<div class="content">
-			<div class="writeBlog">
-				<div class="clearfix">
+			<div class="clearfix">
+				<div class="writeBlog">
 					<?foreach($query as $row) :?>	
 						<?=form_open('admin/editBlogpost', array('class' => 'editForm'));?>
 							<?=form_hidden('id', $this->uri->segment(3));?>
@@ -39,7 +39,7 @@
 					<?endforeach;?>
 				</div><!--  end writeBlog  -->
 				
-				<div class="sideIcons">
+				<div class="editIcons">
 					<ul>
 						<li><img src="<?=base_url();?>inc/img/tinymce/bold.png" alt="" /><span> - Bold your text</span></li>
 						<li><img src="<?=base_url();?>inc/img/tinymce/italic.png" alt="" /><span> - Italicize your font</span></li>
@@ -56,8 +56,8 @@
 						<li><img src="<?=base_url();?>inc/img/tinymce/link.png" alt="" /><span> - Create a link</span></li>
 						<li><img src="<?=base_url();?>inc/img/tinymce/unlink.png" alt="" /><span> - Remove link</span></li>
 					</ul>
-				</div><!--  end sideIcons  -->
-			</div>		
+				</div><!--  end editIcons  -->
+			</div>
 	
 <script src="<?=base_url();?>inc/js/blogVal.js" type="text/javascript"></script>
 

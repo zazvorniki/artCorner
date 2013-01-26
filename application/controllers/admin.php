@@ -202,7 +202,12 @@ class Admin extends CI_Controller{
 		}
 		//this takes the currentUser and then passes it to a function inside the user model
 		$user = $this->users_model->getUser($user['currentUser']->id);
-		$this->blog_model->editView();
+		
+		$data = array();
+		$query = $this->blog_model->loadOneEntry();
+		$data['query'] = $query;
+		$this->load->view('edit_view', $data);
+		
 		$this->load->view('footer_view');
 	}
 	
