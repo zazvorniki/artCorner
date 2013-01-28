@@ -1,0 +1,78 @@
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+	
+	body{
+		padding: 0 2em;	
+	}
+	
+	.logo{
+		background-size: 950px 200px;
+		height: 200px;
+		width: 950px;
+		float: none;
+	}
+	
+	.logo a{
+		height: 200px;
+		width: 850px;
+		text-align: center;
+	}
+	
+	.binder{
+		background-size: 120px 80px;
+		width: 82em;
+		padding-right: 5em;
+	}
+	
+	.container{
+		width: 67em;
+	}
+	
+	.link{
+		float: none;
+		font-size: 1.7em;
+	}
+	
+	.headerCon{
+		text-align: center;
+	}
+	
+	.beta{
+		display: none;
+	}
+	
+	.ref{
+		display: none;
+	}
+	
+	.blogContainer, .innerBlog{
+		width: 95%;
+	}
+	
+	.innerBlog p, .bBody, .read{
+		font-size: 2.5em;
+	}
+	
+	.bTitle, .innerBlog .bTitle{
+		font-size: 3.5em;
+	}
+	
+	.backBtn{
+		font-size: 3em;
+		margin-bottom
+	}
+	
+	.bDate, .innerBlog .bDate{
+		font-size: 2.8em;
+	}
+		
+	.readMore{
+		padding: 1em 0;
+	}
+	
+	.fb-like{
+		display: none !important;
+	}
+	
+}

@@ -15,9 +15,10 @@
 	
 <!--  ==========	Style Sheets		==========	-->
 	<link rel="stylesheet" href="<?=base_url();?>inc/css/screen.css"/>
+	<link rel="stylesheet" href="<?=base_url();?>inc/css/phone.css"/>
 	<link rel="stylesheet" href="<?=base_url();?>inc/css/flexipage.css" />
 	
-	<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.0.js"></script>
 	
 <!--  ==========	Header and navigation ==========  -->
 

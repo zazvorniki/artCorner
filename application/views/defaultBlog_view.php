@@ -5,13 +5,13 @@
 			<div class="blogContainer clearfix">
 				<ul class="item">
      				 <?foreach($query as $row) :?>	
-					<li class="">					
+					<li>					
 						<p class="bTitle"><?=anchor('blog/comments/'.$row->id, $row->title);?></p>
 						<p class="bDate">Posted by, <?=$row->posted_by?> on <?=date("F j, Y", $row->date)?></p>
 						<div class="bBody">
 						<?=$row->body?>
 						</div><!--  end bBody  -->
-						<p class="readMore"><?=anchor('blog/comments/'.$row->id, ' More->', array('class' => 'readMore'));?></p>
+						<p class="readMore"><?=anchor('blog/comments/'.$row->id, ' More->', array('class' => 'read'));?></p>
 					</li>
 				<?endforeach;?>
 				</ul><!--  end item  -->

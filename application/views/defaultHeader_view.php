@@ -11,10 +11,10 @@
 	<meta name="author" content="Jessica Sears">
 	<meta name="format-detection" content="telephone=no">
 	<meta name="keywords" content="art room, plantation key, plantation key school, school, florida school, the keys, florida keys, Mrs. Sears, Sears">
-	<meta name="viewport" content="initial-scale = .3,maximum-scale = .3" />
 		
 <!--  ==========	Style Sheets		==========	-->
 	<link rel="stylesheet" href="<?=base_url();?>inc/css/screen.css"/>
+	<link rel="stylesheet" href="<?=base_url();?>inc/css/phone.css"/>
 	<link rel="stylesheet" href="<?=base_url();?>inc/css/flexipage.css" />
 	<link rel="stylesheet" href="<?=base_url();?>inc/css/print.css" type="text/css" media="print" />
 	
@@ -31,7 +31,7 @@
 	<![endif]-->
 	
 <!--  ==========	Jquery	==========	-->
-	<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.0.js"></script>
 </head>
 <body>
 <!--  ==========	Facebook like button ==========  -->
@@ -47,7 +47,7 @@
 		</ul>
 		<noscript class="noJava">
 		<h3>Please turn your javascript on to take advantage of all the features of this site!</h3></noscript>	
-		<div class="headerCon">
+		<div class="headerCon" style="text-align: center;">
 		<img class="printLogo" src="<?=base_url();?>inc/img/printLogo.png" alt="logo" />
 			<div id="nav">
 				<ul>
