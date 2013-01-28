@@ -1,3 +1,4 @@
+<!--  ==========	Login Page ==========  -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,7 +20,6 @@
 <!--  ==========	Header and navigation ==========  -->
 
 </head>
-
 <body>
 
 <!--  ==========	Login Form ==========  -->
@@ -31,14 +31,12 @@
 			<label>Password:</label><input  type="password" name="pass" id="pass" />
 			<input type="hidden" name="robot" value="yes" />
 			<p><input type="submit" value="Sign In" /></p>
-		</form><!--  end form  -->
+		</form>
 </div><!--  end loginForm  -->
 
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.js"></script>
-
 <script src="<?=base_url();?>inc/js/livevalidation_standalone.js" type="text/javascript"></script>
-
-<script src="<?=base_url();?>inc/js/loginVal.js" type="text/javascript"></script>
+<script src="<?=base_url();?>inc/js/loginVal.min.js" type="text/javascript"></script>
 <script src="<?=base_url();?>inc/js/Modernizr.js" type="text/javascript"></script>
 </body>
 </html>

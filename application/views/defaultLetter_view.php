@@ -1,4 +1,4 @@
-<!--  ==========	Body ==========  -->
+<!--  ==========	Default Letters ==========  -->
 <div class="binder">
 	<div class="container">
 		<div class="content">

@@ -515,12 +515,17 @@ html[xmlns] .clearfix {
 }
 
 .ref h3{
-	font-family: droidBold;
+	font-family: droid;
 }
 
 .ref ul{
 	padding: 0;
 	width: 15em;
+}
+
+.ref li{
+	display: block;
+	padding: .5em 0;
 }
 
 .innerBlog{

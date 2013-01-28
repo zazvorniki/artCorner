@@ -1,4 +1,4 @@
-<!--  ==========  ==========  -->
+<!--  ========== Contact Page ==========  -->
 <div class="binder">
 	<div class="container">
 		<div class="content">
@@ -10,18 +10,15 @@
 					<?=form_open('email/emailForm/', array('class' => 'con'));?>
 						<?=form_hidden('data-key', 'contactF')?>
 						<p><label>Name:</label> <input class="contact" type="text" value="" name="name" id="name" autocomplete="off"/></p>
-						
 						<p><label>Email:</label> <input type="text" class="contact" name="email" id="email" autocomplete="off"/></p>
 						Message:
 						<div class="messageCon">
 							<p><textarea name="message" ></textarea></p>
 						</div><!--  end messageContent  -->	
-							
 						<p class="textValid"><span id="notThere" class="LV_validation_message LV_invalid" style="display: none;">Can't be empty!</span></p>	
-							
 						<input type="submit" class="submit contactSub" value="Email" />
 					</form><!--  end con  -->
-			</div><!--  end contactForm  -->
+				</div><!--  end contactForm  -->
 				<div class="reasons">
 					<h4>Have a question you want to ask Ms. Sears the art teacher behind this blog? Then go right ahead!</h4>
 					<p>You can ask her about:</p>
@@ -31,5 +28,5 @@
 						<li><img src="<?= base_url();?>inc/img/check.png" alt="check mark" />or if you have a question about your grade</li>
 					</ul>
 				</div><!--  end reasons  -->
-			</div>	
-<script src="<?=base_url();?>inc/js/contactVal.js" type="text/javascript"></script>
+			</div><!--  end clearFix  -->	
+<script src="<?=base_url();?>inc/js/contactVal.min.js" type="text/javascript"></script>

@@ -1,3 +1,4 @@
+<!--  ==========	Default Header ==========  -->
 <!DOCTYPE html>
 <html lang="en"><head>
 <title>Plantation Key Art Corner</title>
@@ -11,8 +12,7 @@
 	<meta name="format-detection" content="telephone=no">
 	<meta name="keywords" content="art room, plantation key, plantation key school, school, florida school, the keys, florida keys, Mrs. Sears, Sears">
 	<meta name="viewport" content="initial-scale = .3,maximum-scale = .3" />
-	
-	
+		
 <!--  ==========	Style Sheets		==========	-->
 	<link rel="stylesheet" href="<?=base_url();?>inc/css/screen.css"/>
 	<link rel="stylesheet" href="<?=base_url();?>inc/css/flexipage.css" />
@@ -32,14 +32,13 @@
 	
 <!--  ==========	Jquery	==========	-->
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.js"></script>
-	<?php echo smiley_js(); ?>
 </head>
-
 <body>
 <!--  ==========	Facebook like button ==========  -->
+
 	<!-- this has to be in the body or else it's not valid html -->
 	<div id="fb-root"></div>
-	<script src="<?=base_url();?>inc/js/fb.js" type="text/javascript"></script>
+	<script src="<?=base_url();?>inc/js/fb.min.js" type="text/javascript"></script>
 	
 <!--  ==========	Header and navigation ==========  -->
 	<div id="header">

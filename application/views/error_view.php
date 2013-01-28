@@ -1,4 +1,4 @@
-<!--  ==========	Body ==========  -->
+<!--  ==========	Error Page(only displays if someone bypasses the noscript tag) ==========  -->
 <div class="binder">
 	<div class="container">
 		<div class="content">
