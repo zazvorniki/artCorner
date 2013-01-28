@@ -117,6 +117,8 @@ class Blog extends CI_Controller{
 			$user = $this->users_model->getUser($user['currentUser']->id);
 			//This takes the information from the model and pushes it into the admin vocab view
 			$data['query'] = $this->blog_model->loadVocab();
+			$letters['letter'] = $this->blog_model->loadLetters();
+			$this->load->view('defaultLetter_view',$letters);
 			$this->load->view('adminVocab_view', $data);
 			$this->load->view('footer_view');		
 		}
