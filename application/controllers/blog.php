@@ -128,6 +128,12 @@ class Blog extends CI_Controller{
 			//This takes the information from the model and pushes it into the default one blog post view
 			$this->load->view('defaultHeader_view');
 			$data['query'] = $this->blog_model->loadOneEntry();
+//			$this->load->helper('smiley');
+//			$this->load->library('table');
+//			$image_array = get_clickable_smileys(base_url().'inc/img/smileys/', 'comments');
+//			$col_array = $this->table->make_columns($image_array, 7);
+//			$data['smiley_table'] = $this->table->generate($col_array);
+						
 			$this->load->view('innerBlog_view', $data);
 			//This takes the information from the model and pushes it into the default comment view
 			$d['query'] = $this->blog_model->loadComments();

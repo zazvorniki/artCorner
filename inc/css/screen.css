@@ -714,7 +714,8 @@ html[xmlns] .clearfix {
 }
 
 .vocabPage li span{
-	font: 1em "source", Helvetica, Geneva, sans-serif !important;	
+	font: 1em "source", Helvetica, Geneva, sans-serif !important;
+	color: #464746 !important;	
 }
 
 

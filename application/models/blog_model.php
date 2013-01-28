@@ -30,7 +30,7 @@
 	{
 		//this array finds the inputs and strips the html tags from them before inputting them in the database
 		$title = strip_tags($this->input->post('title'));
-		$body = preg_replace('/[^(\x20-\x7F)]*/','', strip_tags($this->input->post('body'), '<strong>, <em>, <span>'));
+		$body = preg_replace('/[^(\x20-\x7F)]*/','', strip_tags($this->input->post('body'), '<strong>, <em>'));
 		
 		$data = array(
 			'title'=>$title,

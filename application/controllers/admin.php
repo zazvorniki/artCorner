@@ -77,7 +77,8 @@ class Admin extends CI_Controller{
 			}
 				if (empty($_POST['posted_by']) || empty($_POST['title']) || empty($_POST['category']) || empty($_POST['body']))
 				{
-					$user['currentUser']=$this->session->userdata('currentUser');
+					$user = $this->users_model->getUser($user['currentUser']->id);
+					
 					$this->load->view('error_view');
 					$this->load->view('footer_view');
 				}else{
@@ -103,7 +104,7 @@ class Admin extends CI_Controller{
 			}
 				if (empty($_POST['title']) || empty($_POST['body']))
 				{
-					$user['currentUser']=$this->session->userdata('currentUser');
+					$user = $this->users_model->getUser($user['currentUser']->id);
 					$this->load->view('error_view');
 					$this->load->view('footer_view');
 				}else{
@@ -129,7 +130,7 @@ class Admin extends CI_Controller{
 			//this takes the info from the form and pushes it to the publish post function in the model and then redirects to the successPost function
 				if (empty($_POST['posted_by']) || empty($_POST['title']) || empty($_POST['category']) || empty($_POST['body']))
 				{
-					$user['currentUser']=$this->session->userdata('currentUser');
+					$user = $this->users_model->getUser($user['currentUser']->id);
 					$this->load->view('error_view');
 					$this->load->view('footer_view');
 				}else{
@@ -155,9 +156,9 @@ class Admin extends CI_Controller{
 				redirect('admin/');
 			}
 			
-				if (empty($_POST['resource']) || empty($_POST['title']) || empty($_POST['category']))
+				if (empty($_POST['resource']) || empty($_POST['name']) || empty($_POST['category']))
 				{
-					$user['currentUser']=$this->session->userdata('currentUser');
+					$user = $this->users_model->getUser($user['currentUser']->id);
 					$this->load->view('error_view');
 					$this->load->view('footer_view');
 				}else{

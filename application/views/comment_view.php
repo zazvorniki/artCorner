@@ -31,6 +31,8 @@
 			<p style="padding-top: 1em;">*note: to create a new paragraph press the return twice</p>
 			<p style="padding-top: 1em;"><input type="submit" class="submit" value="Submit Comment" /></p>
 		</form><!--  end comForm  -->
+<!--		<?php echo $smiley_table; ?>-->
+		
 	</div><!--  end postingComment  -->
 </div><!--  end commentPage  -->
 
