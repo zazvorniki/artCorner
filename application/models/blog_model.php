@@ -174,6 +174,13 @@
 		return $query->result();	
 	}
 	
+	public function loadLetters()
+	{
+		//this grabs all the blog posts by the last one inserted and it must have the projects category
+		$query = $this->db->query("SELECT DISTINCT left(title, 1) as letter FROM (entries) where category = 'vocab' order by title asc");
+		return $query->result();	
+	}
+	
 	public function loadVocab()
 	{
 		//this grabs all the blog posts by the last one inserted and it must have the projects category

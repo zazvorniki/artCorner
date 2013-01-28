@@ -107,7 +107,10 @@ class Blog extends CI_Controller{
 			//This takes the information from the model and pushes it into the default vocab view
 			$this->load->view('defaultHeader_view');
 			$data['query'] = $this->blog_model->loadVocab();
-			$this->load->view('defaultVocab_view', $data);
+			$letters['letter'] = $this->blog_model->loadLetters();
+			$this->load->view('defaultLetter_view',$letters);
+			$this->load->view('defaultVocab_view',$data); 
+			
 			$this->load->view('footer_view');
 		}else{
 			//this takes the currentUser and then passes it to a function inside the user model
