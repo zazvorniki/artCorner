@@ -5,7 +5,7 @@
 			<div class="blogContainer clearfix">
 				<ul class="item">
      				 <?foreach($query as $row) :?>	
-					<li>					
+					<li class="">					
 						<p class="bTitle"><?=anchor('blog/comments/'.$row->id, $row->title);?></p>
 						<p class="bDate">Posted by, <?=$row->posted_by?> on <?=date("F j, Y", $row->date)?></p>
 						<div class="bBody">
