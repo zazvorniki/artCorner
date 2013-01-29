@@ -20,12 +20,13 @@
 			<?=form_hidden('data-key', 'newComment')?>
 			<p><label>Name:</label><input class="comInput" id="cAuthor" type="text" name="author" autocomplete="off"/></p>
 			<p><label>Email:</label><input class="comInput" id="cEmail" type="text" name="email" autocomplete="off"/></p>
-			<span style="padding-right: 1em;">Show your email</span>
-			<div class="square">
-				<input type="checkbox" value="show" id="square" name="showEmail"  checked="checked" />
-				<label for="square"></label>
+			<div class="checkbox">
+				<span style="padding-right: 1em;">Show your email</span>
+				<div class="square">
+					<input type="checkbox" value="show" id="square" name="showEmail"  checked="checked" />
+					<label for="square"></label>
+				</div>
 			</div>
-			<p class="warnMess" style="padding: 1em  0;">*note: to create a new paragraph press the return twice</p>
 			<label class="com">Comment:</label><textarea class="cBox" id="cBox" name="body" rows="4"></textarea>
 			<p class="textValid"><span id="tooLong" class="LV_validation_message LV_invalid" style="display: none;">Too Long!</span><span id="notThere" class="LV_validation_message LV_invalid" style="display: none;">Can't be empty!</span></p>
 			<p style="padding-top: .5em;"><input type="submit" class="submit" value="Submit Comment" /></p>

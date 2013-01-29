@@ -17,7 +17,6 @@
 								<span>Project<input type="radio" name="category" value="project" <?if($row->category == "project"){echo 'checked' ;}?>></span>
 								<span>Event<input type="radio" name="category" value="event"<?if($row->category == "event"){echo 'checked' ;}?>></span>
 							</p>
-							<span>*note: to create a new paragraph press the return twice</span>
 							<p class="textValid"><span id="radioVal" class="LV_validation_message LV_invalid" style="display: none;">Can't be empty!</span></p>
 							<div class="textPos">
 								<p><textarea name="body" id="body" > <?=$row->body?></textarea></p>
