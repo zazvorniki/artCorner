@@ -25,7 +25,7 @@
 					<ul>
 						<li><img src="<?=base_url();?>inc/img/check.png" alt="check mark" />any artiest new or old</li>
 						<li><img src="<?=base_url();?>inc/img/check.png" alt="check mark" />anything about her assignments</li>
-						<li><img src="<?= base_url();?>inc/img/check.png" alt="check mark" />or if you have a question about your grade</li>
+						<li><img src="<?= base_url();?>inc/img/check.png" alt="check mark" />if you have a question about your grade</li>
 					</ul>
 				</div><!--  end reasons  -->
 			</div><!--  end clearFix  -->	
