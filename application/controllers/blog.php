@@ -161,7 +161,7 @@ class Blog extends CI_Controller
 		}
 	}
 	
-	function contactForm()
+	public function contactForm()
 	{	
 		//if the user variable is empty then this will load the default views, if the user is logged in then it will load the admin views	
 		if (empty($user['currentUser'])) {

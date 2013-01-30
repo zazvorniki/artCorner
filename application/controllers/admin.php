@@ -9,9 +9,18 @@ class Admin extends CI_Controller{
 		$this->load->model('users_model');
 		//this loads the blog model which handles the blog functionality 
 		$this->load->model('blog_model');
+		
+		$this->user = $this->session->userdata('currentUser');
 	}
 	
-	function index()
+	public function require_auth($location = 'admin/')
+	{
+		if (empty($this->user)) {
+			redirect($location);
+		}
+	}
+	
+	public function index()
 	{	
 		//this destroys any sessions that may be lingering 
 		$this->session->sess_destroy();
@@ -19,124 +28,96 @@ class Admin extends CI_Controller{
 		$this->load->view('login_view');
 	}
 	
-	function writeBlog()
+	public function writeBlog()
 	{
-		//this says that the session user is the current user
-		$user['currentUser']=$this->session->userdata('currentUser');
-		//if the sessions are empty then this will redirect the user back to the login page
-		if (empty($user['currentUser'])) {
-			redirect('admin/');
-		}
-		//this takes the currentUser and then passes it to a function inside the user model
-		$user = $this->users_model->getUser($user['currentUser']->id);
-		//this loads the view where you can post a blog entire
+		$this->require_auth();
+		$user = $this->users_model->getUser($this->user->id);
 		$this->load->view('write_view');
 		$this->load->view('footer_view');
 	}
 	
-	function writeResource()
+	public function writeResource()
 	{
-		//this says that the session user is the current user
-		$user['currentUser']=$this->session->userdata('currentUser');
-		//if the sessions are empty then this will redirect the user back to the login page
-		if (empty($user['currentUser'])) {
-			redirect('admin/');
-		}
-		//this takes the currentUser and then passes it to a function inside the user model
-		$user = $this->users_model->getUser($user['currentUser']->id);
-		//this loads the view where you can post a blog entire
+		$this->require_auth();
+		$user = $this->users_model->getUser($this->user->id);
 		$this->load->view('resource_view');
 		$this->load->view('footer_view');
 	}
 	
-	function writeVocab()
+	public function writeVocab()
 	{
-		//this says that the session user is the current user
-		$user['currentUser']=$this->session->userdata('currentUser');
-		//if the sessions are empty then this will redirect the user back to the login page
-		if (empty($user['currentUser'])) {
-			redirect('admin/');
-		}
-		//this takes the currentUser and then passes it to a function inside the user model
-		$user = $this->users_model->getUser($user['currentUser']->id);
-		//this loads the view where you can post a blog entire
+		$this->require_auth();
+		$user = $this->users_model->getUser($this->user->id);
 		$this->load->view('vocab_view');
 		$this->load->view('footer_view');
 	}
 	
-	function insertPost()
+	public function insertPost()
 	{
+		$this->require_auth();
+		
 		//this checks to see if the form has a data-key. If it does not then it is directed to the error page. This secures this function and dissallows access directly from the url bar.
 		if($this->input->post('data-key') == 'newPost')
 		{
-			//this says that the session user is the current user
-			$user['currentUser']=$this->session->userdata('currentUser');
-			//if the sessions are empty then this will redirect the user back to the login page		
-			if (empty($user['currentUser'])) {
-				redirect('admin/');
-			}
-				if (empty($_POST['posted_by']) || empty($_POST['title']) || empty($_POST['category']) || empty($_POST['body']))
-				{
-					$user = $this->users_model->getUser($user['currentUser']->id);
-					
-					$this->load->view('error_view');
-					$this->load->view('footer_view');
-				}else{
-					//this takes the info from the form and pushes it to the publish post function in the model and then redirects to the successPost function
-					$this->blog_model->publishPost();
-					redirect('admin/successPost');			
-				}			
+			$user = $this->users_model->getUser($this->user->id);
+			
+			//this makes sure that all the fields are filled in. If they are not then it will send you to an error page. This will only be triggered though if the user somehow gets past both the jquery and noscript tags
+			if (empty($_POST['posted_by']) || empty($_POST['title']) || empty($_POST['category']) || empty($_POST['body']))
+			{				
+				$this->load->view('error_view');
+				$this->load->view('footer_view');
+			}else{
+				//this takes the info from the form and pushes it to the publish post function in the model and then redirects to the successPost function
+				$this->blog_model->publishPost();
+				redirect('admin/successPost');			
+			}			
 		}else{
 			redirect('error/');
 		}	
 	}
 	
-	function insertVocab()
+	public function insertVocab()
 	{
+		$this->require_auth();
+		
 		//this checks to see if the form has a data-key. If it does not then it is directed to the error page. This secures this function and dissallows access directly from the url bar.
 		if($this->input->post('data-key') == 'newVocab')
 		{
-			//this says that the session user is the current user
-			$user['currentUser']=$this->session->userdata('currentUser');
-			//if the sessions are empty then this will redirect the user back to the login page		
-			if (empty($user['currentUser'])) {
-				redirect('admin/');
-			}
-				if (empty($_POST['title']) || empty($_POST['body']))
-				{
-					$user = $this->users_model->getUser($user['currentUser']->id);
-					$this->load->view('error_view');
-					$this->load->view('footer_view');
-				}else{
-					//this takes the info from the form and pushes it to the publish post function in the model and then redirects to the successPost function
-					$this->blog_model->publishVocab();
-					redirect('admin/successVocab');			
-				}			
+			$user = $this->users_model->getUser($this->user->id);
+			
+			//if the fields are not fill in then this will send the user to an error page. This will only trigger if the user somehow manages to get past jquery and my noscript tags
+			if (empty($_POST['title']) || empty($_POST['body']))
+			{
+				$this->load->view('error_view');
+				$this->load->view('footer_view');
+			}else{
+				//this takes the info from the form and pushes it to the publish post function in the model and then redirects to the successPost function
+				$this->blog_model->publishVocab();
+				redirect('admin/successVocab');			
+			}			
 		}else{
 			redirect('error/');
 		}	
 	}
 	
-	function editBlogpost()
+	public function editBlogpost()
 	{
+		$this->require_auth();
+		
+		//if the fields are not fill in then this will send the user to an error page. This will only trigger if the user somehow manages to get past jquery and my noscript tags
 		if($this->input->post('data-key') == 'editPost')
 		{
-			//this says that the session user is the current user
-			$user['currentUser']=$this->session->userdata('currentUser');
-			//if the sessions are empty then this will redirect the user back to the login page		
-			if (empty($user['currentUser'])) {
-				redirect('admin/');
-			}
+			$user = $this->users_model->getUser($this->user->id);
+			
 			//this takes the info from the form and pushes it to the publish post function in the model and then redirects to the successPost function
-				if (empty($_POST['posted_by']) || empty($_POST['title']) || empty($_POST['category']) || empty($_POST['body']))
-				{
-					$user = $this->users_model->getUser($user['currentUser']->id);
-					$this->load->view('error_view');
-					$this->load->view('footer_view');
-				}else{
-					$this->blog_model->editPost();
-					redirect('blog/');			
-				}			
+			if (empty($_POST['posted_by']) || empty($_POST['title']) || empty($_POST['category']) || empty($_POST['body']))
+			{
+				$this->load->view('error_view');
+				$this->load->view('footer_view');
+			}else{
+				$this->blog_model->editPost();
+				redirect('blog/');			
+			}			
 		}else {
 			redirect('error/');
 		}
@@ -144,115 +125,82 @@ class Admin extends CI_Controller{
 		
 	}
 	
-	function insertResource()
+	public function insertResource()
 	{
+		$this->require_auth();
+		
 		//this checks to see if the form has a data-key. If it does not then it is directed to the error page. This secures this function and disallows access directly from the url bar.
 		if($this->input->post('data-key') == 'newRe')
 		{
-			//this says that the session user is the current user
-			$user['currentUser']=$this->session->userdata('currentUser');
-			//if the sessions are empty then this will redirect the user back to the login page
-			if (empty($user['currentUser'])) {
-				redirect('admin/');
-			}
+			$user = $this->users_model->getUser($this->user->id);
 			
-				if (empty($_POST['resource']) || empty($_POST['name']) || empty($_POST['category']))
-				{
-					$user = $this->users_model->getUser($user['currentUser']->id);
-					$this->load->view('error_view');
-					$this->load->view('footer_view');
-				}else{
-					//this takes the info from the form and pushes it to the publish resource function in the model and then redirects to the successPost function
-					$this->blog_model->publishResource();
-					redirect('admin/successResource');			
-				}			
+			//if the user does not fill in the form fields and somehow gets past both the jquery and noscript tags then this will trigger
+			if (empty($_POST['resource']) || empty($_POST['name']) || empty($_POST['category']))
+			{
+				$this->load->view('error_view');
+				$this->load->view('footer_view');
+			}else{
+				//this takes the info from the form and pushes it to the publish resource function in the model and then redirects to the successPost function
+				$this->blog_model->publishResource();
+				redirect('admin/successResource');			
+			}			
 		}else{
 			redirect('error/');
 		}	
 	}
 	
-	function successPost()
+	public function successPost()
 	{
-		//this says that the session user is the current user
-		$user['currentUser']=$this->session->userdata('currentUser');
-		//if the sessions are empty then this will redirect the user back to the login page		
-		if (empty($user['currentUser'])) {
-			redirect('admin/');
-		}
-
-		//this takes the currentUser and then passes it to a function inside the user model
-		$user = $this->users_model->getUser($user['currentUser']->id);
+		$this->require_auth();
+		$user = $this->users_model->getUser($this->user->id);
+		
 		//these load the views appropriate for this page		
 		$this->load->view('thankYou_view');
 		$this->load->view('write_view');
 		$this->load->view('footer_view');
 	}
 	
-	function successResource()
+	public function successResource()
 	{
-		//this says that the session user is the current user
-		$user['currentUser']=$this->session->userdata('currentUser');
-		//if the sessions are empty then this will redirect the user back to the login page	
-		if (empty($user['currentUser'])) {
-			redirect('admin/');
-		}
-		//this takes the currentUser and then passes it to a function inside the user model
-		$user = $this->users_model->getUser($user['currentUser']->id);
+		$this->require_auth();
+		$user = $this->users_model->getUser($this->user->id);
+		
 		//these load the views appropriate for this page		
 		$this->load->view('thankYou_view');
 		$this->load->view('resource_view');
 		$this->load->view('footer_view');
 	}
 	
-	function successVocab()
+	public function successVocab()
 	{
-		//this says that the session user is the current user
-		$user['currentUser']=$this->session->userdata('currentUser');
-		//if the sessions are empty then this will redirect the user back to the login page	
-		if (empty($user['currentUser'])) {
-			redirect('admin/');
-		}
-		//this takes the currentUser and then passes it to a function inside the user model
-		$user = $this->users_model->getUser($user['currentUser']->id);
+		$this->require_auth();
+		$user = $this->users_model->getUser($this->user->id);
+		
 		//these load the views appropriate for this page		
 		$this->load->view('thankYou_view');
 		$this->load->view('vocab_view');
 		$this->load->view('footer_view');
 	}
 
-	function edit()
+	public function edit()
 	{
-		//this says that the session user is the current user
-		$user['currentUser']=$this->session->userdata('currentUser');
-		//if the sessions are empty then this will redirect the user back to the login page			
-		if (empty($user['currentUser'])) {
-			redirect('admin/');
-		}
-		//this takes the currentUser and then passes it to a function inside the user model
-		$user = $this->users_model->getUser($user['currentUser']->id);
+		$this->require_auth();
+		$user = $this->users_model->getUser($this->user->id);
 		
-		$data = array();
-		$query = $this->blog_model->loadOneEntry();
-		$data['query'] = $query;
-		$this->load->view('edit_view', $data);
-		
+		//these load the views appropriate for this page		
+		$this->load->view('edit_view', array(
+			'query' => $this->blog_model->loadOneEntry(),
+		));
 		$this->load->view('footer_view');
 	}
 	
-	function delete()
+	public function delete()
 	{
+		$this->require_auth();
+		
 		//this checks to see if the form has a data-key. If it does not then it is directed to the error page. This secures this function and disallows access directly from the url bar.
 		if($this->input->post('data-key') == 'permDelete')
 		{
-			//this says that the session user is the current user
-			$user['currentUser']=$this->session->userdata('currentUser');
-			//if the sessions are empty then this will redirect the user back to the login page			
-			if (empty($user['currentUser'])) {
-				redirect('admin/');
-			}
-			//this takes the currentUser and then passes it to a function inside the user model
-			$user = $this->users_model->getUser($user['currentUser']->id);
-			
 			$this->blog_model->deletePost();
 			redirect('blog/');
 		}else{
@@ -260,54 +208,31 @@ class Admin extends CI_Controller{
 		}	
 	}
 	
-	function deleteLink()
+	public function deleteLink()
 	{
-		//this says that the session user is the current user
-		$user['currentUser']=$this->session->userdata('currentUser');
-		//if the sessions are empty then this will redirect the user back to the login page			
-		if (empty($user['currentUser'])) {
-			redirect('admin/');
-		}
-		//this takes the currentUser and then passes it to a function inside the user model
-		$user = $this->users_model->getUser($user['currentUser']->id);
-		
+		$this->require_auth();
 		$this->blog_model->deleteResource();
 		redirect('blog/');
 	}
 	
-	function deleteVocab()
+	public function deleteVocab()
 	{
-		//this says that the session user is the current user
-		$user['currentUser']=$this->session->userdata('currentUser');
-		//if the sessions are empty then this will redirect the user back to the login page			
-		if (empty($user['currentUser'])) {
-			redirect('admin/');
-		}
-		//this takes the currentUser and then passes it to a function inside the user model
-		$user = $this->users_model->getUser($user['currentUser']->id);
-		
+		$this->require_auth();
 		$this->blog_model->deleteVocabulary();
 		redirect('blog/vocab');
 	}
 	
-	function deleteWarning()
+	public function deleteWarning()
 	{
-		//this says that the session user is the current user
-		$user['currentUser']=$this->session->userdata('currentUser');
-		//if the sessions are empty then this will redirect the user back to the login page			
-		if (empty($user['currentUser'])) {
-			redirect('admin/');
-		}
-		//this takes the currentUser and then passes it to a function inside the user model
-		$user = $this->users_model->getUser($user['currentUser']->id);
+		$this->require_auth();
+		$user = $this->users_model->getUser($this->user->id);
 		$this->load->view('deleteWarning_view');
 	}	
 		
-	function logout()
+	public function logout()
 	{
 		//this destroys the sessions
 		$this->session->sess_destroy();
-		//and then this redirects the user to the login page
 		redirect('blog/');
 	}
 }
