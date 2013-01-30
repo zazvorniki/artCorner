@@ -3,7 +3,7 @@
 	<div class="container">
 		<div class="content">
 			<div class="clearfix">
-				<div class="writeVocab">
+				<div class="writeVocab" style="padding-left: 4em;">
 					<?=form_open('admin/insertVocab', array('class' => 'postForm'));?>
 						<?=form_hidden('data-key', 'newVocab')?>
 						<h3>Add a Vocab Word!</h3>

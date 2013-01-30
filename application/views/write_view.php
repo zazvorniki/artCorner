@@ -41,6 +41,6 @@
 						<li><img src="<?=base_url();?>inc/img/tinymce/unlink.png" alt="" /><span> - Remove link</span></li>
 					</ul>			
 				</div><!--  end sideIcons  -->
-			</div><!--  end writeBlog  -->
+			</div><!--  end clearFix -->
 <script src="<?php echo base_url();?>inc/js/blogVal.min.js" type="text/javascript"></script>
 		

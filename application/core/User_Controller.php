@@ -17,6 +17,14 @@ class	Auth extends User_Controller{
 	}
 }
 
+class AdminViews extends Auth {
+
+    public function __construct() {
+        parent::__construct();
+        $user['currentUser']=$this->session->userdata('currentUser');
+    }
+}
+
 
 class AdminAuth extends Auth {
 
@@ -27,13 +35,5 @@ class AdminAuth extends Auth {
         if (empty($user['currentUser'])) {
         	redirect('admin/');
         }
-    }
-}
-
-class AdminViews extends Auth {
-
-    public function __construct() {
-        parent::__construct();
-        $user['currentUser']=$this->session->userdata('currentUser');
     }
 }

@@ -1,6 +1,7 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Blog extends CI_Controller{
+class Blog extends CI_Controller
+{
 
 	public function __construct() 
 	{ 
@@ -9,172 +10,145 @@ class Blog extends CI_Controller{
 		$this->load->model('blog_model');
 		//this loads the users model that connects this verifies the user
 		$this->load->model('users_model');
+		
+		$this->user = $this->session->userdata('currentUser');
 	}
 	
-	function index()
+	public function index()
 	{
-		//this says that the session user is the current user
-		$user['currentUser']=$this->session->userdata('currentUser');
-		//this if statement says if there are user sessions then the user will be given the admin controls, but if they do not have the right sessions than they are given the views without the controls.
-		if (empty($user['currentUser'])) {
-			//This grabs the information from the model and then pushes the data into the default body view
+		//if the user variable is empty then this will load the default views, if the user is logged in then it will load the admin views
+		if (empty($this->user)) {
 			$this->load->view('defaultHeader_view');
-			$data['query'] = $this->blog_model->loadAll();
-			$this->load->view('defaultBlog_view', $data);
-			//This takes the information from the model and then pushes it into the default side bar
-			$d['query'] = $this->blog_model->loadResource();
-			$this->load->view('defaultSidebar_view', $d);
+			$this->load->view('defaultBlog_view', array(
+				'query' => $this->blog_model->loadAll(),
+			));
+			$this->load->view('defaultSidebar_view', array(
+				'query' => $this->blog_model->loadResource(),
+			));
 			$this->load->view('footer_view');
 		}else {
-			//this takes the currentUser and then passes it to a function inside the user model
-			$user = $this->users_model->getUser($user['currentUser']->id);
-			//This takes the model and pushes the information into the admin blog view
-			$data['query'] = $this->blog_model->loadAll();
-			$this->load->view('adminBlog_view', $data);
-			//This takes the information from the model and pushes it into the admins side bar
-			$d['query'] = $this->blog_model->loadResource();
-			$this->load->view('adminSidebar_view', $d);
+			$user = $this->users_model->getUser($this->user->id);
+			$this->load->view('adminBlog_view', array(
+				'query' => $this->blog_model->loadAll(),
+			));
+			$this->load->view('adminSidebar_view', array(
+				'query' => $this->blog_model->loadResource(),
+			));
 			$this->load->view('footer_view');
 		} 
 	}
 	
-	function projects()
+	public function projects()
 	{
-		//this says that the session user is the current user
-		$user['currentUser']=$this->session->userdata('currentUser');
-		
-		//this if statement says if there are user sessions then the user will be given the admin controls, but if they do not have the right sessions than they are given the views without the controls.
-		if (empty($user['currentUser'])) {
-			//this loads the default projects, then the body and the footer 
+		//if the user variable is empty then this will load the default views, if the user is logged in then it will load the admin views
+		if (empty($this->user)) {
 			$this->load->view('defaultHeader_view');
-			//This takes the information for the projects and pushes it into the project default blog view
-			$data['query'] = $this->blog_model->loadProjects();
-			$this->load->view('defaultBlog_view', $data);
-			//This takes the information for the projects and pushes it into the project default sidebar		
-			$d['query'] = $this->blog_model->loadReProject();
-			$this->load->view('defaultSidebar_view', $d);
+			$this->load->view('defaultBlog_view', array(
+				'query' => $this->blog_model->loadProjects(),
+			));
+			$this->load->view('defaultSidebar_view', array(
+				'query' => $this->blog_model->loadReProject(),
+			));
 			$this->load->view('footer_view');
-						
 		}else {
-			//this takes the currentUser and then passes it to a function inside the user model
-			$user = $this->users_model->getUser($user['currentUser']->id);
-			//This takes the information for the projects and pushes it into the project admin blog view
-			$data['query'] = $this->blog_model->loadProjects();
-			$this->load->view('adminBlog_view', $data);
-			
-			//This takes the information for the projects and pushes it into the project admin sidebar			
-			$d['query'] = $this->blog_model->loadReProject();	
-			$this->load->view('adminSidebar_view', $d);
+			$user = $this->users_model->getUser($this->user->id);
+			$this->load->view('adminBlog_view', array(
+				'query' => $this->blog_model->loadProjects(),
+			));
+			$this->load->view('adminSidebar_view', array(
+				'query' => $this->blog_model->loadReProject(),
+			));			
 			$this->load->view('footer_view');
 		}
 	}
 	
-	function events()
+	public function events()
 	{
-		//this says that the session user is the current user
-		$user['currentUser']=$this->session->userdata('currentUser');
-		//this if statement says if there are user sessions then the user will be given the admin controls, but if they do not have the right sessions than they are given the views without the controls.
-		if (empty($user['currentUser'])) {
-			//This takes the information from the model and pushes it into the event default blog view
+		//if the user variable is empty then this will load the default views, if the user is logged in then it will load the admin views
+		if (empty($this->user)) {
 			$this->load->view('defaultHeader_view');
-			$data['query'] = $this->blog_model->loadEvents();
-			$this->load->view('defaultBlog_view', $data);
-			//This takes the information from the model and pushes it into the event default sidebar
-			$d['query'] = $this->blog_model->loadReEvent();
-			$this->load->view('defaultSidebar_view', $d);
+			$this->load->view('defaultBlog_view', array(
+				'query' => $this->blog_model->loadEvents(),
+			));
+			$this->load->view('defaultSidebar_view', array(
+				'query' => $this->blog_model->loadReEvent(),
+			));
 			$this->load->view('footer_view');
 		}else{
-			//this takes the currentUser and then passes it to a function inside the user model
-			$user = $this->users_model->getUser($user['currentUser']->id);
-			//This takes the information from the model and pushes it into the event admin blog view
-			$query = $this->blog_model->loadEvents();
-			$data['query'] = $query;
-			$this->load->view('adminBlog_view', $data);
-			//This takes the information from the model and pushes it into the event sidebar admin view
-			$d['query'] = $this->blog_model->loadReEvent();
-			$this->load->view('adminSidebar_view', $d);
-			$this->load->view('footer_view');
+			$user = $this->users_model->getUser($this->user->id);
+			$this->load->view('adminBlog_view', array(
+				'query' => $this->blog_model->loadEvents(),
+			));
+			$this->load->view('adminSidebar_view', array(
+				'query' => $this->blog_model->loadReEvent(),
+			));			
+			$this->load->view('footer_view');		
 		}		
 	}
 	
-	function vocab()
+	public function vocab()
 	{
-		//this says that the session user is the current user
-		$user['currentUser']=$this->session->userdata('currentUser');
-		//this if statement says if there are user sessions then the user will be given the admin controls, but if they do not have the right sessions than they are given the views without the controls.
-		if (empty($user['currentUser'])) {
-
-			//This takes the information from the model and pushes it into the default vocab view
+		//if the user variable is empty then this will load the default views, if the user is logged in then it will load the admin views		
+		if (empty($this->user)) {
 			$this->load->view('defaultHeader_view');
-			$data['query'] = $this->blog_model->loadVocab();
-			$letters['letter'] = $this->blog_model->loadLetters();
-			$this->load->view('defaultLetter_view',$letters);
-			$this->load->view('defaultVocab_view',$data); 
-			
+			$this->load->view('defaultLetter_view', array(
+				'letter' => $this->blog_model->loadLetters(),
+			));
+			$this->load->view('defaultVocab_view', array(
+				'query' => $this->blog_model->loadVocab(),
+			));
 			$this->load->view('footer_view');
 		}else{
-			//this takes the currentUser and then passes it to a function inside the user model
-			$user = $this->users_model->getUser($user['currentUser']->id);
-			//This takes the information from the model and pushes it into the admin vocab view
-			$data['query'] = $this->blog_model->loadVocab();
-			$letters['letter'] = $this->blog_model->loadLetters();
-			$this->load->view('defaultLetter_view',$letters);
-			$this->load->view('adminVocab_view', $data);
+			$user = $this->users_model->getUser($this->user->id);
+			$this->load->view('defaultLetter_view', array(
+				'letter' => $this->blog_model->loadLetters(),
+			));
+			$this->load->view('adminVocab_view', array(
+				'query' => $this->blog_model->loadVocab(),
+			));
 			$this->load->view('footer_view');		
 		}
 	}			
 	
-	function comments()
+	public function comments()
 	{
-		//this says that the session user is the current user
-		$user['currentUser']=$this->session->userdata('currentUser');
-		//this if statement says if there are user sessions then the user will be given the admin controls, but if they do not have the right sessions than they are given the views without the controls.
-		if (empty($user['currentUser'])) {
-			//This takes the information from the model and pushes it into the default one blog post view
+		//if the user variable is empty then this will load the default views, if the user is logged in then it will load the admin views	
+		if (empty($this->user)) {
 			$this->load->view('defaultHeader_view');
-			$data['query'] = $this->blog_model->loadOneEntry();
-//			$this->load->helper('smiley');
-//			$this->load->library('table');
-//			$image_array = get_clickable_smileys(base_url().'inc/img/smileys/', 'comments');
-//			$col_array = $this->table->make_columns($image_array, 7);
-//			$data['smiley_table'] = $this->table->generate($col_array);
-						
-			$this->load->view('innerBlog_view', $data);
-			//This takes the information from the model and pushes it into the default comment view
-			$d['query'] = $this->blog_model->loadComments();
-			$this->load->view('comment_view', $d);
+			$this->load->view('innerBlog_view', array(
+				'query' => $this->blog_model->loadOneEntry(),
+			));
+			$this->load->view('comment_view', array(
+				'query' => $this->blog_model->loadComments(),
+			));
 			$this->load->view('footer_view');
 		}else {
-			//this takes the currentUser and then passes it to a function inside the user model
-			$user = $this->users_model->getUser($user['currentUser']->id);
-			//This takes the information from the model and pushes it into the admin one blog post view
-			$data['query'] = $this->blog_model->loadOneEntry();
-			$this->load->view('adminInner_view', $data);
-			//This takes the information from the model and pushes it into the admin comment view
-			$d['query'] = $this->blog_model->loadComments();
-			$this->load->view('comment_view', $d);
+			$user = $this->users_model->getUser($this->user->id);
+			$this->load->view('adminInner_view', array(
+				'query' => $this->blog_model->loadOneEntry(),
+			));
+			$this->load->view('comment_view', array(
+				'query' => $this->blog_model->loadComments(),
+			));			
 			$this->load->view('footer_view');
 		}		
 	}
 	
-	function writeComment()
+	public function writeComment()
 	{	
-		//this makes sure that the data-key is filled in. If the user tries to access this function with just the url they will be sent to the error page
+		//only if the data-key is newComment then this function will run. This prevents the user from accessing this function by acadent and also prevents honey pots
 		if($this->input->post('data-key') == 'newComment')
 		{
-			//this publishes the comment and then redirects the user back to the comment page they were on with their comment posted
-
+			//this makes sure that the input fields are not blank. If they are then it will send you to an error page. This should not be accessed unless they have somehow gotten around my jquery and noscript tag.
 			if (empty($_POST['author']) || empty($_POST['email']) || empty($_POST['body']))
 			{
-				
-				 if (empty($user['currentUser'])) {
-				 	//This takes the information from the model and pushes it into the default one blog post view
+				//if the user variable is empty then this will load the default views, if the user is logged in then it will load the admin views	
+				 if(empty($this->user)) {
 				 	$this->load->view('defaultHeader_view');
 				 	$this->load->view('error_view');
 				 	$this->load->view('footer_view');
 				 }else {
-				 	//this takes the currentUser and then passes it to a function inside the user model
-				 	$user = $this->users_model->getUser($user['currentUser']->id);
+					$user = $this->users_model->getUser($this->user->id);
 				 	$this->load->view('error_view');
 				 	$this->load->view('footer_view');
 				 }	
@@ -188,19 +162,14 @@ class Blog extends CI_Controller{
 	}
 	
 	function contactForm()
-	{
-		//this says that the session user is the current user
-		$user['currentUser']=$this->session->userdata('currentUser');
-		//this if statement says if there are user sessions then the user will be given the admin controls, but if they do not have the right sessions than they are given the views without the controls.
+	{	
+		//if the user variable is empty then this will load the default views, if the user is logged in then it will load the admin views	
 		if (empty($user['currentUser'])) {
-			//This loads the default views. The header, body and footer
 			$this->load->view('defaultHeader_view');
 			$this->load->view('contact_view');
 			$this->load->view('footer_view');
 		}else {
-			//this takes the currentUser and then passes it to a function inside the user model
-			$user = $this->users_model->getUser($user['currentUser']->id);
-			//This loads the default views. The header, body and footer
+			$user = $this->users_model->getUser($this->user->id);
 			$this->load->view('contact_view');
 			$this->load->view('footer_view');
 		}		
