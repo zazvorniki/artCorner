@@ -9,15 +9,18 @@ class Admin extends CI_Controller{
 		$this->load->model('users_model');
 		//this loads the blog model which handles the blog functionality 
 		$this->load->model('blog_model');
-		
-		$this->user = $this->session->userdata('currentUser');
 	}
 	
 	public function require_auth($location = 'admin/')
 	{
+		//this sets the session variable to the currentUser
+		$this->user = $this->session->userdata('currentUser');
+		//this says if the currentUser is not set then it will redirect them to the admin page
 		if (empty($this->user)) {
 			redirect($location);
 		}
+		//this calls the header with the users information
+		$user = $this->users_model->getUser($this->user->id);
 	}
 	
 	public function index()
@@ -30,37 +33,35 @@ class Admin extends CI_Controller{
 	
 	public function writeBlog()
 	{
+		//this calls the header, write view and the footer
 		$this->require_auth();
-		$user = $this->users_model->getUser($this->user->id);
 		$this->load->view('write_view');
 		$this->load->view('footer_view');
 	}
 	
 	public function writeResource()
 	{
+		//this calls the header, resource view and the footer
 		$this->require_auth();
-		$user = $this->users_model->getUser($this->user->id);
 		$this->load->view('resource_view');
 		$this->load->view('footer_view');
 	}
 	
 	public function writeVocab()
 	{
+		//this calls the header, vocab view and the footer
 		$this->require_auth();
-		$user = $this->users_model->getUser($this->user->id);
 		$this->load->view('vocab_view');
 		$this->load->view('footer_view');
 	}
 	
 	public function insertPost()
 	{
+		//this calls the header
 		$this->require_auth();
-		
 		//this checks to see if the form has a data-key. If it does not then it is directed to the error page. This secures this function and dissallows access directly from the url bar.
 		if($this->input->post('data-key') == 'newPost')
-		{
-			$user = $this->users_model->getUser($this->user->id);
-			
+		{			
 			//this makes sure that all the fields are filled in. If they are not then it will send you to an error page. This will only be triggered though if the user somehow gets past both the jquery and noscript tags
 			if (empty($_POST['posted_by']) || empty($_POST['title']) || empty($_POST['category']) || empty($_POST['body']))
 			{				
@@ -82,9 +83,7 @@ class Admin extends CI_Controller{
 		
 		//this checks to see if the form has a data-key. If it does not then it is directed to the error page. This secures this function and dissallows access directly from the url bar.
 		if($this->input->post('data-key') == 'newVocab')
-		{
-			$user = $this->users_model->getUser($this->user->id);
-			
+		{			
 			//if the fields are not fill in then this will send the user to an error page. This will only trigger if the user somehow manages to get past jquery and my noscript tags
 			if (empty($_POST['title']) || empty($_POST['body']))
 			{
@@ -106,9 +105,7 @@ class Admin extends CI_Controller{
 		
 		//if the fields are not fill in then this will send the user to an error page. This will only trigger if the user somehow manages to get past jquery and my noscript tags
 		if($this->input->post('data-key') == 'editPost')
-		{
-			$user = $this->users_model->getUser($this->user->id);
-			
+		{			
 			//this takes the info from the form and pushes it to the publish post function in the model and then redirects to the successPost function
 			if (empty($_POST['posted_by']) || empty($_POST['title']) || empty($_POST['category']) || empty($_POST['body']))
 			{
@@ -131,9 +128,7 @@ class Admin extends CI_Controller{
 		
 		//this checks to see if the form has a data-key. If it does not then it is directed to the error page. This secures this function and disallows access directly from the url bar.
 		if($this->input->post('data-key') == 'newRe')
-		{
-			$user = $this->users_model->getUser($this->user->id);
-			
+		{			
 			//if the user does not fill in the form fields and somehow gets past both the jquery and noscript tags then this will trigger
 			if (empty($_POST['resource']) || empty($_POST['name']) || empty($_POST['category']))
 			{
@@ -151,10 +146,8 @@ class Admin extends CI_Controller{
 	
 	public function successPost()
 	{
-		$this->require_auth();
-		$user = $this->users_model->getUser($this->user->id);
-		
-		//these load the views appropriate for this page		
+		//this calls the header, thank you view, write view and the footer
+		$this->require_auth();		
 		$this->load->view('thankYou_view');
 		$this->load->view('write_view');
 		$this->load->view('footer_view');
@@ -162,10 +155,8 @@ class Admin extends CI_Controller{
 	
 	public function successResource()
 	{
-		$this->require_auth();
-		$user = $this->users_model->getUser($this->user->id);
-		
-		//these load the views appropriate for this page		
+		//this calls the header, thank you view, resource view and the footer
+		$this->require_auth();		
 		$this->load->view('thankYou_view');
 		$this->load->view('resource_view');
 		$this->load->view('footer_view');
@@ -173,10 +164,8 @@ class Admin extends CI_Controller{
 	
 	public function successVocab()
 	{
-		$this->require_auth();
-		$user = $this->users_model->getUser($this->user->id);
-		
-		//these load the views appropriate for this page		
+		//this calls the header, thank you view, vocab view and the footer
+		$this->require_auth();		
 		$this->load->view('thankYou_view');
 		$this->load->view('vocab_view');
 		$this->load->view('footer_view');
@@ -184,10 +173,8 @@ class Admin extends CI_Controller{
 
 	public function edit()
 	{
-		$this->require_auth();
-		$user = $this->users_model->getUser($this->user->id);
-		
-		//these load the views appropriate for this page		
+		//this calls the header, edit view view and the footer
+		$this->require_auth();		
 		$this->load->view('edit_view', array(
 			'query' => $this->blog_model->loadOneEntry(),
 		));
@@ -196,8 +183,8 @@ class Admin extends CI_Controller{
 	
 	public function delete()
 	{
+		//this calls the header, edit view view and the footer
 		$this->require_auth();
-		
 		//this checks to see if the form has a data-key. If it does not then it is directed to the error page. This secures this function and disallows access directly from the url bar.
 		if($this->input->post('data-key') == 'permDelete')
 		{
@@ -210,6 +197,7 @@ class Admin extends CI_Controller{
 	
 	public function deleteLink()
 	{
+		//this calls the header, delete resource view and the footer
 		$this->require_auth();
 		$this->blog_model->deleteResource();
 		redirect('blog/');
@@ -217,6 +205,7 @@ class Admin extends CI_Controller{
 	
 	public function deleteVocab()
 	{
+		//this calls the header, delete vocab view and the footer
 		$this->require_auth();
 		$this->blog_model->deleteVocabulary();
 		redirect('blog/vocab');
@@ -224,6 +213,7 @@ class Admin extends CI_Controller{
 	
 	public function deleteWarning()
 	{
+		//this calls the header, delete warning view and the footer
 		$this->require_auth();
 		$user = $this->users_model->getUser($this->user->id);
 		$this->load->view('deleteWarning_view');
@@ -231,7 +221,7 @@ class Admin extends CI_Controller{
 		
 	public function logout()
 	{
-		//this destroys the sessions
+		//this destroys the sessions and then redirects you to the blog
 		$this->session->sess_destroy();
 		redirect('blog/');
 	}
