@@ -206,6 +206,8 @@ body {
 	color:#d6efee;
 	font:1.5em nexafree,  Arial,  Helvetica,  Geneva,  sans-serif;
 	text-decoration:none;
+	-webkit-text-stroke-width: .7px;
+	-webkit-text-stroke-color: #80cecb;
 }
 
 
@@ -218,6 +220,8 @@ body {
 
 #header a:hover, #footer a:hover {
 	color:#85b6b4;
+	-webkit-text-stroke-width: .5px;
+	-webkit-text-stroke-color: #365b59;
 }
 
 
@@ -615,14 +619,14 @@ body {
 
 
 .ref ul {
-	width:15em;
+	width:13em;
 	padding:0;
 }
 
 
 .ref li {
 	display:block;
-	padding:.5em 0;
+	padding:.7em 0;
 }
 
 

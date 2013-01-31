@@ -7,8 +7,8 @@
 	<meta name="description" content="Mrs. Sears, the art teacher at Plantation key school created this blog to keep her students and their parents informed on the projects and events going on in the art room.">
 	<meta name="robots" content="all">
 	 <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
-<!--	<meta name="googlebot" content="all">-->
-	<meta name="author" content="Jessica Sears">
+	<meta name="googlebot" content="all">
+	<meta name="Author" content="Jessica Sears">
 	<meta name="format-detection" content="telephone=no">
 	<meta name="keywords" content="art room, plantation key, plantation key school, school, florida school, the keys, florida keys, Mrs. Sears, Sears">
 		
@@ -32,6 +32,9 @@
 	
 <!--  ==========	Jquery	==========	-->
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.0.js"></script>
+<!--  ==========	Google Analytics	==========	-->
+	<script src="<?=base_url();?>inc/js/google.js" type="text/javascript"></script>
+	
 </head>
 <body>
 <!--  ==========	Facebook like button ==========  -->

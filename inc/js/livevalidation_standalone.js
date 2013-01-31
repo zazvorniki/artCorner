@@ -449,7 +449,7 @@ var Validate = {
     },
     Exclusion: function (e, t) {
         var t = t || {};
-        t.failureMessage = t.failureMessage || "Must not be included in the list!";
+        t.failureMessage = t.failureMessage || "Please do not include numbers!";
         t.negate = true;
         Validate.Inclusion(e, t);
         return true
