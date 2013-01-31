@@ -3,7 +3,7 @@
 	<div class="container">
 		<div class="content">
 			<div class="clearfix">
-				<div class="writeBlog" style="padding-left: 4em;">				
+				<div class="writeBlog resourses">				
 					<?=form_open('admin/insertResource', array('class' => 'postForm'));?>
 						<?=form_hidden('data-key', 'newRe')?>
 						<h3>Add a Resource!</h3>
@@ -14,7 +14,7 @@
 							<span>Project<input type="radio" name="category" value="project"></span>
 							<span>Event<input type="radio" name="category" value="event"></span>
 						</p>
-						<p class="textValid"><span id="radioVal" class="LV_validation_message LV_invalid" style="display: none;">Can't be empty!</span></p>
+						<p class="textValid"><span id="radioVal" class="LV_validation_message LV_invalid">Can't be empty!</span></p>
 						<p class="subPos"><input type="submit" class="submit" value="Post" /></p>
 						<span class="cancelPos"><?=anchor('blog/', 'cancel', array('class' => 'cancel'));?></span>
 					</form><!--  end postForm  -->

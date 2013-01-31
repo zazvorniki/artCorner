@@ -902,10 +902,21 @@ body {
 }
 
 
-#cBox_insertunorderedlist, #body_insertunorderedlist, #cBox_insertorderedlist, #body_insertorderedlist, #message_insertunorderedlist, #message_insertorderedlist, .commentJava, .noJava, .emailJava, .printLogo {
+#cBox_insertunorderedlist, #body_insertunorderedlist, #cBox_insertorderedlist, #body_insertorderedlist, #message_insertunorderedlist, #message_insertorderedlist, .commentJava, .noJava, .emailJava, .printLogo, #tooLong, #notThere, #radioVal {
 	display:none;
 }
 
+.checkbox span{
+	padding-right: 1em;
+}
+
+.fb-like{
+	margin-bottom: 1em;
+}
+
+.resourses{
+	padding-left: 4em;
+}
 
 html[xmlns] .clearfix, .bBody p:first-child, .loginForm .LV_validation_message {
 	display:block;

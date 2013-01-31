@@ -47,7 +47,7 @@
 		</ul>
 		<noscript class="noJava">
 		<h3>Please turn your javascript on to take advantage of all the features of this site!</h3></noscript>	
-		<div class="headerCon" style="text-align: center;">
+		<div class="headerCon">
 		<img class="printLogo" src="<?=base_url();?>inc/img/printLogo.png" alt="logo" />
 			<div id="nav">
 				<ul>

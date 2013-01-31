@@ -35,7 +35,7 @@
 		<noscript class="noJava">
 		<link rel="stylesheet" href="<?=base_url();?>inc/css/noJava.css" type="text/css" media="screen"/>
 		<h3>Please turn your javascript on to take advantage of all the features of this site!</h3></noscript>		
-		<div class="headerCon" style="padding: 1em 1.5em 6em 1.5em">
+		<div class="headerCon">
 			<div id="nav">
 				<ul>
 					<li><h1 class="logo"><?=anchor('blog/', 'Plantation Key Art Corner');?></h1></li>

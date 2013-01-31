@@ -3,7 +3,7 @@
 	<div class="container">
 		<div class="content">
 			<div class="clearfix">
-				<div class="writeVocab" style="padding-left: 4em;">
+				<div class="writeVocab resourses">
 					<?=form_open('admin/insertVocab', array('class' => 'postForm'));?>
 						<?=form_hidden('data-key', 'newVocab')?>
 						<h3>Add a Vocab Word!</h3>
@@ -12,7 +12,7 @@
 						<div class="vocabText">
 							<textarea type="text" id="body" name="body" class="resInput"></textarea>	
 						</div><!--  end vocabText  -->
-						<p class="textValid"><span id="notThere" class="LV_validation_message LV_invalid" style="display: none;">Can't be empty!</span></p>
+						<p class="textValid"><span id="notThere" class="LV_validation_message LV_invalid">Can't be empty!</span></p>
 						<p class="subPos"><input type="submit" class="submit" value="Post Vocab" /></p>					
 						<span class="cancelPos"><?=anchor('blog/', 'cancel', array('class' => 'cancel'));?></span>
 					</form><!--  end postForm  -->

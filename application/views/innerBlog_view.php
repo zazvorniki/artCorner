@@ -7,7 +7,7 @@
 				<?foreach($query as $row) :?>	
 					<p class="bTitle"><?=$row->title?></p>
 					<p class="bDate">Posted by, <?=$row->posted_by?> on <?=date("F j, Y", $row->date)?></p>	
-					<div class="fb-like" style="margin-bottom: 1em;" data-href="<?php $url="http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']; echo $url;?>" data-send="false" data-layout="button_count" data-width="450" data-show-faces="true" data-font="arial"></div>
+					<div class="fb-like" data-href="<?php $url="http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']; echo $url;?>" data-send="false" data-layout="button_count" data-width="450" data-show-faces="true" data-font="arial"></div>
 					<?=$row->body?>
 				<?endforeach;?>
 			</div><!--  end innerBlog  -->

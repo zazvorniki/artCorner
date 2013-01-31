@@ -15,7 +15,7 @@
 						<div class="messageCon">
 							<p><textarea name="message" ></textarea></p>
 						</div><!--  end messageContent  -->	
-						<p class="textValid"><span id="notThere" class="LV_validation_message LV_invalid" style="display: none;">Can't be empty!</span></p>	
+						<p class="textValid"><span id="notThere" class="LV_validation_message LV_invalid">Can't be empty!</span></p>	
 						<input type="submit" class="submit contactSub" value="Email" />
 					</form><!--  end con  -->
 				</div><!--  end contactForm  -->
