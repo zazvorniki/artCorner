@@ -1,11 +1,50 @@
+/*
+Author:  Jessica Sears
+Project: 
+*/
+
+/* Style Guide
+	Navigation color: #e6ebf0
+	Default font: Source
+	Default font color: #464746
+	Default container color: #e9e9e9
+	Default font: 1em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+*/
+
+
+/*----------Fonts----------*/
 @font-face {
-	font-weight:400;
-	font-style:normal;
-	font-family:droid;
-	src:url(../font/DroidSerif/DroidSerif-Regular-webfont.eot?#iefix) format(embedded-opentype),  url(../font/DroidSerif/DroidSerif-Regular-webfont.woff) format(woff),  url(../font/DroidSerif/ProSourceSansPro-Regular-webfont.ttf) format(truetype),  url(../font/DroidSerif/DroidSerif-Regular-webfont) format(svg);
+    font-family: 'nexafree';
+    src: url('../font/nexafree/Nexa_Free_Bold-webfont.eot');
+    src: url('../font/nexafree/Nexa_Free_Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/nexafree/Nexa_Free_Bold-webfont.woff') format('woff'),
+         url('../font/nexafree/Nexa_Free_Bold-webfont.ttf') format('truetype'),
+         url('../font/nexafree/Nexa_Free_Bold-webfont') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 
+@font-face {
+    font-family: 'source';
+    src: url('../font/SourceSansPro/SourceSansPro-Regular-webfont.eot');
+    src: url('../font/SourceSansPro/SourceSansPro-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/SourceSansPro/SourceSansPro-Regular-webfont.woff') format('woff'),
+         url('../font/SourceSansPro/SourceSansPro-Regular-webfont.ttf') format('truetype'),
+         url('../font/SourceSansPro/SourceSansPro-Regular-webfont') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
 
+@font-face {
+    font-family: 'droid';
+    src: url('../font/DroidSerif/DroidSerif-Regular-webfont.eot');
+    src: url('../font/DroidSerif/DroidSerif-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/DroidSerif/DroidSerif-Regular-webfont.woff') format('woff'),
+         url('../font/DroidSerif/ProSourceSansPro-Regular-webfont.ttf') format('truetype'),
+         url('../font/DroidSerif/DroidSerif-Regular-webfont') format('svg');
+}
+
+/*----------General----------*/
 html {
 	position:relative;
 	min-height:100%;
@@ -14,7 +53,6 @@ html {
 	margin:0;
 	padding:0;
 }
-
 
 .bold {
 	font-family:bold;
@@ -40,7 +78,7 @@ li, .vocabPage p, #apl li {
 
 
 body {
-	font:1em source,  Helvetica,  Geneva,  sans-serif;
+	font: 1em "source", Helvetica, Geneva, sans-serif;
 	letter-spacing:.1em;
 	background:url(../img/bg.png);
 	height:100%;
@@ -133,7 +171,7 @@ body {
 }
 
 
-.sessionMess {
+.sessionMess, .mobileMess{
 	text-align:center;
 	font-size:1.2em;
 	color:#8a2445;
@@ -162,6 +200,7 @@ body {
 	height:1%;
 }
 
+/*----------Links----------*/
 
 #header a {
 	color:#d6efee;
@@ -248,6 +287,7 @@ body {
 	padding:1em 0;
 }
 
+/*----------Header----------*/
 
 #header {
 	color:#d6efee;
@@ -314,6 +354,7 @@ body {
 	padding:0 2em;
 }
 
+/*----------Forms----------*/
 
 .postForm, .editForm {
 	margin-left:1em;
@@ -547,6 +588,7 @@ body {
 	background-color:#e1e0e0;
 }
 
+/*----------Blog----------*/
 
 .blogContainer {
 	width:65%;
@@ -645,7 +687,6 @@ body {
 	font-size:1.1em;
 	padding-bottom:1em;
 }
-
 
 .editCon {
 	background:url(../img/edit.png) no-repeat;
@@ -800,6 +841,7 @@ body {
 	bottom:.5em;
 }
 
+/*----------Footer----------*/
 
 #footer {
 	color:#d6efee;
@@ -830,6 +872,7 @@ body {
 	padding:0 1em;
 }
 
+/*----------Validation----------*/
 
 .LV_validation_message {
 	display:block;

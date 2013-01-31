@@ -16,6 +16,7 @@
 	
 <!--  ==========	Style Sheets		==========	-->
 	<link rel="stylesheet" href="<?=base_url();?>inc/css/screen.css"/>
+	<link rel="stylesheet" href="<?=base_url();?>inc/css/phone.css"/>
 	
 <!--  ==========	Header and navigation ==========  -->
 
@@ -24,6 +25,7 @@
 
 <!--  ==========	Login Form ==========  -->
 <h3 class="sessionMess">Sorry, this site needs browser sessions in order to log you in. Please make sure you have private browsing turned off.</h3>
+<p class="mobileMess">Sorry, the admin section of this site is not available through mobile phones at this time.</p>
 <div class="loginForm">
 		<?=form_open('users/checkLogin');?>
 			<h2>Login</h2>
