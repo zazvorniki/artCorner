@@ -138,4 +138,17 @@
 		display: block;
 		font-size: 4em;
 	}
+	
+	.vocabPage li{
+		font-size: 3em;
+	}
+	
+	#apl li{
+		line-height: 1.5em;
+		font-size:2.3em;
+	}
+	
+	.vocabPage .bold{
+		font-size: 4em;
+	}
 }
