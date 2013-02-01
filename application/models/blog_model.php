@@ -49,36 +49,40 @@
 		//this array finds the inputs and strips the html tags from them before inputting them in the database
 		$title = strip_tags($this->input->post('title'));
 		$body = preg_replace('/[^(\x20-\x7F)]*/','', $this->input->post('body'));
+		$id = $this->input->post('id');
 		
 		$data = array(
 			'title'=>$title,
 			'body'=>$body
 		);
 		 //this grabs the id from the hidden form field           
-		$this->db->where('id', $this->input->post('id'));
+		$this->db->where('id', $id);
 		//this updates the blog post into the database
 		$this->db->update('entries',$data); 
 	}
 	
 	
 	public function deletePost()
-	{	
+	{
+		$id = $this->input->post('id');	
 		//where the id's match this will delete that post
-		$this->db->where('id', $this->input->post('id'));
+		$this->db->where('id', $id);
 		$this->db->delete('entries');
 	}
 	
 	public function deleteVocabulary()
-	{	
+	{
+		$id = $this->uri->segment(3);	
 		//where the id's match this will delete that post
-		$this->db->where('id', $this->uri->segment(3));
+		$this->db->where('id', $id);
 		$this->db->delete('entries');
 	}
 	
 	public function deleteResource()
-	{	
+	{
+		$id = $this->uri->segment(3);	
 		//where the id's match this will delete that resource
-		$this->db->where('id', $this->uri->segment(3));
+		$this->db->where('id', $id);
 		$this->db->delete('resources');
 	}
 	
@@ -183,35 +187,40 @@
 	
 	public function loadVocab()
 	{
+		$url = $this->uri->segment(3);
 		//this grabs all the blog posts by the last one inserted and it must have the projects category
 		$this->db->order_by("title", "asc");
 		$this->db->where('category', 'vocab');
-		$this->db->like('title', $this->uri->segment(3), 'after'); 
+		$this->db->like('title', $uri, 'after'); 
 		$query = $this->db->get('entries');
 		return $query->result();	
 	}
 	
 	public function loadOneEntry()
 	{
+		$id = $this->uri->segment(3);
 		//this grabs the blog entry where the id matches to the one in the url
-		$this->db->where('id', $this->uri->segment(3));
+		$this->db->where('id', $id);
 		$query = $this->db->get('entries');
 		return $query->result();	
 	}
 		
 	public function editView()
 	{
+		$id = $this->uri->segment(3);
+		
 		//this grabs the edit view where the ids match on the blogs
-		$this->db->where('id', $this->uri->segment(3));
+		$this->db->where('id', $id);
 		$query = $this->db->get('entries');
 		return $query->result();	
 	}
 	
 	public function loadComments()
 	{
+		$id = $this->uri->segment(3);
 		//queries the database for the comments that are attached to that entry id
 		$this->db->order_by("date", "desc");
-		$this->db->where('entry_id', $this->uri->segment(3));
+		$this->db->where('entry_id', $id);
 		$query = $this->db->get('comments');
 		return $query->result();	
 	}

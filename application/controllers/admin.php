@@ -215,7 +215,6 @@ class Admin extends CI_Controller{
 	{
 		//this calls the header, delete warning view and the footer
 		$this->require_auth();
-		$user = $this->users_model->getUser($this->user->id);
 		$this->load->view('deleteWarning_view');
 	}	
 		
