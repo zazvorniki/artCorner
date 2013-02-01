@@ -11,6 +11,7 @@
 	<meta name="Author" content="Jessica Sears">
 	<meta name="format-detection" content="telephone=no">
 	<meta name="keywords" content="art room, plantation key, plantation key school, school, florida school, the keys, florida keys, Mrs. Sears, Sears">
+	<link rel="icon" type="image/ico" href="<?=base_url();?>favicon.ico">
 		
 <!--  ==========	Style Sheets		==========	-->
 	<link rel="stylesheet" href="<?=base_url();?>inc/css/screen.css"/>
