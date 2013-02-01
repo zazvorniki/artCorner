@@ -112,11 +112,18 @@ class Blog extends CI_Controller
 	
 	public function comments()
 	{
+		$blog = $this->blog_model->loadOneEntry();
+		
+		//if the blog id is not there then it will throw an error page to stop the user from entering a comment on a blog post that does not exist
+		if (! isset($blog[0]->id))
+		{
+			redirect('error/');
+		}
 		//if the user variable is empty then this will load the default views, if the user is logged in then it will load the admin views	
 		if (empty($this->user)) {
 			$this->load->view('defaultHeader_view');
 			$this->load->view('innerBlog_view', array(
-				'query' => $this->blog_model->loadOneEntry(),
+				'query' => $blog,
 			));
 			$this->load->view('comment_view', array(
 				'query' => $this->blog_model->loadComments(),
@@ -125,7 +132,7 @@ class Blog extends CI_Controller
 		}else {
 			$user = $this->users_model->getUser($this->user->id);
 			$this->load->view('adminInner_view', array(
-				'query' => $this->blog_model->loadOneEntry(),
+				'query' => $blog,
 			));
 			$this->load->view('comment_view', array(
 				'query' => $this->blog_model->loadComments(),
